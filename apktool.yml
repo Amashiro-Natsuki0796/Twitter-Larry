@@ -1,5 +1,5 @@
 version: 3.0.2
-apkFileName: X_11.40.0-release.0_APKPure.apk
+apkFileName: X_11.40.0-release.apk
 usesFramework:
   ids:
   - 1

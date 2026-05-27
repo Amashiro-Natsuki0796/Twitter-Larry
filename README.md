@@ -7,13 +7,13 @@
 ![Demo](Demo.jpg)
 
 ## 简介
-Lates
+
 很多人不喜欢Twitter的新版图标，所以我手动修改了apk，替换了所有图标同时兼容Android14的自适应图标
 
 ## 安装说明
-LatesLates
+
 使用apktool 3.0.2版本构建apk
-Latest
-## 注意事项LatestLatest
+
+## 注意事项
 
 如果无法登录请先安装最新版X，然后降级此版本
