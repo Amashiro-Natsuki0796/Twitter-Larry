@@ -1,0 +1,18 @@
+.class public final synthetic Lcom/twitter/database/legacy/timeline/replay/sanitizers/d;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lcom/twitter/util/functional/f;
+
+
+# virtual methods
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lcom/twitter/database/model/b;
+
+    iget-object p1, p1, Lcom/twitter/database/model/b;->a:Ljava/lang/String;
+
+    return-object p1
+.end method

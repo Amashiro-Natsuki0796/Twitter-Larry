@@ -1,0 +1,68 @@
+.class public abstract Ltv/periscope/model/g0;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public abstract a()Ljava/lang/String;
+    .annotation build Lorg/jetbrains/annotations/b;
+    .end annotation
+.end method
+
+.method public abstract b()I
+.end method
+
+.method public abstract c()I
+.end method
+
+.method public abstract d()Ljava/lang/String;
+    .annotation build Lorg/jetbrains/annotations/b;
+    .end annotation
+.end method
+
+.method public abstract e()Z
+.end method
+
+.method public abstract f()Ljava/lang/String;
+    .annotation build Lorg/jetbrains/annotations/b;
+    .end annotation
+.end method
+
+.method public abstract g()Ljava/lang/Long;
+    .annotation build Lorg/jetbrains/annotations/b;
+    .end annotation
+.end method
+
+.method public abstract h()Z
+.end method
+
+.method public abstract i()Ljava/lang/String;
+    .annotation build Lorg/jetbrains/annotations/b;
+    .end annotation
+.end method
+
+.method public abstract j()Ljava/lang/String;
+    .annotation build Lorg/jetbrains/annotations/b;
+    .end annotation
+.end method
+
+.method public abstract k()Ljava/lang/String;
+    .annotation build Lorg/jetbrains/annotations/b;
+    .end annotation
+.end method
+
+.method public abstract l()Z
+.end method
+
+.method public abstract m()Z
+.end method

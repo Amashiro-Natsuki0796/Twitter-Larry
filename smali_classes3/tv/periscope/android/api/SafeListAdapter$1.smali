@@ -1,0 +1,123 @@
+.class Ltv/periscope/android/api/SafeListAdapter$1;
+.super Lcom/google/gson/TypeAdapter;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Ltv/periscope/android/api/SafeListAdapter;->create(Lcom/google/gson/Gson;Lcom/google/gson/reflect/a;)Lcom/google/gson/TypeAdapter;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x1
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/google/gson/TypeAdapter<",
+        "TT;>;"
+    }
+.end annotation
+
+
+# instance fields
+.field final synthetic this$0:Ltv/periscope/android/api/SafeListAdapter;
+
+.field final synthetic val$delegate:Lcom/google/gson/TypeAdapter;
+
+.field final synthetic val$tokenType:Lcom/google/gson/reflect/a;
+
+
+# direct methods
+.method public constructor <init>(Ltv/periscope/android/api/SafeListAdapter;Lcom/google/gson/TypeAdapter;Lcom/google/gson/reflect/a;)V
+    .locals 0
+
+    iput-object p1, p0, Ltv/periscope/android/api/SafeListAdapter$1;->this$0:Ltv/periscope/android/api/SafeListAdapter;
+
+    iput-object p2, p0, Ltv/periscope/android/api/SafeListAdapter$1;->val$delegate:Lcom/google/gson/TypeAdapter;
+
+    iput-object p3, p0, Ltv/periscope/android/api/SafeListAdapter$1;->val$tokenType:Lcom/google/gson/reflect/a;
+
+    invoke-direct {p0}, Lcom/google/gson/TypeAdapter;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public read(Lcom/google/gson/stream/a;)Ljava/lang/Object;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/google/gson/stream/a;",
+            ")TT;"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    iget-object v0, p0, Ltv/periscope/android/api/SafeListAdapter$1;->val$delegate:Lcom/google/gson/TypeAdapter;
+
+    invoke-virtual {v0, p1}, Lcom/google/gson/TypeAdapter;->read(Lcom/google/gson/stream/a;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    iget-object v0, p0, Ltv/periscope/android/api/SafeListAdapter$1;->val$tokenType:Lcom/google/gson/reflect/a;
+
+    invoke-virtual {v0}, Lcom/google/gson/reflect/a;->getRawType()Ljava/lang/Class;
+
+    move-result-object v0
+
+    const-class v1, Ljava/util/List;
+
+    invoke-virtual {v1, v0}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    if-nez p1, :cond_0
+
+    sget-object p1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    return-object p1
+
+    :cond_0
+    check-cast p1, Ljava/util/List;
+
+    invoke-static {p1}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object p1
+
+    :cond_1
+    return-object p1
+.end method
+
+.method public write(Lcom/google/gson/stream/c;Ljava/lang/Object;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/google/gson/stream/c;",
+            "TT;)V"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    iget-object v0, p0, Ltv/periscope/android/api/SafeListAdapter$1;->val$delegate:Lcom/google/gson/TypeAdapter;
+
+    invoke-virtual {v0, p1, p2}, Lcom/google/gson/TypeAdapter;->write(Lcom/google/gson/stream/c;Ljava/lang/Object;)V
+
+    return-void
+.end method

@@ -1,0 +1,92 @@
+.class public final synthetic Lcom/twitter/rooms/ui/core/invite/s;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lkotlin/jvm/functions/Function1;
+
+
+# instance fields
+.field public final synthetic a:Lcom/twitter/rooms/subsystem/api/args/RoomInviteFragmentContentViewArgs;
+
+.field public final synthetic b:Z
+
+
+# direct methods
+.method public synthetic constructor <init>(Lcom/twitter/rooms/subsystem/api/args/RoomInviteFragmentContentViewArgs;Z)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/twitter/rooms/ui/core/invite/s;->a:Lcom/twitter/rooms/subsystem/api/args/RoomInviteFragmentContentViewArgs;
+
+    iput-boolean p2, p0, Lcom/twitter/rooms/ui/core/invite/s;->b:Z
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 20
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p1
+
+    check-cast v1, Lcom/twitter/rooms/ui/core/invite/z;
+
+    sget-object v2, Lcom/twitter/rooms/ui/core/invite/RoomInviteViewModel;->Companion:Lcom/twitter/rooms/ui/core/invite/RoomInviteViewModel$l;
+
+    const-string v2, "$this$setState"
+
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    iget-object v3, v0, Lcom/twitter/rooms/ui/core/invite/s;->a:Lcom/twitter/rooms/subsystem/api/args/RoomInviteFragmentContentViewArgs;
+
+    invoke-virtual {v3}, Lcom/twitter/rooms/subsystem/api/args/RoomInviteFragmentContentViewArgs;->getInviteType()Lcom/twitter/rooms/model/helpers/q;
+
+    move-result-object v2
+
+    invoke-virtual {v3}, Lcom/twitter/rooms/subsystem/api/args/RoomInviteFragmentContentViewArgs;->getMaxInvites()Ljava/lang/Integer;
+
+    move-result-object v4
+
+    const/16 v17, 0x0
+
+    const/16 v18, 0x0
+
+    const/4 v3, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    iget-boolean v8, v0, Lcom/twitter/rooms/ui/core/invite/s;->b:Z
+
+    const/4 v9, 0x0
+
+    const/4 v10, 0x0
+
+    const/4 v11, 0x0
+
+    const/4 v12, 0x0
+
+    const/4 v13, 0x0
+
+    const/4 v14, 0x0
+
+    const/4 v15, 0x0
+
+    const/16 v16, 0x0
+
+    const v19, 0x3ff75
+
+    invoke-static/range {v1 .. v19}, Lcom/twitter/rooms/ui/core/invite/z;->a(Lcom/twitter/rooms/ui/core/invite/z;Lcom/twitter/rooms/model/helpers/q;Ljava/util/List;Ljava/lang/Integer;ZLjava/util/Set;Ljava/util/List;ZLjava/util/Set;Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;ZII)Lcom/twitter/rooms/ui/core/invite/z;
+
+    move-result-object v1
+
+    return-object v1
+.end method

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.gms.ads.nativead.NativeAdView android:id="@id/gms_native_view" android:layout_width="match_parent" android:layout_height="match_parent">
+        <com.twitter.tweetview.core.TweetView android:id="@id/row" android:layout_width="match_parent" android:layout_height="match_parent" style="@style/TweetView.Immersive.NativeAds" />
+    </com.google.android.gms.ads.nativead.NativeAdView>
+</FrameLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.ui.components.text.legacy.TypefacesTextView android:textSize="@dimen/font_size_xsmall" android:gravity="center" android:paddingTop="@dimen/space_2" android:paddingBottom="@dimen/space_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:paddingStart="@dimen/space_4" android:paddingEnd="@dimen/space_4"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <tag android:value="CommunityBadge" android:id="@id/weaverComponent" />
+</com.twitter.ui.components.text.legacy.TypefacesTextView>

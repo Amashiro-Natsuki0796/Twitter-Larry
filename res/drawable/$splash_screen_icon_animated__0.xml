@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="432.0dp" android:width="432.0dp" android:viewportWidth="288.0" android:viewportHeight="288.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <group android:name="x_logo_group" android:pivotX="144.0" android:pivotY="144.0">
+        <path android:name="x_logo_path" android:fillColor="#ffffff" android:pathData="M176.23,94.5H192.02L156.35,136.43L199.5,193.5H165.71L139.24,158.89L109.46,193.5H92.18L131.4,148.65L90,94.5H124.64L148.56,126.13L176.23,94.5ZM170.34,183.45H179.64L119.6,104.03H109.6L170.34,183.45Z" android:fillType="evenOdd" />
+    </group>
+</vector>

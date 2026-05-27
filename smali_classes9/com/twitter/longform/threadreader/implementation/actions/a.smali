@@ -1,0 +1,27 @@
+.class public abstract Lcom/twitter/longform/threadreader/implementation/actions/a;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/twitter/longform/threadreader/implementation/actions/a$a;,
+        Lcom/twitter/longform/threadreader/implementation/actions/a$b;,
+        Lcom/twitter/longform/threadreader/implementation/actions/a$c;,
+        Lcom/twitter/longform/threadreader/implementation/actions/a$d;,
+        Lcom/twitter/longform/threadreader/implementation/actions/a$e;,
+        Lcom/twitter/longform/threadreader/implementation/actions/a$f;,
+        Lcom/twitter/longform/threadreader/implementation/actions/a$g;
+    }
+.end annotation
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method

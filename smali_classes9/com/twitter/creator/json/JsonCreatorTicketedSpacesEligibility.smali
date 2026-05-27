@@ -1,0 +1,92 @@
+.class public final Lcom/twitter/creator/json/JsonCreatorTicketedSpacesEligibility;
+.super Lcom/twitter/model/json/common/m;
+.source "SourceFile"
+
+
+# annotations
+.annotation build Lcom/bluelinelabs/logansquare/annotation/JsonObject;
+    fieldNamingPolicy = .enum Lcom/bluelinelabs/logansquare/annotation/JsonObject$FieldNamingPolicy;->LOWER_CASE_WITH_UNDERSCORES:Lcom/bluelinelabs/logansquare/annotation/JsonObject$FieldNamingPolicy;
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/twitter/model/json/common/m<",
+        "Lcom/twitter/creator/model/f$a;",
+        ">;"
+    }
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0008\u0007\u0018\u00002\u0008\u0012\u0004\u0012\u00020\u00020\u0001B\u0007\u00a2\u0006\u0004\u0008\u0003\u0010\u0004\u00a8\u0006\u0005"
+    }
+    d2 = {
+        "Lcom/twitter/creator/json/JsonCreatorTicketedSpacesEligibility;",
+        "Lcom/twitter/model/json/common/m;",
+        "Lcom/twitter/creator/model/f$a;",
+        "<init>",
+        "()V",
+        "subsystem.tfa.creator.json_release"
+    }
+    k = 0x1
+    mv = {
+        0x2,
+        0x1,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# instance fields
+.field public a:Ljava/lang/Object;
+    .annotation build Lcom/bluelinelabs/logansquare/annotation/JsonField;
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 1
+
+    invoke-direct {p0}, Lcom/twitter/model/json/common/m;-><init>()V
+
+    sget-object v0, Lkotlin/collections/EmptyList;->a:Lkotlin/collections/EmptyList;
+
+    iput-object v0, p0, Lcom/twitter/creator/json/JsonCreatorTicketedSpacesEligibility;->a:Ljava/lang/Object;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final r()Ljava/lang/Object;
+    .locals 3
+
+    new-instance v0, Lcom/twitter/creator/model/f$a;
+
+    iget-object v1, p0, Lcom/twitter/creator/json/JsonCreatorTicketedSpacesEligibility;->a:Ljava/lang/Object;
+
+    const-string v2, "audioSpacesSellerEligibility"
+
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    sget-object v2, Lcom/twitter/creator/model/f$b;->Followers:Lcom/twitter/creator/model/f$b;
+
+    invoke-interface {v1, v2}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+
+    sget-object v2, Lcom/twitter/creator/model/f$b;->Age:Lcom/twitter/creator/model/f$b;
+
+    invoke-interface {v1, v2}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sget-object v2, Lcom/twitter/creator/model/f$b;->Spaces:Lcom/twitter/creator/model/f$b;
+
+    invoke-interface {v1, v2}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+
+    return-object v0
+.end method

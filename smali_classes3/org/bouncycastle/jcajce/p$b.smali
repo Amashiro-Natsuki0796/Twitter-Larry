@@ -1,0 +1,98 @@
+.class public final Lorg/bouncycastle/jcajce/p$b;
+.super Ljava/security/cert/X509CRLSelector;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lorg/bouncycastle/jcajce/p;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x9
+    name = "b"
+.end annotation
+
+
+# instance fields
+.field public final a:Lorg/bouncycastle/jcajce/p;
+
+
+# direct methods
+.method public constructor <init>(Lorg/bouncycastle/jcajce/p;)V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/security/cert/X509CRLSelector;-><init>()V
+
+    iput-object p1, p0, Lorg/bouncycastle/jcajce/p$b;->a:Lorg/bouncycastle/jcajce/p;
+
+    iget-object p1, p1, Lorg/bouncycastle/jcajce/p;->a:Ljava/security/cert/CRLSelector;
+
+    instance-of v0, p1, Ljava/security/cert/X509CRLSelector;
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Ljava/security/cert/X509CRLSelector;
+
+    invoke-virtual {p1}, Ljava/security/cert/X509CRLSelector;->getCertificateChecking()Ljava/security/cert/X509Certificate;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Ljava/security/cert/X509CRLSelector;->setCertificateChecking(Ljava/security/cert/X509Certificate;)V
+
+    invoke-virtual {p1}, Ljava/security/cert/X509CRLSelector;->getDateAndTime()Ljava/util/Date;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Ljava/security/cert/X509CRLSelector;->setDateAndTime(Ljava/util/Date;)V
+
+    invoke-virtual {p1}, Ljava/security/cert/X509CRLSelector;->getIssuers()Ljava/util/Collection;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Ljava/security/cert/X509CRLSelector;->setIssuers(Ljava/util/Collection;)V
+
+    invoke-virtual {p1}, Ljava/security/cert/X509CRLSelector;->getMinCRL()Ljava/math/BigInteger;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Ljava/security/cert/X509CRLSelector;->setMinCRLNumber(Ljava/math/BigInteger;)V
+
+    invoke-virtual {p1}, Ljava/security/cert/X509CRLSelector;->getMaxCRL()Ljava/math/BigInteger;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Ljava/security/cert/X509CRLSelector;->setMaxCRLNumber(Ljava/math/BigInteger;)V
+
+    :cond_0
+    return-void
+.end method
+
+
+# virtual methods
+.method public final match(Ljava/security/cert/CRL;)Z
+    .locals 1
+
+    iget-object v0, p0, Lorg/bouncycastle/jcajce/p$b;->a:Lorg/bouncycastle/jcajce/p;
+
+    if-nez v0, :cond_1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {v0, p1}, Lorg/bouncycastle/jcajce/p;->match(Ljava/security/cert/CRL;)Z
+
+    move-result p1
+
+    :goto_0
+    return p1
+.end method

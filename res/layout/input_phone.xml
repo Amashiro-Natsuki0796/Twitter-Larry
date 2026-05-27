@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.hbb20.CountryCodePicker android:id="@id/country_code_picker" android:layout_width="wrap_content" android:layout_height="wrap_content" app:ccpDialog_backgroundColor="@color/cell_background" app:ccpDialog_textColor="@color/primary_text" app:ccp_arrowColor="@color/primary_text" app:ccp_autoDetectCountry="true" app:ccp_contentColor="@color/primary_text" />
+    <EditText android:textColor="@color/primary_text" android:id="@id/edit_phone_number" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/x_lite_phone_header" android:singleLine="true" android:inputType="phone" android:autofillHints="@null" />
+</LinearLayout>

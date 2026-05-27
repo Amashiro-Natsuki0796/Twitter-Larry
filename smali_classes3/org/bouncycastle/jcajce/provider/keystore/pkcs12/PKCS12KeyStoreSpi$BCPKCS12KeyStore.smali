@@ -1,0 +1,40 @@
+.class public Lorg/bouncycastle/jcajce/provider/keystore/pkcs12/PKCS12KeyStoreSpi$BCPKCS12KeyStore;
+.super Lorg/bouncycastle/jcajce/provider/keystore/util/AdaptingKeyStoreSpi;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lorg/bouncycastle/jcajce/provider/keystore/pkcs12/PKCS12KeyStoreSpi;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x9
+    name = "BCPKCS12KeyStore"
+.end annotation
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 5
+
+    new-instance v0, Lorg/bouncycastle/jcajce/util/a;
+
+    invoke-direct {v0}, Lorg/bouncycastle/jcajce/util/a;-><init>()V
+
+    new-instance v1, Lorg/bouncycastle/jcajce/provider/keystore/pkcs12/PKCS12KeyStoreSpi;
+
+    new-instance v2, Lorg/bouncycastle/jcajce/util/a;
+
+    invoke-direct {v2}, Lorg/bouncycastle/jcajce/util/a;-><init>()V
+
+    sget-object v3, Lorg/bouncycastle/asn1/pkcs/p;->v2:Lorg/bouncycastle/asn1/t;
+
+    sget-object v4, Lorg/bouncycastle/asn1/pkcs/p;->A2:Lorg/bouncycastle/asn1/t;
+
+    invoke-direct {v1, v2, v3, v4}, Lorg/bouncycastle/jcajce/provider/keystore/pkcs12/PKCS12KeyStoreSpi;-><init>(Lorg/bouncycastle/jcajce/util/c;Lorg/bouncycastle/asn1/t;Lorg/bouncycastle/asn1/t;)V
+
+    invoke-direct {p0, v0, v1}, Lorg/bouncycastle/jcajce/provider/keystore/util/AdaptingKeyStoreSpi;-><init>(Lorg/bouncycastle/jcajce/util/c;Ljava/security/KeyStoreSpi;)V
+
+    return-void
+.end method

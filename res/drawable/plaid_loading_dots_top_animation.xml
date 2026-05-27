@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list android:oneshot="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="600" android:drawable="@drawable/plaid_loading_dots" />
+    <item android:duration="150" android:drawable="@drawable/plaid_loading_dots_top_1" />
+    <item android:duration="150" android:drawable="@drawable/plaid_loading_dots_top_2" />
+    <item android:duration="150" android:drawable="@drawable/plaid_loading_dots_top_3" />
+    <item android:duration="150" android:drawable="@drawable/plaid_loading_dots_top_4" />
+</animation-list>

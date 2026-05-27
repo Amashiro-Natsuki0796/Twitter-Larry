@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:id="@id/camera_review" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" app:cardBackgroundColor="@android:color/transparent" app:cardCornerRadius="@dimen/media_corner_radius" app:cardElevation="0.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.twitter.media.av.autoplay.ui.VideoContainerHost android:id="@id/video_container_host" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" />
+    <com.twitter.media.ui.fresco.FrescoMediaImageView android:id="@id/image_preview" android:layout_width="match_parent" android:layout_height="match_parent" />
+</androidx.cardview.widget.CardView>

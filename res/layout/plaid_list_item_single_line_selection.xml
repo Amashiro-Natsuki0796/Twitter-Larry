@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="@dimen/plaid_list_item_size"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RadioButton android:id="@id/radiobutton" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/plaid_space_1x" android:buttonTint="@color/plaid_compound_button_background" />
+    <TextView android:textColor="@drawable/plaid_tertiary_button_text_color" android:gravity="center_vertical" android:id="@id/value" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="@dimen/plaid_space_2x" android:layout_marginEnd="@dimen/plaid_space_2x" style="@style/PlaidText.H5.Regular" />
+    <TextView android:gravity="center_vertical" android:id="@id/descriptor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/plaid_space_1x" style="@style/PlaidText.B2.Regular" />
+</merge>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/sports_link_group" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.twitter.ui.widget.TintableImageView android:id="@id/sports_badge" android:layout_width="?tweetViewUserImageSize" android:layout_height="16.0dp" android:layout_marginTop="@dimen/social_context_badge_padding" android:src="@drawable/ic_search_hint" android:scaleType="fitEnd" android:tint="@color/blue_500" android:layout_marginEnd="@dimen/tweet_avatar_start_margin" />
+        <com.twitter.ui.widget.UnpaddedTypefacesTextView android:textSize="@dimen/font_size_small" android:textStyle="bold" android:textColor="@color/blue_500" android:id="@id/sports_link_text" android:paddingTop="@dimen/space_12" android:paddingBottom="@dimen/space_2" android:duplicateParentState="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:importantForAccessibility="no" />
+    </LinearLayout>
+    <com.twitter.ui.widget.TintableImageView android:layout_gravity="center_vertical" android:id="@id/sports_link_dot_divider" android:paddingTop="@dimen/space_12" android:paddingBottom="@dimen/space_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_dot_divider" android:tint="@color/blue_500" android:importantForAccessibility="no" android:paddingStart="@dimen/space_4" android:paddingEnd="@dimen/space_4" />
+    <com.twitter.ui.widget.UnpaddedTypefacesTextView android:textSize="@dimen/font_size_small" android:textStyle="bold" android:textColor="?textColorPrimary" android:id="@id/sports_game_status" android:paddingTop="@dimen/space_12" android:paddingBottom="@dimen/space_2" android:duplicateParentState="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:importantForAccessibility="no" />
+    <tag android:value="SportsLink" android:id="@id/weaverComponent" />
+</LinearLayout>

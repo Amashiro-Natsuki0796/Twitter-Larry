@@ -1,0 +1,117 @@
+.class public final Landroidx/compose/foundation/interaction/p$a;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lkotlinx/coroutines/flow/h;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Landroidx/compose/foundation/interaction/p;->invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;",
+        "Lkotlinx/coroutines/flow/h;"
+    }
+.end annotation
+
+
+# instance fields
+.field public final synthetic a:Ljava/util/ArrayList;
+
+.field public final synthetic b:Landroidx/compose/runtime/f2;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroidx/compose/runtime/f2<",
+            "Ljava/lang/Boolean;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>(Landroidx/compose/runtime/f2;Ljava/util/ArrayList;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p2, p0, Landroidx/compose/foundation/interaction/p$a;->a:Ljava/util/ArrayList;
+
+    iput-object p1, p0, Landroidx/compose/foundation/interaction/p$a;->b:Landroidx/compose/runtime/f2;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final emit(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 1
+
+    check-cast p1, Landroidx/compose/foundation/interaction/k;
+
+    instance-of p2, p1, Landroidx/compose/foundation/interaction/o$b;
+
+    iget-object v0, p0, Landroidx/compose/foundation/interaction/p$a;->a:Ljava/util/ArrayList;
+
+    if-eqz p2, :cond_0
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :cond_0
+    instance-of p2, p1, Landroidx/compose/foundation/interaction/o$c;
+
+    if-eqz p2, :cond_1
+
+    check-cast p1, Landroidx/compose/foundation/interaction/o$c;
+
+    iget-object p1, p1, Landroidx/compose/foundation/interaction/o$c;->a:Landroidx/compose/foundation/interaction/o$b;
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :cond_1
+    instance-of p2, p1, Landroidx/compose/foundation/interaction/o$a;
+
+    if-eqz p2, :cond_2
+
+    check-cast p1, Landroidx/compose/foundation/interaction/o$a;
+
+    iget-object p1, p1, Landroidx/compose/foundation/interaction/o$a;->a:Landroidx/compose/foundation/interaction/o$b;
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+
+    :cond_2
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result p1
+
+    xor-int/lit8 p1, p1, 0x1
+
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    iget-object p2, p0, Landroidx/compose/foundation/interaction/p$a;->b:Landroidx/compose/runtime/f2;
+
+    invoke-interface {p2, p1}, Landroidx/compose/runtime/f2;->setValue(Ljava/lang/Object;)V
+
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
+
+    return-object p1
+.end method

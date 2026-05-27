@@ -1,0 +1,111 @@
+.class public final Lcom/twitter/timeline/itembinder/ui/GenericTimelineItemViewViewModel;
+.super Lcom/twitter/weaver/mvi/MviViewModel;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/twitter/weaver/mvi/MviViewModel<",
+        "Ljava/lang/Object;",
+        "Ljava/lang/Object;",
+        "Ljava/lang/Object;",
+        ">;"
+    }
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000\u000e\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\u0008\u0007\u0018\u00002\u0014\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u00020\u0001\u00a8\u0006\u0003"
+    }
+    d2 = {
+        "Lcom/twitter/timeline/itembinder/ui/GenericTimelineItemViewViewModel;",
+        "Lcom/twitter/weaver/mvi/MviViewModel;",
+        "",
+        "subsystem.tfa.timeline.core_release"
+    }
+    k = 0x1
+    mv = {
+        0x2,
+        0x1,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+.annotation build Lkotlin/jvm/internal/SourceDebugExtension;
+.end annotation
+
+
+# static fields
+.field public static final synthetic l:[Lkotlin/reflect/KProperty;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "[",
+            "Lkotlin/reflect/KProperty<",
+            "Ljava/lang/Object;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 5
+
+    new-instance v0, Lkotlin/jvm/internal/PropertyReference1Impl;
+
+    const-string v1, "getIntents()Lcom/twitter/weaver/mvi/dsl/MviIntentTransformerBuilder;"
+
+    const/4 v2, 0x0
+
+    const-class v3, Lcom/twitter/timeline/itembinder/ui/GenericTimelineItemViewViewModel;
+
+    const-string v4, "intents"
+
+    invoke-direct {v0, v3, v4, v1, v2}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    sget-object v1, Lkotlin/jvm/internal/Reflection;->a:Lkotlin/jvm/internal/ReflectionFactory;
+
+    invoke-virtual {v1, v0}, Lkotlin/jvm/internal/ReflectionFactory;->j(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/reflect/KProperty1;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    new-array v1, v1, [Lkotlin/reflect/KProperty;
+
+    aput-object v0, v1, v2
+
+    sput-object v1, Lcom/twitter/timeline/itembinder/ui/GenericTimelineItemViewViewModel;->l:[Lkotlin/reflect/KProperty;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final s()Lcom/twitter/weaver/mvi/dsl/e;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/twitter/weaver/mvi/dsl/e<",
+            "Ljava/lang/Object;",
+            ">;"
+        }
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+
+    sget-object v0, Lcom/twitter/timeline/itembinder/ui/GenericTimelineItemViewViewModel;->l:[Lkotlin/reflect/KProperty;
+
+    const/4 v1, 0x0
+
+    aget-object v0, v0, v1
+
+    const/4 v0, 0x0
+
+    throw v0
+.end method

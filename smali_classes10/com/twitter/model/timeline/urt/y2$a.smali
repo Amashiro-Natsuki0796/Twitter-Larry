@@ -1,0 +1,84 @@
+.class public final Lcom/twitter/model/timeline/urt/y2$a;
+.super Lcom/twitter/util/object/o;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/twitter/model/timeline/urt/y2;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = "a"
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/twitter/util/object/o<",
+        "Lcom/twitter/model/timeline/urt/y2;",
+        ">;"
+    }
+.end annotation
+
+
+# instance fields
+.field public a:Ljava/lang/String;
+    .annotation build Lorg/jetbrains/annotations/b;
+    .end annotation
+.end field
+
+.field public b:Ljava/lang/String;
+    .annotation build Lorg/jetbrains/annotations/b;
+    .end annotation
+.end field
+
+.field public c:I
+
+
+# virtual methods
+.method public final i()Ljava/lang/Object;
+    .locals 2
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+
+    new-instance v0, Lcom/twitter/model/timeline/urt/y2;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iget-object v1, p0, Lcom/twitter/model/timeline/urt/y2$a;->a:Ljava/lang/String;
+
+    invoke-static {v1}, Lcom/twitter/util/object/m;->b(Ljava/lang/Object;)V
+
+    iget-object v1, p0, Lcom/twitter/model/timeline/urt/y2$a;->b:Ljava/lang/String;
+
+    invoke-static {v1}, Lcom/twitter/util/object/m;->b(Ljava/lang/Object;)V
+
+    return-object v0
+.end method
+
+.method public final k()Z
+    .locals 1
+
+    iget-object v0, p0, Lcom/twitter/model/timeline/urt/y2$a;->a:Ljava/lang/String;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/twitter/model/timeline/urt/y2$a;->b:Ljava/lang/String;
+
+    if-eqz v0, :cond_0
+
+    iget v0, p0, Lcom/twitter/model/timeline/urt/y2$a;->c:I
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+.end method

@@ -1,0 +1,50 @@
+.class public final Lcom/twitter/tweetview/core/ui/socialcontext/SocialContextEducationDelegateBinder;
+.super Lcom/twitter/tweetview/core/ui/socialcontext/BaseSocialContextDelegateBinder;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/twitter/tweetview/core/ui/socialcontext/BaseSocialContextDelegateBinder<",
+        "Lcom/twitter/tweetview/core/ui/socialcontext/h;",
+        ">;"
+    }
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000\u000e\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\u0008\u0007\u0018\u00002\u0008\u0012\u0004\u0012\u00020\u00020\u0001\u00a8\u0006\u0003"
+    }
+    d2 = {
+        "Lcom/twitter/tweetview/core/ui/socialcontext/SocialContextEducationDelegateBinder;",
+        "Lcom/twitter/tweetview/core/ui/socialcontext/BaseSocialContextDelegateBinder;",
+        "Lcom/twitter/tweetview/core/ui/socialcontext/h;",
+        "subsystem.tfa.tweet-view.core_release"
+    }
+    k = 0x1
+    mv = {
+        0x2,
+        0x1,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# direct methods
+.method public constructor <init>(Lcom/twitter/tweetview/core/ui/socialcontext/i;)V
+    .locals 1
+    .param p1    # Lcom/twitter/tweetview/core/ui/socialcontext/i;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+
+    const-string v0, "socialContextHelper"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-direct {p0, p1}, Lcom/twitter/tweetview/core/ui/socialcontext/BaseSocialContextDelegateBinder;-><init>(Lcom/twitter/tweetview/core/ui/socialcontext/i;)V
+
+    return-void
+.end method

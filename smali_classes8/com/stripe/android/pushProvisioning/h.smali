@@ -1,0 +1,11 @@
+.class public interface abstract Lcom/stripe/android/pushProvisioning/h;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Landroid/os/Parcelable;
+
+
+# virtual methods
+.method public abstract p0(Lcom/stripe/android/pushProvisioning/c;)V
+.end method

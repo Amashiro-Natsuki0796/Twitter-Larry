@@ -1,0 +1,39 @@
+.class public final synthetic Lcom/x/payments/screens/home/card/details/component/b;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lkotlin/jvm/functions/Function1;
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
+
+    check-cast p1, Lcom/x/payments/screens/home/card/details/component/PaymentCardDetailsState;
+
+    if-nez p1, :cond_0
+
+    new-instance p1, Lcom/x/payments/screens/home/card/details/component/PaymentCardDetailsState;
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    const/4 v1, 0x0
+
+    const/4 v4, 0x7
+
+    const/4 v5, 0x0
+
+    move-object v0, p1
+
+    invoke-direct/range {v0 .. v5}, Lcom/x/payments/screens/home/card/details/component/PaymentCardDetailsState;-><init>(Ljava/lang/String;Lcom/x/payments/models/PaymentMethod$CreditCard;Lcom/x/payments/screens/home/card/details/component/PaymentCardDetailsState$DetailsStatus;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+
+    :cond_0
+    invoke-static {p1}, Lkotlinx/coroutines/flow/q2;->a(Ljava/lang/Object;)Lkotlinx/coroutines/flow/p2;
+
+    move-result-object p1
+
+    return-object p1
+.end method

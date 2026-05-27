@@ -1,0 +1,31 @@
+.class public final Ltv/periscope/android/view/y;
+.super Ltv/periscope/android/view/g1;
+.source "SourceFile"
+
+
+# instance fields
+.field public final synthetic a:Ltv/periscope/android/view/z;
+
+
+# direct methods
+.method public constructor <init>(Ltv/periscope/android/view/z;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ltv/periscope/android/view/y;->a:Ltv/periscope/android/view/z;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 0
+
+    iget-object p1, p0, Ltv/periscope/android/view/y;->a:Ltv/periscope/android/view/z;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-void
+.end method

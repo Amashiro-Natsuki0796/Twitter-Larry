@@ -1,0 +1,59 @@
+.class public abstract Lcom/twitter/model/communities/b0;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/twitter/model/communities/b0$a;,
+        Lcom/twitter/model/communities/b0$b;,
+        Lcom/twitter/model/communities/b0$c;,
+        Lcom/twitter/model/communities/b0$d;,
+        Lcom/twitter/model/communities/b0$e;,
+        Lcom/twitter/model/communities/b0$f;
+    }
+.end annotation
+
+
+# static fields
+.field public static final Companion:Lcom/twitter/model/communities/b0$f;
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+.end field
+
+.field public static final a:Lcom/twitter/model/communities/b0$c;
+    .annotation build Lkotlin/jvm/JvmField;
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+.end field
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lcom/twitter/model/communities/b0$f;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lcom/twitter/model/communities/b0;->Companion:Lcom/twitter/model/communities/b0$f;
+
+    new-instance v0, Lcom/twitter/model/communities/b0$c;
+
+    invoke-direct {v0}, Lcom/twitter/util/serialization/serializer/g;-><init>()V
+
+    sput-object v0, Lcom/twitter/model/communities/b0;->a:Lcom/twitter/model/communities/b0$c;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method

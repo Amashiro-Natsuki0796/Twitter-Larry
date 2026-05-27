@@ -1,0 +1,385 @@
+.class public final Landroidx/room/p0$i$a;
+.super Lkotlin/coroutines/jvm/internal/SuspendLambda;
+.source "SourceFile"
+
+# interfaces
+.implements Lkotlin/jvm/functions/Function2;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Landroidx/room/p0$i;->invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lkotlin/coroutines/jvm/internal/SuspendLambda;",
+        "Lkotlin/jvm/functions/Function2<",
+        "Landroidx/room/l1;",
+        "Lkotlin/coroutines/Continuation<",
+        "-",
+        "Lkotlin/Unit;",
+        ">;",
+        "Ljava/lang/Object;",
+        ">;"
+    }
+.end annotation
+
+.annotation runtime Lkotlin/coroutines/jvm/internal/DebugMetadata;
+    c = "androidx.room.RoomDatabase$performClear$1$1"
+    f = "RoomDatabase.android.kt"
+    l = {
+        0x214,
+        0x215,
+        0x217,
+        0x21d,
+        0x21e,
+        0x21f
+    }
+    m = "invokeSuspend"
+.end annotation
+
+
+# instance fields
+.field public q:I
+
+.field public synthetic r:Ljava/lang/Object;
+
+.field public final synthetic s:Landroidx/room/p0;
+
+.field public final synthetic x:Z
+
+.field public final synthetic y:[Ljava/lang/String;
+
+
+# direct methods
+.method public constructor <init>(Landroidx/room/p0;Z[Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroidx/room/p0;",
+            "Z[",
+            "Ljava/lang/String;",
+            "Lkotlin/coroutines/Continuation<",
+            "-",
+            "Landroidx/room/p0$i$a;",
+            ">;)V"
+        }
+    .end annotation
+
+    iput-object p1, p0, Landroidx/room/p0$i$a;->s:Landroidx/room/p0;
+
+    iput-boolean p2, p0, Landroidx/room/p0$i$a;->x:Z
+
+    iput-object p3, p0, Landroidx/room/p0$i$a;->y:[Ljava/lang/String;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p4}, Lkotlin/coroutines/jvm/internal/SuspendLambda;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final create(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Object;",
+            "Lkotlin/coroutines/Continuation<",
+            "*>;)",
+            "Lkotlin/coroutines/Continuation<",
+            "Lkotlin/Unit;",
+            ">;"
+        }
+    .end annotation
+
+    new-instance v0, Landroidx/room/p0$i$a;
+
+    iget-boolean v1, p0, Landroidx/room/p0$i$a;->x:Z
+
+    iget-object v2, p0, Landroidx/room/p0$i$a;->y:[Ljava/lang/String;
+
+    iget-object v3, p0, Landroidx/room/p0$i$a;->s:Landroidx/room/p0;
+
+    invoke-direct {v0, v3, v1, v2, p2}, Landroidx/room/p0$i$a;-><init>(Landroidx/room/p0;Z[Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Landroidx/room/p0$i$a;->r:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Landroidx/room/l1;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Landroidx/room/p0$i$a;->create(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Landroidx/room/p0$i$a;
+
+    sget-object p2, Lkotlin/Unit;->a:Lkotlin/Unit;
+
+    invoke-virtual {p1, p2}, Landroidx/room/p0$i$a;->invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
+
+    sget-object v0, Lkotlin/coroutines/intrinsics/CoroutineSingletons;->COROUTINE_SUSPENDED:Lkotlin/coroutines/intrinsics/CoroutineSingletons;
+
+    iget v1, p0, Landroidx/room/p0$i$a;->q:I
+
+    const/4 v2, 0x0
+
+    iget-object v3, p0, Landroidx/room/p0$i$a;->s:Landroidx/room/p0;
+
+    packed-switch v1, :pswitch_data_0
+
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :pswitch_0
+    invoke-static {p1}, Lkotlin/ResultKt;->b(Ljava/lang/Object;)V
+
+    goto/16 :goto_5
+
+    :pswitch_1
+    iget-object v1, p0, Landroidx/room/p0$i$a;->r:Ljava/lang/Object;
+
+    check-cast v1, Landroidx/room/l1;
+
+    invoke-static {p1}, Lkotlin/ResultKt;->b(Ljava/lang/Object;)V
+
+    goto/16 :goto_4
+
+    :pswitch_2
+    iget-object v1, p0, Landroidx/room/p0$i$a;->r:Ljava/lang/Object;
+
+    check-cast v1, Landroidx/room/l1;
+
+    invoke-static {p1}, Lkotlin/ResultKt;->b(Ljava/lang/Object;)V
+
+    goto :goto_3
+
+    :pswitch_3
+    iget-object v1, p0, Landroidx/room/p0$i$a;->r:Ljava/lang/Object;
+
+    check-cast v1, Landroidx/room/l1;
+
+    invoke-static {p1}, Lkotlin/ResultKt;->b(Ljava/lang/Object;)V
+
+    goto :goto_2
+
+    :pswitch_4
+    iget-object v1, p0, Landroidx/room/p0$i$a;->r:Ljava/lang/Object;
+
+    check-cast v1, Landroidx/room/l1;
+
+    invoke-static {p1}, Lkotlin/ResultKt;->b(Ljava/lang/Object;)V
+
+    goto :goto_1
+
+    :pswitch_5
+    iget-object v1, p0, Landroidx/room/p0$i$a;->r:Ljava/lang/Object;
+
+    check-cast v1, Landroidx/room/l1;
+
+    invoke-static {p1}, Lkotlin/ResultKt;->b(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :pswitch_6
+    invoke-static {p1}, Lkotlin/ResultKt;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Landroidx/room/p0$i$a;->r:Ljava/lang/Object;
+
+    check-cast p1, Landroidx/room/l1;
+
+    iput-object p1, p0, Landroidx/room/p0$i$a;->r:Ljava/lang/Object;
+
+    const/4 v1, 0x1
+
+    iput v1, p0, Landroidx/room/p0$i$a;->q:I
+
+    invoke-interface {p1, p0}, Landroidx/room/l1;->d(Lkotlin/coroutines/Continuation;)Ljava/lang/Boolean;
+
+    move-result-object v1
+
+    if-ne v1, v0, :cond_0
+
+    return-object v0
+
+    :cond_0
+    move-object v7, v1
+
+    move-object v1, p1
+
+    move-object p1, v7
+
+    :goto_0
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    if-nez p1, :cond_1
+
+    invoke-virtual {v3}, Landroidx/room/p0;->getInvalidationTracker()Landroidx/room/v;
+
+    move-result-object p1
+
+    iput-object v1, p0, Landroidx/room/p0$i$a;->r:Ljava/lang/Object;
+
+    const/4 v4, 0x2
+
+    iput v4, p0, Landroidx/room/p0$i$a;->q:I
+
+    invoke-virtual {p1, p0}, Landroidx/room/v;->d(Lkotlin/coroutines/jvm/internal/SuspendLambda;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v0, :cond_1
+
+    return-object v0
+
+    :cond_1
+    :goto_1
+    sget-object p1, Landroidx/room/l1$a;->IMMEDIATE:Landroidx/room/l1$a;
+
+    new-instance v4, Landroidx/room/p0$i$a$a;
+
+    iget-boolean v5, p0, Landroidx/room/p0$i$a;->x:Z
+
+    iget-object v6, p0, Landroidx/room/p0$i$a;->y:[Ljava/lang/String;
+
+    invoke-direct {v4, v5, v6, v2}, Landroidx/room/p0$i$a$a;-><init>(Z[Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+
+    iput-object v1, p0, Landroidx/room/p0$i$a;->r:Ljava/lang/Object;
+
+    const/4 v5, 0x3
+
+    iput v5, p0, Landroidx/room/p0$i$a;->q:I
+
+    invoke-interface {v1, p1, v4, p0}, Landroidx/room/l1;->b(Landroidx/room/l1$a;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/jvm/internal/SuspendLambda;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_2
+    iput-object v1, p0, Landroidx/room/p0$i$a;->r:Ljava/lang/Object;
+
+    const/4 p1, 0x4
+
+    iput p1, p0, Landroidx/room/p0$i$a;->q:I
+
+    invoke-interface {v1, p0}, Landroidx/room/l1;->d(Lkotlin/coroutines/Continuation;)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    if-ne p1, v0, :cond_3
+
+    return-object v0
+
+    :cond_3
+    :goto_3
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    if-nez p1, :cond_6
+
+    iput-object v1, p0, Landroidx/room/p0$i$a;->r:Ljava/lang/Object;
+
+    const/4 p1, 0x5
+
+    iput p1, p0, Landroidx/room/p0$i$a;->q:I
+
+    const-string p1, "PRAGMA wal_checkpoint(FULL)"
+
+    invoke-static {v1, p1, p0}, Landroidx/room/n1;->a(Landroidx/room/f0;Ljava/lang/String;Lkotlin/coroutines/jvm/internal/ContinuationImpl;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v0, :cond_4
+
+    return-object v0
+
+    :cond_4
+    :goto_4
+    iput-object v2, p0, Landroidx/room/p0$i$a;->r:Ljava/lang/Object;
+
+    const/4 p1, 0x6
+
+    iput p1, p0, Landroidx/room/p0$i$a;->q:I
+
+    const-string p1, "VACUUM"
+
+    invoke-static {v1, p1, p0}, Landroidx/room/n1;->a(Landroidx/room/f0;Ljava/lang/String;Lkotlin/coroutines/jvm/internal/ContinuationImpl;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v0, :cond_5
+
+    return-object v0
+
+    :cond_5
+    :goto_5
+    invoke-virtual {v3}, Landroidx/room/p0;->getInvalidationTracker()Landroidx/room/v;
+
+    move-result-object p1
+
+    iget-object v0, p1, Landroidx/room/v;->g:Landroidx/room/t;
+
+    iget-object v1, p1, Landroidx/room/v;->c:Landroidx/room/q1;
+
+    iget-object p1, p1, Landroidx/room/v;->f:Landroidx/room/s;
+
+    invoke-virtual {v1, p1, v0}, Landroidx/room/q1;->e(Landroidx/room/s;Landroidx/room/t;)V
+
+    :cond_6
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method

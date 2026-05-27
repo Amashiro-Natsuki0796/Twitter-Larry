@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:twitter="http://schemas.android.com/apk/res-auto">
+    <Preference android:selectable="false" android:summary="@string/settings_content_you_see_item_detail" android:order="10" />
+    <Preference android:key="content_you_see_trends_or_explore" android:order="30" />
+    <Preference android:title="@string/search_settings" android:key="content_you_see_search" android:order="40" />
+    <Preference android:title="@string/settings_sensitive_media_title" android:key="content_you_see_display_sensitive_media_settings" android:order="50" twitter:isPreferenceVisible="false" />
+    <com.twitter.ui.widget.TwitterPreferenceCategory android:key="for_you_settings_category" android:order="60" twitter:allowDividerAbove="true" twitter:allowDividerBelow="false" twitter:isPreferenceVisible="false">
+        <com.twitter.settings.widget.LinkableSwitchPreferenceCompat android:title="@string/for_you_recommendations_setting" android:key="content_you_see_allow_for_you_recommendations" android:summary="@string/for_you_recommendations_setting_description" twitter:clickableUrl="@string/settings_for_you_recommendations_learn_more_url" twitter:isPreferenceVisible="false" twitter:multilineTitle="true" />
+    </com.twitter.ui.widget.TwitterPreferenceCategory>
+</PreferenceScreen>

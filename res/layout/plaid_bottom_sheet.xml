@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/plaid_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/plaid_space_4x" android:layout_marginStart="@dimen/plaid_space_4x" android:layout_marginEnd="@dimen/plaid_space_4x" />
+    <TextView android:gravity="start" android:id="@id/plaid_bottom_sheet_title" android:paddingTop="@dimen/plaid_space_2x" android:paddingBottom="@dimen/plaid_space_2x" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/plaid_space_4x" android:paddingEnd="@dimen/plaid_space_4x" style="@style/PlaidText.H2.ExtraBold" />
+    <TextView android:gravity="start" android:id="@id/plaid_bottom_sheet_summary" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/plaid_space_4x" android:paddingEnd="@dimen/plaid_space_4x" style="@style/PlaidText.B1.Regular" />
+    <com.plaid.internal.core.ui_components.PlaidPrimaryButton android:layout_gravity="center" android:id="@id/plaid_bottom_sheet_primary_button" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/plaid_space_4x" android:layout_marginBottom="@dimen/plaid_space_2x" android:layout_marginStart="@dimen/plaid_space_4x" android:layout_marginEnd="@dimen/plaid_space_4x" />
+    <com.plaid.internal.core.ui_components.PlaidSecondaryButton android:layout_gravity="center" android:id="@id/plaid_bottom_sheet_secondary_button" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/plaid_space_2x" android:layout_marginStart="@dimen/plaid_space_4x" android:layout_marginEnd="@dimen/plaid_space_4x" />
+</merge>

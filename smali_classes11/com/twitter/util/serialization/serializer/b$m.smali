@@ -1,0 +1,80 @@
+.class public final Lcom/twitter/util/serialization/serializer/b$m;
+.super Lcom/twitter/util/serialization/serializer/l;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/twitter/util/serialization/serializer/b;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x1
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/twitter/util/serialization/serializer/l<",
+        "Ljava/lang/Short;",
+        ">;"
+    }
+.end annotation
+
+
+# virtual methods
+.method public final d(Lcom/twitter/util/serialization/stream/e;)Ljava/lang/Object;
+    .locals 0
+    .param p1    # Lcom/twitter/util/serialization/stream/e;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;,
+            Ljava/lang/ClassNotFoundException;
+        }
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+
+    invoke-virtual {p1}, Lcom/twitter/util/serialization/stream/e;->F()I
+
+    move-result p1
+
+    int-to-short p1, p1
+
+    invoke-static {p1}, Ljava/lang/Short;->valueOf(S)Ljava/lang/Short;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final e(Lcom/twitter/util/serialization/stream/f;Ljava/lang/Object;)V
+    .locals 0
+    .param p1    # Lcom/twitter/util/serialization/stream/f;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/Object;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    check-cast p2, Ljava/lang/Short;
+
+    invoke-virtual {p2}, Ljava/lang/Short;->shortValue()S
+
+    move-result p2
+
+    invoke-virtual {p1, p2}, Lcom/twitter/util/serialization/stream/f;->F(I)Lcom/twitter/util/serialization/stream/bytebuffer/e;
+
+    return-void
+.end method

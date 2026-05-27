@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.ui.components.button.compose.HorizonComposeButton android:textSize="@dimen/font_size_normal" android:layout_gravity="center_vertical" android:id="@id/quick_promote_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/quick_promote_button_text" style="@style/TwitterButtonMediumPrimaryFilled"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <tag android:value="QuickPromoteButton" android:id="@id/weaverComponent" />
+</com.twitter.ui.components.button.compose.HorizonComposeButton>

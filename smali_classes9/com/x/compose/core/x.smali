@@ -1,0 +1,209 @@
+.class public final Lcom/x/compose/core/x;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lkotlin/jvm/functions/Function2;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Lkotlin/jvm/functions/Function2<",
+        "Landroidx/compose/runtime/n;",
+        "Ljava/lang/Integer;",
+        "Lkotlin/Unit;",
+        ">;"
+    }
+.end annotation
+
+.annotation build Lkotlin/jvm/internal/SourceDebugExtension;
+.end annotation
+
+
+# instance fields
+.field public final synthetic a:Landroidx/compose/ui/m;
+
+.field public final synthetic b:Landroidx/compose/runtime/internal/g;
+
+.field public final synthetic c:Lcom/x/compose/core/r;
+
+
+# direct methods
+.method public constructor <init>(Landroidx/compose/ui/m;Landroidx/compose/runtime/internal/g;Lcom/x/compose/core/r;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/x/compose/core/x;->a:Landroidx/compose/ui/m;
+
+    iput-object p2, p0, Lcom/x/compose/core/x;->b:Landroidx/compose/runtime/internal/g;
+
+    iput-object p3, p0, Lcom/x/compose/core/x;->c:Lcom/x/compose/core/r;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
+
+    check-cast p1, Landroidx/compose/runtime/n;
+
+    check-cast p2, Ljava/lang/Number;
+
+    invoke-virtual {p2}, Ljava/lang/Number;->intValue()I
+
+    move-result p2
+
+    and-int/lit8 p2, p2, 0x3
+
+    const/4 v0, 0x2
+
+    if-ne p2, v0, :cond_1
+
+    invoke-interface {p1}, Landroidx/compose/runtime/n;->b()Z
+
+    move-result p2
+
+    if-nez p2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-interface {p1}, Landroidx/compose/runtime/n;->k()V
+
+    goto/16 :goto_2
+
+    :cond_1
+    :goto_0
+    sget-object p2, Landroidx/compose/ui/e;->Companion:Landroidx/compose/ui/e$a;
+
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object p2, Landroidx/compose/ui/e$a;->b:Landroidx/compose/ui/g;
+
+    const/4 v0, 0x0
+
+    invoke-static {p2, v0}, Landroidx/compose/foundation/layout/q;->d(Landroidx/compose/ui/e;Z)Landroidx/compose/ui/layout/h1;
+
+    move-result-object p2
+
+    invoke-interface {p1}, Landroidx/compose/runtime/n;->c()J
+
+    move-result-wide v1
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v1
+
+    invoke-interface {p1}, Landroidx/compose/runtime/n;->d()Landroidx/compose/runtime/z2;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lcom/x/compose/core/x;->a:Landroidx/compose/ui/m;
+
+    invoke-static {p1, v3}, Landroidx/compose/ui/j;->c(Landroidx/compose/runtime/n;Landroidx/compose/ui/m;)Landroidx/compose/ui/m;
+
+    move-result-object v3
+
+    sget-object v4, Landroidx/compose/ui/node/g;->Companion:Landroidx/compose/ui/node/g$a;
+
+    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v4, Landroidx/compose/ui/node/g$a;->b:Landroidx/compose/ui/node/h0$a;
+
+    invoke-interface {p1}, Landroidx/compose/runtime/n;->y()Landroidx/compose/runtime/d;
+
+    move-result-object v5
+
+    if-eqz v5, :cond_5
+
+    invoke-interface {p1}, Landroidx/compose/runtime/n;->j()V
+
+    invoke-interface {p1}, Landroidx/compose/runtime/n;->w()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_2
+
+    invoke-interface {p1, v4}, Landroidx/compose/runtime/n;->O(Lkotlin/jvm/functions/Function0;)V
+
+    goto :goto_1
+
+    :cond_2
+    invoke-interface {p1}, Landroidx/compose/runtime/n;->e()V
+
+    :goto_1
+    sget-object v4, Landroidx/compose/ui/node/g$a;->g:Landroidx/compose/ui/node/g$a$d;
+
+    invoke-static {p1, p2, v4}, Landroidx/compose/runtime/o5;->a(Landroidx/compose/runtime/n;Ljava/lang/Object;Lkotlin/jvm/functions/Function2;)V
+
+    sget-object p2, Landroidx/compose/ui/node/g$a;->f:Landroidx/compose/ui/node/g$a$f;
+
+    invoke-static {p1, v2, p2}, Landroidx/compose/runtime/o5;->a(Landroidx/compose/runtime/n;Ljava/lang/Object;Lkotlin/jvm/functions/Function2;)V
+
+    sget-object p2, Landroidx/compose/ui/node/g$a;->j:Landroidx/compose/ui/node/g$a$a;
+
+    invoke-interface {p1}, Landroidx/compose/runtime/n;->w()Z
+
+    move-result v2
+
+    if-nez v2, :cond_3
+
+    invoke-interface {p1}, Landroidx/compose/runtime/n;->J()Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    invoke-static {v2, v4}, Lkotlin/jvm/internal/Intrinsics;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_4
+
+    :cond_3
+    invoke-static {v1, p1, v1, p2}, Landroidx/compose/animation/u0;->b(ILandroidx/compose/runtime/n;ILandroidx/compose/ui/node/g$a$a;)V
+
+    :cond_4
+    sget-object p2, Landroidx/compose/ui/node/g$a;->d:Landroidx/compose/ui/node/g$a$e;
+
+    invoke-static {p1, v3, p2}, Landroidx/compose/runtime/o5;->a(Landroidx/compose/runtime/n;Ljava/lang/Object;Lkotlin/jvm/functions/Function2;)V
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p2
+
+    iget-object v0, p0, Lcom/x/compose/core/x;->b:Landroidx/compose/runtime/internal/g;
+
+    invoke-virtual {v0, p1, p2}, Landroidx/compose/runtime/internal/g;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-object p2, p0, Lcom/x/compose/core/x;->c:Lcom/x/compose/core/r;
+
+    invoke-interface {p2}, Lcom/x/compose/core/r;->c()Lcom/x/compose/core/d0;
+
+    move-result-object p2
+
+    const/4 v0, 0x6
+
+    invoke-static {p2, p1, v0}, Lcom/x/compose/core/y;->a(Lcom/x/compose/core/d0;Landroidx/compose/runtime/n;I)V
+
+    invoke-interface {p1}, Landroidx/compose/runtime/n;->g()V
+
+    :goto_2
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
+
+    return-object p1
+
+    :cond_5
+    invoke-static {}, Landroidx/compose/runtime/i;->b()V
+
+    const/4 p1, 0x0
+
+    throw p1
+.end method

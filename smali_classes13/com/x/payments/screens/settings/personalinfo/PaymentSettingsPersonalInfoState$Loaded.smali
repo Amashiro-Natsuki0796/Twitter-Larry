@@ -1,0 +1,926 @@
+.class public final Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = "Loaded"
+.end annotation
+
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded$$serializer;,
+        Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded$Companion;
+    }
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000V\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u0008\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\u0008\u000e\n\u0002\u0010\u000e\n\u0002\u0008\u0004\n\u0002\u0010\u0000\n\u0002\u0008\r\u0008\u0087\u0008\u0018\u0000 62\u00020\u0001:\u000276B3\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012\u0006\u0010\u0007\u001a\u00020\u0006\u0012\u0006\u0010\u0008\u001a\u00020\u0006\u0012\n\u0008\u0002\u0010\n\u001a\u0004\u0018\u00010\t\u00a2\u0006\u0004\u0008\u000b\u0010\u000cBI\u0008\u0010\u0012\u0006\u0010\u000e\u001a\u00020\r\u0012\u0008\u0010\u0003\u001a\u0004\u0018\u00010\u0002\u0012\u0008\u0010\u0005\u001a\u0004\u0018\u00010\u0004\u0012\u0006\u0010\u0007\u001a\u00020\u0006\u0012\u0006\u0010\u0008\u001a\u00020\u0006\u0012\u0008\u0010\n\u001a\u0004\u0018\u00010\t\u0012\u0008\u0010\u0010\u001a\u0004\u0018\u00010\u000f\u00a2\u0006\u0004\u0008\u000b\u0010\u0011J\'\u0010\u001a\u001a\u00020\u00172\u0006\u0010\u0012\u001a\u00020\u00002\u0006\u0010\u0014\u001a\u00020\u00132\u0006\u0010\u0016\u001a\u00020\u0015H\u0001\u00a2\u0006\u0004\u0008\u0018\u0010\u0019J\u0010\u0010\u001b\u001a\u00020\u0002H\u00c6\u0003\u00a2\u0006\u0004\u0008\u001b\u0010\u001cJ\u0010\u0010\u001d\u001a\u00020\u0004H\u00c6\u0003\u00a2\u0006\u0004\u0008\u001d\u0010\u001eJ\u0010\u0010\u001f\u001a\u00020\u0006H\u00c6\u0003\u00a2\u0006\u0004\u0008\u001f\u0010 J\u0010\u0010!\u001a\u00020\u0006H\u00c6\u0003\u00a2\u0006\u0004\u0008!\u0010 J\u0012\u0010\"\u001a\u0004\u0018\u00010\tH\u00c6\u0003\u00a2\u0006\u0004\u0008\"\u0010#JD\u0010$\u001a\u00020\u00002\u0008\u0008\u0002\u0010\u0003\u001a\u00020\u00022\u0008\u0008\u0002\u0010\u0005\u001a\u00020\u00042\u0008\u0008\u0002\u0010\u0007\u001a\u00020\u00062\u0008\u0008\u0002\u0010\u0008\u001a\u00020\u00062\n\u0008\u0002\u0010\n\u001a\u0004\u0018\u00010\tH\u00c6\u0001\u00a2\u0006\u0004\u0008$\u0010%J\u0010\u0010\'\u001a\u00020&H\u00d6\u0001\u00a2\u0006\u0004\u0008\'\u0010(J\u0010\u0010)\u001a\u00020\rH\u00d6\u0001\u00a2\u0006\u0004\u0008)\u0010*J\u001a\u0010-\u001a\u00020\u00062\u0008\u0010,\u001a\u0004\u0018\u00010+H\u00d6\u0003\u00a2\u0006\u0004\u0008-\u0010.R\u0017\u0010\u0003\u001a\u00020\u00028\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0003\u0010/\u001a\u0004\u00080\u0010\u001cR\u0017\u0010\u0005\u001a\u00020\u00048\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0005\u00101\u001a\u0004\u00082\u0010\u001eR\u0017\u0010\u0007\u001a\u00020\u00068\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0007\u00103\u001a\u0004\u0008\u0007\u0010 R\u0017\u0010\u0008\u001a\u00020\u00068\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0008\u00103\u001a\u0004\u0008\u0008\u0010 R\u0019\u0010\n\u001a\u0004\u0018\u00010\t8\u0006\u00a2\u0006\u000c\n\u0004\u0008\n\u00104\u001a\u0004\u00085\u0010#\u00a8\u00068"
+    }
+    d2 = {
+        "Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;",
+        "Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState;",
+        "Lcom/x/payments/models/PaymentCustomerIdentity;",
+        "customerIdentity",
+        "Lcom/x/payments/screens/settings/personalinfo/PaymentCustomerKycStatus;",
+        "kycStatus",
+        "",
+        "isLegalNameEnabled",
+        "isAddressEnabled",
+        "Lcom/x/payments/screens/settings/personalinfo/g;",
+        "pendingEditType",
+        "<init>",
+        "(Lcom/x/payments/models/PaymentCustomerIdentity;Lcom/x/payments/screens/settings/personalinfo/PaymentCustomerKycStatus;ZZLcom/x/payments/screens/settings/personalinfo/g;)V",
+        "",
+        "seen0",
+        "Lkotlinx/serialization/internal/j2;",
+        "serializationConstructorMarker",
+        "(ILcom/x/payments/models/PaymentCustomerIdentity;Lcom/x/payments/screens/settings/personalinfo/PaymentCustomerKycStatus;ZZLcom/x/payments/screens/settings/personalinfo/g;Lkotlinx/serialization/internal/j2;)V",
+        "self",
+        "Lkotlinx/serialization/encoding/d;",
+        "output",
+        "Lkotlinx/serialization/descriptors/SerialDescriptor;",
+        "serialDesc",
+        "",
+        "write$Self$_features_payments_impl",
+        "(Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;Lkotlinx/serialization/encoding/d;Lkotlinx/serialization/descriptors/SerialDescriptor;)V",
+        "write$Self",
+        "component1",
+        "()Lcom/x/payments/models/PaymentCustomerIdentity;",
+        "component2",
+        "()Lcom/x/payments/screens/settings/personalinfo/PaymentCustomerKycStatus;",
+        "component3",
+        "()Z",
+        "component4",
+        "component5",
+        "()Lcom/x/payments/screens/settings/personalinfo/g;",
+        "copy",
+        "(Lcom/x/payments/models/PaymentCustomerIdentity;Lcom/x/payments/screens/settings/personalinfo/PaymentCustomerKycStatus;ZZLcom/x/payments/screens/settings/personalinfo/g;)Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;",
+        "",
+        "toString",
+        "()Ljava/lang/String;",
+        "hashCode",
+        "()I",
+        "",
+        "other",
+        "equals",
+        "(Ljava/lang/Object;)Z",
+        "Lcom/x/payments/models/PaymentCustomerIdentity;",
+        "getCustomerIdentity",
+        "Lcom/x/payments/screens/settings/personalinfo/PaymentCustomerKycStatus;",
+        "getKycStatus",
+        "Z",
+        "Lcom/x/payments/screens/settings/personalinfo/g;",
+        "getPendingEditType",
+        "Companion",
+        "$serializer",
+        "-features-payments-impl"
+    }
+    k = 0x1
+    mv = {
+        0x2,
+        0x1,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+.annotation runtime Lkotlinx/serialization/h;
+.end annotation
+
+
+# static fields
+.field private static final $childSerializers:[Lkotlin/Lazy;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "[",
+            "Lkotlin/Lazy<",
+            "Lkotlinx/serialization/KSerializer<",
+            "Ljava/lang/Object;",
+            ">;>;"
+        }
+    .end annotation
+
+    .annotation build Lkotlin/jvm/JvmField;
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+.end field
+
+.field public static final $stable:I
+
+.field public static final Companion:Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded$Companion;
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+.end field
+
+
+# instance fields
+.field private final customerIdentity:Lcom/x/payments/models/PaymentCustomerIdentity;
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+.end field
+
+.field private final isAddressEnabled:Z
+
+.field private final isLegalNameEnabled:Z
+
+.field private final kycStatus:Lcom/x/payments/screens/settings/personalinfo/PaymentCustomerKycStatus;
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+.end field
+
+.field private final pendingEditType:Lcom/x/payments/screens/settings/personalinfo/g;
+    .annotation build Lorg/jetbrains/annotations/b;
+    .end annotation
+.end field
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 7
+
+    const/4 v0, 0x3
+
+    const/4 v1, 0x2
+
+    const/4 v2, 0x0
+
+    new-instance v3, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded$Companion;
+
+    invoke-direct {v3}, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded$Companion;-><init>()V
+
+    sput-object v3, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;->Companion:Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded$Companion;
+
+    sget-object v3, Lkotlin/LazyThreadSafetyMode;->PUBLICATION:Lkotlin/LazyThreadSafetyMode;
+
+    new-instance v4, Lcom/x/dm/root/s;
+
+    invoke-direct {v4, v1}, Lcom/x/dm/root/s;-><init>(I)V
+
+    invoke-static {v3, v4}, Lkotlin/LazyKt__LazyJVMKt;->a(Lkotlin/LazyThreadSafetyMode;Lkotlin/jvm/functions/Function0;)Lkotlin/Lazy;
+
+    move-result-object v4
+
+    new-instance v5, Lcom/twitter/chat/messages/composables/h4;
+
+    invoke-direct {v5, v0}, Lcom/twitter/chat/messages/composables/h4;-><init>(I)V
+
+    invoke-static {v3, v5}, Lkotlin/LazyKt__LazyJVMKt;->a(Lkotlin/LazyThreadSafetyMode;Lkotlin/jvm/functions/Function0;)Lkotlin/Lazy;
+
+    move-result-object v3
+
+    const/4 v5, 0x5
+
+    new-array v5, v5, [Lkotlin/Lazy;
+
+    const/4 v6, 0x0
+
+    aput-object v2, v5, v6
+
+    const/4 v6, 0x1
+
+    aput-object v4, v5, v6
+
+    aput-object v2, v5, v1
+
+    aput-object v2, v5, v0
+
+    const/4 v0, 0x4
+
+    aput-object v3, v5, v0
+
+    sput-object v5, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;->$childSerializers:[Lkotlin/Lazy;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(ILcom/x/payments/models/PaymentCustomerIdentity;Lcom/x/payments/screens/settings/personalinfo/PaymentCustomerKycStatus;ZZLcom/x/payments/screens/settings/personalinfo/g;Lkotlinx/serialization/internal/j2;)V
+    .locals 2
+
+    and-int/lit8 p7, p1, 0xf
+
+    const/4 v0, 0x0
+
+    const/16 v1, 0xf
+
+    if-ne v1, p7, :cond_1
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p2, p0, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;->customerIdentity:Lcom/x/payments/models/PaymentCustomerIdentity;
+
+    iput-object p3, p0, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;->kycStatus:Lcom/x/payments/screens/settings/personalinfo/PaymentCustomerKycStatus;
+
+    iput-boolean p4, p0, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;->isLegalNameEnabled:Z
+
+    iput-boolean p5, p0, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;->isAddressEnabled:Z
+
+    and-int/lit8 p1, p1, 0x10
+
+    if-nez p1, :cond_0
+
+    iput-object v0, p0, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;->pendingEditType:Lcom/x/payments/screens/settings/personalinfo/g;
+
+    goto :goto_0
+
+    :cond_0
+    iput-object p6, p0, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;->pendingEditType:Lcom/x/payments/screens/settings/personalinfo/g;
+
+    :goto_0
+    return-void
+
+    :cond_1
+    sget-object p2, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded$$serializer;->INSTANCE:Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded$$serializer;
+
+    invoke-virtual {p2}, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded$$serializer;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
+
+    move-result-object p2
+
+    invoke-static {p1, v1, p2}, Lkotlinx/serialization/internal/z1;->b(IILkotlinx/serialization/descriptors/SerialDescriptor;)V
+
+    throw v0
+.end method
+
+.method public constructor <init>(Lcom/x/payments/models/PaymentCustomerIdentity;Lcom/x/payments/screens/settings/personalinfo/PaymentCustomerKycStatus;ZZLcom/x/payments/screens/settings/personalinfo/g;)V
+    .locals 1
+    .param p1    # Lcom/x/payments/models/PaymentCustomerIdentity;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+    .param p2    # Lcom/x/payments/screens/settings/personalinfo/PaymentCustomerKycStatus;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+    .param p5    # Lcom/x/payments/screens/settings/personalinfo/g;
+        .annotation build Lorg/jetbrains/annotations/b;
+        .end annotation
+    .end param
+
+    const-string v0, "customerIdentity"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "kycStatus"
+
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 3
+    iput-object p1, p0, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;->customerIdentity:Lcom/x/payments/models/PaymentCustomerIdentity;
+
+    .line 4
+    iput-object p2, p0, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;->kycStatus:Lcom/x/payments/screens/settings/personalinfo/PaymentCustomerKycStatus;
+
+    .line 5
+    iput-boolean p3, p0, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;->isLegalNameEnabled:Z
+
+    .line 6
+    iput-boolean p4, p0, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;->isAddressEnabled:Z
+
+    .line 7
+    iput-object p5, p0, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;->pendingEditType:Lcom/x/payments/screens/settings/personalinfo/g;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Lcom/x/payments/models/PaymentCustomerIdentity;Lcom/x/payments/screens/settings/personalinfo/PaymentCustomerKycStatus;ZZLcom/x/payments/screens/settings/personalinfo/g;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    .locals 6
+
+    and-int/lit8 p6, p6, 0x10
+
+    if-eqz p6, :cond_0
+
+    const/4 p5, 0x0
+
+    :cond_0
+    move-object v5, p5
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move v3, p3
+
+    move v4, p4
+
+    .line 8
+    invoke-direct/range {v0 .. v5}, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;-><init>(Lcom/x/payments/models/PaymentCustomerIdentity;Lcom/x/payments/screens/settings/personalinfo/PaymentCustomerKycStatus;ZZLcom/x/payments/screens/settings/personalinfo/g;)V
+
+    return-void
+.end method
+
+.method private static final _childSerializers$_anonymous_()Lkotlinx/serialization/KSerializer;
+    .locals 12
+
+    const/4 v0, 0x2
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x3
+
+    const/4 v3, 0x0
+
+    new-instance v10, Lkotlinx/serialization/e;
+
+    sget-object v4, Lkotlin/jvm/internal/Reflection;->a:Lkotlin/jvm/internal/ReflectionFactory;
+
+    const-class v5, Lcom/x/payments/screens/settings/personalinfo/PaymentCustomerKycStatus;
+
+    invoke-virtual {v4, v5}, Lkotlin/jvm/internal/ReflectionFactory;->b(Ljava/lang/Class;)Lkotlin/reflect/KClass;
+
+    move-result-object v6
+
+    const-class v5, Lcom/x/payments/screens/settings/personalinfo/PaymentCustomerKycStatus$KycDocumentsVerified;
+
+    invoke-virtual {v4, v5}, Lkotlin/jvm/internal/ReflectionFactory;->b(Ljava/lang/Class;)Lkotlin/reflect/KClass;
+
+    move-result-object v5
+
+    const-class v7, Lcom/x/payments/screens/settings/personalinfo/PaymentCustomerKycStatus$KycUnverified;
+
+    invoke-virtual {v4, v7}, Lkotlin/jvm/internal/ReflectionFactory;->b(Ljava/lang/Class;)Lkotlin/reflect/KClass;
+
+    move-result-object v7
+
+    const-class v8, Lcom/x/payments/screens/settings/personalinfo/PaymentCustomerKycStatus$KycVerified;
+
+    invoke-virtual {v4, v8}, Lkotlin/jvm/internal/ReflectionFactory;->b(Ljava/lang/Class;)Lkotlin/reflect/KClass;
+
+    move-result-object v4
+
+    new-array v8, v2, [Lkotlin/reflect/KClass;
+
+    aput-object v5, v8, v3
+
+    aput-object v7, v8, v1
+
+    aput-object v4, v8, v0
+
+    new-instance v4, Lkotlinx/serialization/internal/s1;
+
+    sget-object v5, Lcom/x/payments/screens/settings/personalinfo/PaymentCustomerKycStatus$KycDocumentsVerified;->INSTANCE:Lcom/x/payments/screens/settings/personalinfo/PaymentCustomerKycStatus$KycDocumentsVerified;
+
+    new-array v7, v3, [Ljava/lang/annotation/Annotation;
+
+    const-string v9, "com.x.payments.screens.settings.personalinfo.PaymentCustomerKycStatus.KycDocumentsVerified"
+
+    invoke-direct {v4, v9, v5, v7}, Lkotlinx/serialization/internal/s1;-><init>(Ljava/lang/String;Ljava/lang/Object;[Ljava/lang/annotation/Annotation;)V
+
+    new-instance v5, Lkotlinx/serialization/internal/s1;
+
+    sget-object v7, Lcom/x/payments/screens/settings/personalinfo/PaymentCustomerKycStatus$KycUnverified;->INSTANCE:Lcom/x/payments/screens/settings/personalinfo/PaymentCustomerKycStatus$KycUnverified;
+
+    new-array v9, v3, [Ljava/lang/annotation/Annotation;
+
+    const-string v11, "com.x.payments.screens.settings.personalinfo.PaymentCustomerKycStatus.KycUnverified"
+
+    invoke-direct {v5, v11, v7, v9}, Lkotlinx/serialization/internal/s1;-><init>(Ljava/lang/String;Ljava/lang/Object;[Ljava/lang/annotation/Annotation;)V
+
+    new-array v2, v2, [Lkotlinx/serialization/KSerializer;
+
+    aput-object v4, v2, v3
+
+    aput-object v5, v2, v1
+
+    sget-object v1, Lcom/x/payments/screens/settings/personalinfo/PaymentCustomerKycStatus$KycVerified$$serializer;->INSTANCE:Lcom/x/payments/screens/settings/personalinfo/PaymentCustomerKycStatus$KycVerified$$serializer;
+
+    aput-object v1, v2, v0
+
+    new-array v9, v3, [Ljava/lang/annotation/Annotation;
+
+    const-string v5, "com.x.payments.screens.settings.personalinfo.PaymentCustomerKycStatus"
+
+    move-object v4, v10
+
+    move-object v7, v8
+
+    move-object v8, v2
+
+    invoke-direct/range {v4 .. v9}, Lkotlinx/serialization/e;-><init>(Ljava/lang/String;Lkotlin/reflect/KClass;[Lkotlin/reflect/KClass;[Lkotlinx/serialization/KSerializer;[Ljava/lang/annotation/Annotation;)V
+
+    return-object v10
+.end method
+
+.method private static final synthetic _childSerializers$_anonymous_$0()Lkotlinx/serialization/KSerializer;
+    .locals 2
+
+    const-string v0, "com.x.payments.screens.settings.personalinfo.EditPersonalInfoType"
+
+    invoke-static {}, Lcom/x/payments/screens/settings/personalinfo/g;->values()[Lcom/x/payments/screens/settings/personalinfo/g;
+
+    move-result-object v1
+
+    invoke-static {v1, v0}, Lkotlinx/serialization/internal/j0;->a([Ljava/lang/Enum;Ljava/lang/String;)Lkotlinx/serialization/internal/i0;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static synthetic a()Lkotlinx/serialization/KSerializer;
+    .locals 1
+
+    invoke-static {}, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;->_childSerializers$_anonymous_()Lkotlinx/serialization/KSerializer;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static final synthetic access$get$childSerializers$cp()[Lkotlin/Lazy;
+    .locals 1
+
+    sget-object v0, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;->$childSerializers:[Lkotlin/Lazy;
+
+    return-object v0
+.end method
+
+.method public static synthetic b()Lkotlinx/serialization/KSerializer;
+    .locals 1
+
+    invoke-static {}, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;->_childSerializers$_anonymous_$0()Lkotlinx/serialization/KSerializer;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static synthetic copy$default(Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;Lcom/x/payments/models/PaymentCustomerIdentity;Lcom/x/payments/screens/settings/personalinfo/PaymentCustomerKycStatus;ZZLcom/x/payments/screens/settings/personalinfo/g;ILjava/lang/Object;)Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;
+    .locals 3
+
+    and-int/lit8 p7, p6, 0x1
+
+    if-eqz p7, :cond_0
+
+    iget-object p1, p0, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;->customerIdentity:Lcom/x/payments/models/PaymentCustomerIdentity;
+
+    :cond_0
+    and-int/lit8 p7, p6, 0x2
+
+    if-eqz p7, :cond_1
+
+    iget-object p2, p0, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;->kycStatus:Lcom/x/payments/screens/settings/personalinfo/PaymentCustomerKycStatus;
+
+    :cond_1
+    move-object p7, p2
+
+    and-int/lit8 p2, p6, 0x4
+
+    if-eqz p2, :cond_2
+
+    iget-boolean p3, p0, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;->isLegalNameEnabled:Z
+
+    :cond_2
+    move v0, p3
+
+    and-int/lit8 p2, p6, 0x8
+
+    if-eqz p2, :cond_3
+
+    iget-boolean p4, p0, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;->isAddressEnabled:Z
+
+    :cond_3
+    move v1, p4
+
+    and-int/lit8 p2, p6, 0x10
+
+    if-eqz p2, :cond_4
+
+    iget-object p5, p0, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;->pendingEditType:Lcom/x/payments/screens/settings/personalinfo/g;
+
+    :cond_4
+    move-object v2, p5
+
+    move-object p2, p0
+
+    move-object p3, p1
+
+    move-object p4, p7
+
+    move p5, v0
+
+    move p6, v1
+
+    move-object p7, v2
+
+    invoke-virtual/range {p2 .. p7}, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;->copy(Lcom/x/payments/models/PaymentCustomerIdentity;Lcom/x/payments/screens/settings/personalinfo/PaymentCustomerKycStatus;ZZLcom/x/payments/screens/settings/personalinfo/g;)Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static final synthetic write$Self$_features_payments_impl(Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;Lkotlinx/serialization/encoding/d;Lkotlinx/serialization/descriptors/SerialDescriptor;)V
+    .locals 4
+    .annotation runtime Lkotlin/jvm/JvmStatic;
+    .end annotation
+
+    sget-object v0, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;->$childSerializers:[Lkotlin/Lazy;
+
+    sget-object v1, Lcom/x/payments/models/PaymentCustomerIdentity$$serializer;->INSTANCE:Lcom/x/payments/models/PaymentCustomerIdentity$$serializer;
+
+    iget-object v2, p0, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;->customerIdentity:Lcom/x/payments/models/PaymentCustomerIdentity;
+
+    const/4 v3, 0x0
+
+    invoke-interface {p1, p2, v3, v1, v2}, Lkotlinx/serialization/encoding/d;->G(Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/i;Ljava/lang/Object;)V
+
+    const/4 v1, 0x1
+
+    aget-object v2, v0, v1
+
+    invoke-interface {v2}, Lkotlin/Lazy;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lkotlinx/serialization/i;
+
+    iget-object v3, p0, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;->kycStatus:Lcom/x/payments/screens/settings/personalinfo/PaymentCustomerKycStatus;
+
+    invoke-interface {p1, p2, v1, v2, v3}, Lkotlinx/serialization/encoding/d;->G(Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/i;Ljava/lang/Object;)V
+
+    const/4 v1, 0x2
+
+    iget-boolean v2, p0, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;->isLegalNameEnabled:Z
+
+    invoke-interface {p1, p2, v1, v2}, Lkotlinx/serialization/encoding/d;->n(Lkotlinx/serialization/descriptors/SerialDescriptor;IZ)V
+
+    const/4 v1, 0x3
+
+    iget-boolean v2, p0, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;->isAddressEnabled:Z
+
+    invoke-interface {p1, p2, v1, v2}, Lkotlinx/serialization/encoding/d;->n(Lkotlinx/serialization/descriptors/SerialDescriptor;IZ)V
+
+    invoke-interface {p1, p2}, Lkotlinx/serialization/encoding/d;->y(Lkotlinx/serialization/descriptors/SerialDescriptor;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v1, p0, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;->pendingEditType:Lcom/x/payments/screens/settings/personalinfo/g;
+
+    if-eqz v1, :cond_1
+
+    :goto_0
+    const/4 v1, 0x4
+
+    aget-object v0, v0, v1
+
+    invoke-interface {v0}, Lkotlin/Lazy;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lkotlinx/serialization/i;
+
+    iget-object p0, p0, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;->pendingEditType:Lcom/x/payments/screens/settings/personalinfo/g;
+
+    invoke-interface {p1, p2, v1, v0, p0}, Lkotlinx/serialization/encoding/d;->v(Lkotlinx/serialization/descriptors/SerialDescriptor;ILkotlinx/serialization/i;Ljava/lang/Object;)V
+
+    :cond_1
+    return-void
+.end method
+
+
+# virtual methods
+.method public final component1()Lcom/x/payments/models/PaymentCustomerIdentity;
+    .locals 1
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+
+    iget-object v0, p0, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;->customerIdentity:Lcom/x/payments/models/PaymentCustomerIdentity;
+
+    return-object v0
+.end method
+
+.method public final component2()Lcom/x/payments/screens/settings/personalinfo/PaymentCustomerKycStatus;
+    .locals 1
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+
+    iget-object v0, p0, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;->kycStatus:Lcom/x/payments/screens/settings/personalinfo/PaymentCustomerKycStatus;
+
+    return-object v0
+.end method
+
+.method public final component3()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;->isLegalNameEnabled:Z
+
+    return v0
+.end method
+
+.method public final component4()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;->isAddressEnabled:Z
+
+    return v0
+.end method
+
+.method public final component5()Lcom/x/payments/screens/settings/personalinfo/g;
+    .locals 1
+    .annotation build Lorg/jetbrains/annotations/b;
+    .end annotation
+
+    iget-object v0, p0, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;->pendingEditType:Lcom/x/payments/screens/settings/personalinfo/g;
+
+    return-object v0
+.end method
+
+.method public final copy(Lcom/x/payments/models/PaymentCustomerIdentity;Lcom/x/payments/screens/settings/personalinfo/PaymentCustomerKycStatus;ZZLcom/x/payments/screens/settings/personalinfo/g;)Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;
+    .locals 7
+    .param p1    # Lcom/x/payments/models/PaymentCustomerIdentity;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+    .param p2    # Lcom/x/payments/screens/settings/personalinfo/PaymentCustomerKycStatus;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+    .param p5    # Lcom/x/payments/screens/settings/personalinfo/g;
+        .annotation build Lorg/jetbrains/annotations/b;
+        .end annotation
+    .end param
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+
+    const-string v0, "customerIdentity"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "kycStatus"
+
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    new-instance v0, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;
+
+    move-object v1, v0
+
+    move-object v2, p1
+
+    move-object v3, p2
+
+    move v4, p3
+
+    move v5, p4
+
+    move-object v6, p5
+
+    invoke-direct/range {v1 .. v6}, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;-><init>(Lcom/x/payments/models/PaymentCustomerIdentity;Lcom/x/payments/screens/settings/personalinfo/PaymentCustomerKycStatus;ZZLcom/x/payments/screens/settings/personalinfo/g;)V
+
+    return-object v0
+.end method
+
+.method public equals(Ljava/lang/Object;)Z
+    .locals 4
+    .param p1    # Ljava/lang/Object;
+        .annotation build Lorg/jetbrains/annotations/b;
+        .end annotation
+    .end param
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;
+
+    iget-object v1, p0, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;->customerIdentity:Lcom/x/payments/models/PaymentCustomerIdentity;
+
+    iget-object v3, p1, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;->customerIdentity:Lcom/x/payments/models/PaymentCustomerIdentity;
+
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;->kycStatus:Lcom/x/payments/screens/settings/personalinfo/PaymentCustomerKycStatus;
+
+    iget-object v3, p1, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;->kycStatus:Lcom/x/payments/screens/settings/personalinfo/PaymentCustomerKycStatus;
+
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-boolean v1, p0, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;->isLegalNameEnabled:Z
+
+    iget-boolean v3, p1, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;->isLegalNameEnabled:Z
+
+    if-eq v1, v3, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-boolean v1, p0, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;->isAddressEnabled:Z
+
+    iget-boolean v3, p1, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;->isAddressEnabled:Z
+
+    if-eq v1, v3, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-object v1, p0, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;->pendingEditType:Lcom/x/payments/screens/settings/personalinfo/g;
+
+    iget-object p1, p1, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;->pendingEditType:Lcom/x/payments/screens/settings/personalinfo/g;
+
+    if-eq v1, p1, :cond_6
+
+    return v2
+
+    :cond_6
+    return v0
+.end method
+
+.method public final getCustomerIdentity()Lcom/x/payments/models/PaymentCustomerIdentity;
+    .locals 1
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+
+    iget-object v0, p0, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;->customerIdentity:Lcom/x/payments/models/PaymentCustomerIdentity;
+
+    return-object v0
+.end method
+
+.method public final getKycStatus()Lcom/x/payments/screens/settings/personalinfo/PaymentCustomerKycStatus;
+    .locals 1
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+
+    iget-object v0, p0, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;->kycStatus:Lcom/x/payments/screens/settings/personalinfo/PaymentCustomerKycStatus;
+
+    return-object v0
+.end method
+
+.method public final getPendingEditType()Lcom/x/payments/screens/settings/personalinfo/g;
+    .locals 1
+    .annotation build Lorg/jetbrains/annotations/b;
+    .end annotation
+
+    iget-object v0, p0, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;->pendingEditType:Lcom/x/payments/screens/settings/personalinfo/g;
+
+    return-object v0
+.end method
+
+.method public hashCode()I
+    .locals 3
+
+    iget-object v0, p0, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;->customerIdentity:Lcom/x/payments/models/PaymentCustomerIdentity;
+
+    invoke-virtual {v0}, Lcom/x/payments/models/PaymentCustomerIdentity;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;->kycStatus:Lcom/x/payments/screens/settings/personalinfo/PaymentCustomerKycStatus;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    mul-int/2addr v2, v1
+
+    iget-boolean v0, p0, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;->isLegalNameEnabled:Z
+
+    invoke-static {v2, v1, v0}, Landroidx/camera/viewfinder/core/d;->a(IIZ)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;->isAddressEnabled:Z
+
+    invoke-static {v0, v1, v2}, Landroidx/camera/viewfinder/core/d;->a(IIZ)I
+
+    move-result v0
+
+    iget-object v1, p0, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;->pendingEditType:Lcom/x/payments/screens/settings/personalinfo/g;
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    :goto_0
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final isAddressEnabled()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;->isAddressEnabled:Z
+
+    return v0
+.end method
+
+.method public final isLegalNameEnabled()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;->isLegalNameEnabled:Z
+
+    return v0
+.end method
+
+.method public toString()Ljava/lang/String;
+    .locals 7
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+
+    iget-object v0, p0, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;->customerIdentity:Lcom/x/payments/models/PaymentCustomerIdentity;
+
+    iget-object v1, p0, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;->kycStatus:Lcom/x/payments/screens/settings/personalinfo/PaymentCustomerKycStatus;
+
+    iget-boolean v2, p0, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;->isLegalNameEnabled:Z
+
+    iget-boolean v3, p0, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;->isAddressEnabled:Z
+
+    iget-object v4, p0, Lcom/x/payments/screens/settings/personalinfo/PaymentSettingsPersonalInfoState$Loaded;->pendingEditType:Lcom/x/payments/screens/settings/personalinfo/g;
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    const-string v6, "Loaded(customerIdentity="
+
+    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, ", kycStatus="
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, ", isLegalNameEnabled="
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, ", isAddressEnabled="
+
+    const-string v1, ", pendingEditType="
+
+    invoke-static {v5, v2, v0, v3, v1}, Lcom/google/android/gms/internal/measurement/h8;->b(Ljava/lang/StringBuilder;ZLjava/lang/String;ZLjava/lang/String;)V
+
+    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, ")"
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method

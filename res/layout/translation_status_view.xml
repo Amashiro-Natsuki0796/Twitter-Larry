@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.flexbox.FlexboxLayout android:id="@id/main_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="@dimen/space_4" app:flexWrap="wrap">
+        <View android:background="@drawable/ic_vector_grok_icon" android:layout_width="@dimen/tweet_trans_logo_height" android:layout_height="@dimen/tweet_trans_logo_height" android:layout_marginTop="@dimen/space_2" android:layout_marginEnd="@dimen/space_4" android:backgroundTint="?dynamicColorGray600" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView android:textSize="@dimen/font_size_small" android:textColor="?dynamicColorGray600" android:id="@id/grok_translation_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/space_8" />
+        <com.twitter.ui.components.text.legacy.TypefacesTextView android:gravity="center_vertical" android:id="@id/grok_translation_link" android:layout_marginEnd="@dimen/space_8" style="@style/TranslationLink" />
+    </com.google.android.flexbox.FlexboxLayout>
+    <ProgressBar android:id="@id/grok_translation_progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?android:progressBarStyleSmall" />
+    <ImageView android:layout_gravity="center" android:id="@id/grok_translation_info_button" android:visibility="gone" android:src="@drawable/ic_vector_settings_stroke" android:importantForAccessibility="no" style="@style/TranslationInfoButton" />
+</merge>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="@dimen/plaid_navigation_height"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/plaid_back_icon" android:padding="@dimen/plaid_space_1x" android:visibility="invisible" android:layout_width="@dimen/plaid_navigation_height" android:layout_height="@dimen/plaid_navigation_height" android:src="@drawable/pl_icon_arrow_left" android:contentDescription="@string/plaid_back" app:tint="?plaidTextColorH" />
+    <ImageView android:gravity="center" android:id="@id/plaid_logo" android:layout_width="0.0dp" android:layout_height="match_parent" android:src="@drawable/plaid_logo_horizontal" android:layout_weight="1.0" app:tint="?plaidTextColorH" />
+    <TextView android:textColor="@color/plaid_black_1000" android:gravity="center" android:id="@id/plaid_navbar_title" android:visibility="gone" android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0" style="@style/PlaidText.H5.SemiBold" />
+    <ImageView android:id="@id/plaid_close_icon" android:padding="@dimen/plaid_space_1x" android:visibility="invisible" android:layout_width="@dimen/plaid_navigation_height" android:layout_height="@dimen/plaid_navigation_height" android:src="@drawable/pl_icon_close_s1" android:contentDescription="@string/plaid_exit" app:tint="?plaidTextColorH" />
+</merge>

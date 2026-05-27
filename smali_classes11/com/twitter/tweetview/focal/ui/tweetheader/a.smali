@@ -1,0 +1,95 @@
+.class public final synthetic Lcom/twitter/tweetview/focal/ui/tweetheader/a;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lkotlin/jvm/functions/Function1;
+
+
+# instance fields
+.field public final synthetic a:Lcom/twitter/tweetview/core/TweetViewViewModel;
+
+.field public final synthetic b:Lcom/twitter/tweetview/focal/ui/tweetheader/FocalTweetHeaderViewDelegateBinder;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lcom/twitter/tweetview/core/TweetViewViewModel;Lcom/twitter/tweetview/focal/ui/tweetheader/FocalTweetHeaderViewDelegateBinder;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/twitter/tweetview/focal/ui/tweetheader/a;->a:Lcom/twitter/tweetview/core/TweetViewViewModel;
+
+    iput-object p2, p0, Lcom/twitter/tweetview/focal/ui/tweetheader/a;->b:Lcom/twitter/tweetview/focal/ui/tweetheader/FocalTweetHeaderViewDelegateBinder;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    check-cast p1, Lcom/twitter/util/rx/v;
+
+    iget-object p1, p0, Lcom/twitter/tweetview/focal/ui/tweetheader/a;->a:Lcom/twitter/tweetview/core/TweetViewViewModel;
+
+    invoke-virtual {p1}, Lcom/twitter/tweetview/core/TweetViewViewModel;->c()Lcom/twitter/tweetview/core/x;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    iget-object p1, p1, Lcom/twitter/tweetview/core/x;->a:Lcom/twitter/model/core/e;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    if-eqz p1, :cond_1
+
+    iget-object v0, p0, Lcom/twitter/tweetview/focal/ui/tweetheader/a;->b:Lcom/twitter/tweetview/focal/ui/tweetheader/FocalTweetHeaderViewDelegateBinder;
+
+    iget-object v1, v0, Lcom/twitter/tweetview/focal/ui/tweetheader/FocalTweetHeaderViewDelegateBinder;->e:Lcom/twitter/tweetview/core/i;
+
+    if-eqz v1, :cond_1
+
+    sget-object v2, Lcom/twitter/ui/tweet/i;->Companion:Lcom/twitter/ui/tweet/i$a;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v2, 0x0
+
+    invoke-static {p1, v2}, Lcom/twitter/ui/tweet/i$a;->a(Lcom/twitter/model/core/e;Z)Lcom/twitter/ui/tweet/i;
+
+    move-result-object v2
+
+    invoke-interface {v1, v2}, Lcom/twitter/tweetview/core/i;->B(Lcom/twitter/ui/tweet/i;)V
+
+    iget-object p1, p1, Lcom/twitter/model/core/e;->b:Lcom/twitter/model/core/entity/ad/f;
+
+    if-eqz p1, :cond_1
+
+    sget-object v1, Lcom/twitter/model/pc/e;->SCREEN_NAME_CLICK:Lcom/twitter/model/pc/e;
+
+    invoke-static {v1, p1}, Lcom/twitter/analytics/promoted/c;->g(Lcom/twitter/model/pc/e;Lcom/twitter/model/core/entity/ad/f;)Lcom/twitter/analytics/promoted/c$a;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/twitter/util/object/o;->h()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/twitter/analytics/promoted/c;
+
+    iget-object v0, v0, Lcom/twitter/tweetview/focal/ui/tweetheader/FocalTweetHeaderViewDelegateBinder;->f:Lcom/twitter/util/eventreporter/h;
+
+    invoke-virtual {v0, p1}, Lcom/twitter/util/eventreporter/h;->c(Lcom/twitter/util/eventreporter/e;)V
+
+    :cond_1
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
+
+    return-object p1
+.end method

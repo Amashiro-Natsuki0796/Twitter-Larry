@@ -1,0 +1,131 @@
+.class public final synthetic Lcom/twitter/business/listselection/n;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lkotlin/jvm/functions/Function1;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/lang/Object;
+
+
+# direct methods
+.method public synthetic constructor <init>(Ljava/lang/Object;I)V
+    .locals 0
+
+    iput p2, p0, Lcom/twitter/business/listselection/n;->a:I
+
+    iput-object p1, p0, Lcom/twitter/business/listselection/n;->b:Ljava/lang/Object;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Lcom/twitter/business/listselection/n;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    check-cast p1, Ljava/util/List;
+
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->e(Ljava/lang/Object;)V
+
+    iget-object v0, p0, Lcom/twitter/business/listselection/n;->b:Ljava/lang/Object;
+
+    check-cast v0, Ltv/periscope/android/hydra/v0;
+
+    invoke-virtual {v0, p1}, Ltv/periscope/android/hydra/v0;->a(Ljava/util/List;)V
+
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
+
+    return-object p1
+
+    :pswitch_0
+    check-cast p1, Lcom/twitter/explore/immersive/ui/bottomsheet/s;
+
+    const-string v0, "$this$distinct"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/twitter/business/listselection/n;->b:Ljava/lang/Object;
+
+    check-cast v0, Lcom/twitter/explore/immersive/ui/bottomsheet/l;
+
+    iget-object v0, v0, Lcom/twitter/explore/immersive/ui/bottomsheet/l;->q:Landroid/widget/LinearLayout;
+
+    iget-boolean p1, p1, Lcom/twitter/explore/immersive/ui/bottomsheet/s;->d:Z
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    const/16 p1, 0x8
+
+    :goto_0
+    invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
+
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
+
+    return-object p1
+
+    :pswitch_1
+    check-cast p1, Lcom/twitter/business/listselection/s;
+
+    const-string v0, "$this$distinct"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    iget-object p1, p1, Lcom/twitter/business/listselection/s;->d:Ljava/lang/Integer;
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+
+    move-result p1
+
+    iget-object v0, p0, Lcom/twitter/business/listselection/n;->b:Ljava/lang/Object;
+
+    check-cast v0, Lcom/twitter/business/listselection/p;
+
+    iget-object v1, v0, Lcom/twitter/business/listselection/p;->e:Lcom/twitter/ui/widget/TwitterEditText;
+
+    iget-object v0, v0, Lcom/twitter/business/listselection/p;->a:Landroid/view/View;
+
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "getString(...)"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->g(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {v1, p1}, Landroid/widget/TextView;->setHint(Ljava/lang/CharSequence;)V
+
+    :cond_1
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method

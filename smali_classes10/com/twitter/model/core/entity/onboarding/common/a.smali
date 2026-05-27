@@ -1,0 +1,193 @@
+.class public final enum Lcom/twitter/model/core/entity/onboarding/common/a;
+.super Ljava/lang/Enum;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/twitter/model/core/entity/onboarding/common/a$a;
+    }
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Enum<",
+        "Lcom/twitter/model/core/entity/onboarding/common/a;",
+        ">;"
+    }
+.end annotation
+
+
+# static fields
+.field private static final synthetic $ENTRIES:Lkotlin/enums/EnumEntries;
+
+.field private static final synthetic $VALUES:[Lcom/twitter/model/core/entity/onboarding/common/a;
+
+.field public static final enum CLICK:Lcom/twitter/model/core/entity/onboarding/common/a;
+
+.field public static final Companion:Lcom/twitter/model/core/entity/onboarding/common/a$a;
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+.end field
+
+.field public static final enum IMPRESSION:Lcom/twitter/model/core/entity/onboarding/common/a;
+
+.field public static final enum NONE:Lcom/twitter/model/core/entity/onboarding/common/a;
+
+.field private static final SERIALIZER:Lcom/twitter/util/serialization/serializer/j;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/twitter/util/serialization/serializer/j<",
+            "Lcom/twitter/model/core/entity/onboarding/common/a;",
+            ">;"
+        }
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+.end field
+
+
+# instance fields
+.field private final id:Ljava/lang/String;
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+.end field
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 6
+
+    new-instance v0, Lcom/twitter/model/core/entity/onboarding/common/a;
+
+    const-string v1, "none"
+
+    const-string v2, "NONE"
+
+    const/4 v3, 0x0
+
+    invoke-direct {v0, v2, v3, v1}, Lcom/twitter/model/core/entity/onboarding/common/a;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/twitter/model/core/entity/onboarding/common/a;->NONE:Lcom/twitter/model/core/entity/onboarding/common/a;
+
+    new-instance v1, Lcom/twitter/model/core/entity/onboarding/common/a;
+
+    const-string v2, "impression"
+
+    const-string v3, "IMPRESSION"
+
+    const/4 v4, 0x1
+
+    invoke-direct {v1, v3, v4, v2}, Lcom/twitter/model/core/entity/onboarding/common/a;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v1, Lcom/twitter/model/core/entity/onboarding/common/a;->IMPRESSION:Lcom/twitter/model/core/entity/onboarding/common/a;
+
+    new-instance v2, Lcom/twitter/model/core/entity/onboarding/common/a;
+
+    const-string v3, "click"
+
+    const-string v4, "CLICK"
+
+    const/4 v5, 0x2
+
+    invoke-direct {v2, v4, v5, v3}, Lcom/twitter/model/core/entity/onboarding/common/a;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v2, Lcom/twitter/model/core/entity/onboarding/common/a;->CLICK:Lcom/twitter/model/core/entity/onboarding/common/a;
+
+    filled-new-array {v0, v1, v2}, [Lcom/twitter/model/core/entity/onboarding/common/a;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/twitter/model/core/entity/onboarding/common/a;->$VALUES:[Lcom/twitter/model/core/entity/onboarding/common/a;
+
+    invoke-static {v0}, Lkotlin/enums/EnumEntriesKt;->a([Ljava/lang/Enum;)Lkotlin/enums/a;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/twitter/model/core/entity/onboarding/common/a;->$ENTRIES:Lkotlin/enums/EnumEntries;
+
+    new-instance v0, Lcom/twitter/model/core/entity/onboarding/common/a$a;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lcom/twitter/model/core/entity/onboarding/common/a;->Companion:Lcom/twitter/model/core/entity/onboarding/common/a$a;
+
+    sget-object v0, Lcom/twitter/util/serialization/serializer/b;->a:Lcom/twitter/util/serialization/serializer/b$k;
+
+    new-instance v0, Lcom/twitter/util/serialization/serializer/c;
+
+    const-class v1, Lcom/twitter/model/core/entity/onboarding/common/a;
+
+    invoke-direct {v0, v1}, Lcom/twitter/util/serialization/serializer/c;-><init>(Ljava/lang/Class;)V
+
+    sput-object v0, Lcom/twitter/model/core/entity/onboarding/common/a;->SERIALIZER:Lcom/twitter/util/serialization/serializer/j;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            ")V"
+        }
+    .end annotation
+
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    iput-object p3, p0, Lcom/twitter/model/core/entity/onboarding/common/a;->id:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public static final synthetic a()Lcom/twitter/util/serialization/serializer/j;
+    .locals 1
+
+    sget-object v0, Lcom/twitter/model/core/entity/onboarding/common/a;->SERIALIZER:Lcom/twitter/util/serialization/serializer/j;
+
+    return-object v0
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lcom/twitter/model/core/entity/onboarding/common/a;
+    .locals 1
+
+    const-class v0, Lcom/twitter/model/core/entity/onboarding/common/a;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lcom/twitter/model/core/entity/onboarding/common/a;
+
+    return-object p0
+.end method
+
+.method public static values()[Lcom/twitter/model/core/entity/onboarding/common/a;
+    .locals 1
+
+    sget-object v0, Lcom/twitter/model/core/entity/onboarding/common/a;->$VALUES:[Lcom/twitter/model/core/entity/onboarding/common/a;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lcom/twitter/model/core/entity/onboarding/common/a;
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final b()Ljava/lang/String;
+    .locals 1
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+
+    iget-object v0, p0, Lcom/twitter/model/core/entity/onboarding/common/a;->id:Ljava/lang/String;
+
+    return-object v0
+.end method

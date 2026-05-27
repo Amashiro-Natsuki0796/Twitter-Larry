@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:animateLayoutChanges="true" style="@style/TranslationBox.ProfileBio"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.translation.GrokTranslationStatusView android:id="@id/grok_translation_status_view" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView android:id="@id/grok_translation_text" android:focusable="true" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Translation.ProfileBio" />
+    <tag android:value="GrokBioTranslate" android:id="@id/weaverComponent" />
+</LinearLayout>

@@ -1,0 +1,44 @@
+.class public Lorg/bouncycastle/jcajce/provider/asymmetric/ec/SignatureSpi$ecDetDSA224;
+.super Lorg/bouncycastle/jcajce/provider/asymmetric/ec/SignatureSpi;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lorg/bouncycastle/jcajce/provider/asymmetric/ec/SignatureSpi;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x9
+    name = "ecDetDSA224"
+.end annotation
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 4
+
+    sget v0, Lorg/bouncycastle/crypto/util/a;->a:I
+
+    new-instance v0, Lorg/bouncycastle/crypto/digests/z;
+
+    invoke-direct {v0}, Lorg/bouncycastle/crypto/digests/z;-><init>()V
+
+    new-instance v1, Lorg/bouncycastle/crypto/signers/e;
+
+    new-instance v2, Lorg/bouncycastle/crypto/signers/k;
+
+    new-instance v3, Lorg/bouncycastle/crypto/digests/z;
+
+    invoke-direct {v3}, Lorg/bouncycastle/crypto/digests/z;-><init>()V
+
+    invoke-direct {v2, v3}, Lorg/bouncycastle/crypto/signers/k;-><init>(Lorg/bouncycastle/crypto/u;)V
+
+    invoke-direct {v1, v2}, Lorg/bouncycastle/crypto/signers/e;-><init>(Lorg/bouncycastle/crypto/signers/k;)V
+
+    sget-object v2, Lorg/bouncycastle/crypto/signers/r;->a:Lorg/bouncycastle/crypto/signers/r;
+
+    invoke-direct {p0, v0, v1, v2}, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/SignatureSpi;-><init>(Lorg/bouncycastle/crypto/t;Lorg/bouncycastle/crypto/o;Lorg/bouncycastle/crypto/signers/a;)V
+
+    return-void
+.end method

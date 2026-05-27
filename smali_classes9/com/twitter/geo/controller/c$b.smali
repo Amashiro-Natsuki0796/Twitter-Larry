@@ -1,0 +1,96 @@
+.class public final Lcom/twitter/geo/controller/c$b;
+.super Lcom/twitter/util/serialization/serializer/g;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/twitter/geo/controller/c;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x9
+    name = "b"
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/twitter/util/serialization/serializer/g<",
+        "Lcom/twitter/geo/controller/c;",
+        ">;"
+    }
+.end annotation
+
+
+# virtual methods
+.method public final d(Lcom/twitter/util/serialization/stream/e;I)Ljava/lang/Object;
+    .locals 2
+    .param p1    # Lcom/twitter/util/serialization/stream/e;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;,
+            Ljava/lang/ClassNotFoundException;
+        }
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+
+    new-instance p2, Lcom/twitter/geo/controller/c;
+
+    sget-object v0, Lcom/twitter/model/core/entity/geo/d;->m:Lcom/twitter/model/core/entity/geo/d$c;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v0, p1}, Lcom/twitter/util/serialization/serializer/g;->a(Lcom/twitter/util/serialization/stream/e;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/twitter/model/core/entity/geo/d;
+
+    invoke-virtual {v0, p1}, Lcom/twitter/util/serialization/serializer/g;->a(Lcom/twitter/util/serialization/stream/e;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/twitter/model/core/entity/geo/d;
+
+    invoke-direct {p2, v1, p1}, Lcom/twitter/geo/controller/c;-><init>(Lcom/twitter/model/core/entity/geo/d;Lcom/twitter/model/core/entity/geo/d;)V
+
+    return-object p2
+.end method
+
+.method public final g(Lcom/twitter/util/serialization/stream/f;Ljava/lang/Object;)V
+    .locals 2
+    .param p1    # Lcom/twitter/util/serialization/stream/f;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/Object;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    check-cast p2, Lcom/twitter/geo/controller/c;
+
+    iget-object v0, p2, Lcom/twitter/geo/controller/c;->a:Lcom/twitter/model/core/entity/geo/d;
+
+    sget-object v1, Lcom/twitter/model/core/entity/geo/d;->m:Lcom/twitter/model/core/entity/geo/d$c;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v1, p1, v0}, Lcom/twitter/util/serialization/serializer/g;->c(Lcom/twitter/util/serialization/stream/f;Ljava/lang/Object;)V
+
+    iget-object p2, p2, Lcom/twitter/geo/controller/c;->b:Lcom/twitter/model/core/entity/geo/d;
+
+    invoke-virtual {v1, p1, p2}, Lcom/twitter/util/serialization/serializer/g;->c(Lcom/twitter/util/serialization/stream/f;Ljava/lang/Object;)V
+
+    return-void
+.end method

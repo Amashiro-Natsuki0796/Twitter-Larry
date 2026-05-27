@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingTop="@dimen/space_4" android:layout_width="match_parent" android:layout_height="wrap_content" android:animateLayoutChanges="true" android:paddingHorizontal="@dimen/list_row_padding_horizontal"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.translation.GrokTranslationStatusView android:id="@id/grok_translation_status_view" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView android:id="@id/grok_translation_text" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginVertical="@dimen/space_4" style="@style/Translation.AutoTranslationTweetDetail" />
+    <com.twitter.translation.TranslationFeedbackView android:id="@id/translation_feedback_view" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/space_4" />
+    <tag android:value="AutoTranslatedTweet" android:id="@id/weaverComponent" />
+</LinearLayout>

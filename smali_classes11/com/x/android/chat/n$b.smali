@@ -1,0 +1,32 @@
+.class public final Lcom/x/android/chat/n$b;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/x/android/chat/n;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = "b"
+.end annotation
+
+
+# direct methods
+.method public static final a(Lcom/x/android/chat/n$b;Lkotlin/jvm/functions/Function0;)V
+    .locals 1
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance p0, Lcom/x/android/chat/o;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, v0}, Lcom/x/android/chat/o;-><init>(Lkotlin/Function;I)V
+
+    invoke-static {p0}, Lcom/x/android/chat/m;->a(Lkotlin/jvm/functions/Function0;)V
+
+    return-void
+.end method

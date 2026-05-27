@@ -1,0 +1,184 @@
+.class public final Lcom/x/android/type/g60$a;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/x/android/type/g60;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = "a"
+.end annotation
+
+
+# static fields
+.field public static final synthetic a:Lcom/x/android/type/g60$a;
+
+.field public static final b:Lcom/apollographql/apollo/api/g0;
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+.end field
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 6
+
+    new-instance v0, Lcom/x/android/type/g60$a;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lcom/x/android/type/g60$a;->a:Lcom/x/android/type/g60$a;
+
+    new-instance v0, Lcom/apollographql/apollo/api/g0;
+
+    const-string v1, "IssuedCardShippingCarrierRoyalMail"
+
+    const-string v2, "IssuedCardShippingCarrierUsps"
+
+    const-string v3, "IssuedCardShippingCarrierUnspecified"
+
+    const-string v4, "IssuedCardShippingCarrierDhl"
+
+    const-string v5, "IssuedCardShippingCarrierFedex"
+
+    filled-new-array {v3, v4, v5, v1, v2}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lkotlin/collections/g;->j([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v1
+
+    const-string v2, "XPaymentsIssuedCardShippingCarrier"
+
+    invoke-direct {v0, v2, v1}, Lcom/apollographql/apollo/api/g0;-><init>(Ljava/lang/String;Ljava/util/List;)V
+
+    sput-object v0, Lcom/x/android/type/g60$a;->b:Lcom/apollographql/apollo/api/g0;
+
+    return-void
+.end method
+
+.method public static a(Ljava/lang/String;)Lcom/x/android/type/g60;
+    .locals 1
+    .param p0    # Ljava/lang/String;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+
+    const-string v0, "rawValue"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    sparse-switch v0, :sswitch_data_0
+
+    goto :goto_0
+
+    :sswitch_0
+    const-string v0, "IssuedCardShippingCarrierDhl"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object p0, Lcom/x/android/type/g60$b;->a:Lcom/x/android/type/g60$b;
+
+    goto :goto_1
+
+    :sswitch_1
+    const-string v0, "IssuedCardShippingCarrierRoyalMail"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    sget-object p0, Lcom/x/android/type/g60$d;->a:Lcom/x/android/type/g60$d;
+
+    goto :goto_1
+
+    :sswitch_2
+    const-string v0, "IssuedCardShippingCarrierFedex"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    sget-object p0, Lcom/x/android/type/g60$c;->a:Lcom/x/android/type/g60$c;
+
+    goto :goto_1
+
+    :sswitch_3
+    const-string v0, "IssuedCardShippingCarrierUnspecified"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    sget-object p0, Lcom/x/android/type/g60$e;->a:Lcom/x/android/type/g60$e;
+
+    goto :goto_1
+
+    :sswitch_4
+    const-string v0, "IssuedCardShippingCarrierUsps"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    :goto_0
+    new-instance v0, Lcom/x/android/type/ps;
+
+    invoke-direct {v0, p0}, Lcom/x/android/type/ps;-><init>(Ljava/lang/String;)V
+
+    move-object p0, v0
+
+    goto :goto_1
+
+    :cond_4
+    sget-object p0, Lcom/x/android/type/g60$f;->a:Lcom/x/android/type/g60$f;
+
+    :goto_1
+    return-object p0
+
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x528e12d0 -> :sswitch_4
+        -0x4056d3b8 -> :sswitch_3
+        -0xe3337 -> :sswitch_2
+        0x36c80eaf -> :sswitch_1
+        0x606ec679 -> :sswitch_0
+    .end sparse-switch
+.end method

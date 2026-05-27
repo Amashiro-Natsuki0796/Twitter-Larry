@@ -1,0 +1,40 @@
+.class public final Lcom/twitter/graphql/schema/type/m;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/twitter/graphql/schema/type/m$a;
+    }
+.end annotation
+
+
+# static fields
+.field public static final Companion:Lcom/twitter/graphql/schema/type/m$a;
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+.end field
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 3
+
+    new-instance v0, Lcom/twitter/graphql/schema/type/m$a;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lcom/twitter/graphql/schema/type/m;->Companion:Lcom/twitter/graphql/schema/type/m$a;
+
+    sget-object v0, Lkotlin/collections/EmptyList;->a:Lkotlin/collections/EmptyList;
+
+    new-instance v1, Lcom/apollographql/apollo/api/t0;
+
+    const-string v2, "CommunitySpaceCreateActionUnavailable"
+
+    invoke-direct {v1, v2, v0, v0, v0}, Lcom/apollographql/apollo/api/t0;-><init>(Ljava/lang/String;Lkotlin/collections/EmptyList;Lkotlin/collections/EmptyList;Lkotlin/collections/EmptyList;)V
+
+    return-void
+.end method

@@ -1,0 +1,14 @@
+.class public interface abstract Lcom/x/cards/impl/poll/a;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/x/cards/impl/poll/a$a;,
+        Lcom/x/cards/impl/poll/a$b;,
+        Lcom/x/cards/impl/poll/a$c;,
+        Lcom/x/cards/impl/poll/a$d;
+    }
+.end annotation

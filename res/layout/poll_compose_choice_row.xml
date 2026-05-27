@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.composer.poll.PollChoiceEditText android:id="@id/poll_choice" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textCapSentences|textAutoCorrect" style="@style/PollComposeEdittextStyle" />
+    <com.twitter.ui.components.text.legacy.TypefacesTextView android:layout_gravity="end|center" android:id="@id/poll_choice_char_count" android:layout_height="wrap_content" style="@style/PollComposeCharCountStyle" />
+</FrameLayout>

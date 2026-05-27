@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/tweet_grok_create_your_own_container" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.twitter.ui.components.text.legacy.TypefacesTextView android:textColor="?coreColorSecondaryText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tweet_grok_create_your_own" android:drawablePadding="@dimen/space_2" android:drawableEnd="@drawable/ic_chevron_right_small" android:paddingVertical="@dimen/space_4" app:drawableTint="?coreColorSecondaryText" />
+    <tag android:value="GrokImagineAction" android:id="@id/weaverComponent" />
+</FrameLayout>

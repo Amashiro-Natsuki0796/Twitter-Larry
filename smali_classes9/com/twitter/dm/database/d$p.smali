@@ -1,0 +1,34 @@
+.class public final Lcom/twitter/dm/database/d$p;
+.super Lcom/twitter/database/j$b;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/twitter/dm/database/d;->c()Ljava/util/List;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = null
+.end annotation
+
+
+# virtual methods
+.method public final a(Lcom/twitter/database/model/m;Landroidx/sqlite/db/b;)V
+    .locals 1
+
+    const-string v0, "upgrader"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "db"
+
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-class p2, Lcom/twitter/dm/database/b;
+
+    invoke-interface {p1, p2}, Lcom/twitter/database/model/m;->l(Ljava/lang/Class;)V
+
+    return-void
+.end method

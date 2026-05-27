@@ -1,0 +1,51 @@
+.class public final Lcom/google/android/gms/internal/mlkit_vision_face/q;
+.super Lcom/google/android/gms/internal/mlkit_vision_face/n;
+.source "SourceFile"
+
+# interfaces
+.implements Lcom/google/android/gms/internal/mlkit_vision_face/k0;
+
+
+# virtual methods
+.method public final zzc(Ljava/lang/Object;)Lcom/google/android/gms/internal/mlkit_vision_face/m;
+    .locals 3
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_vision_face/n;->c:Lcom/google/android/gms/internal/mlkit_vision_face/a0;
+
+    invoke-virtual {v0, p1}, Lcom/google/android/gms/internal/mlkit_vision_face/a0;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/Collection;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    const/4 v1, 0x3
+
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
+
+    :cond_0
+    check-cast v0, Ljava/util/List;
+
+    instance-of v1, v0, Ljava/util/RandomAccess;
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_1
+
+    new-instance v1, Lcom/google/android/gms/internal/mlkit_vision_face/j;
+
+    invoke-direct {v1, p0, p1, v0, v2}, Lcom/google/android/gms/internal/mlkit_vision_face/m;-><init>(Lcom/google/android/gms/internal/mlkit_vision_face/n;Ljava/lang/Object;Ljava/util/List;Lcom/google/android/gms/internal/mlkit_vision_face/m;)V
+
+    goto :goto_0
+
+    :cond_1
+    new-instance v1, Lcom/google/android/gms/internal/mlkit_vision_face/m;
+
+    invoke-direct {v1, p0, p1, v0, v2}, Lcom/google/android/gms/internal/mlkit_vision_face/m;-><init>(Lcom/google/android/gms/internal/mlkit_vision_face/n;Ljava/lang/Object;Ljava/util/List;Lcom/google/android/gms/internal/mlkit_vision_face/m;)V
+
+    :goto_0
+    return-object v1
+.end method

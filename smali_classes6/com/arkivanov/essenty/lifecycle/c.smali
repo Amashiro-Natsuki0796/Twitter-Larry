@@ -1,0 +1,84 @@
+.class public final synthetic Lcom/arkivanov/essenty/lifecycle/c;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lkotlin/jvm/functions/Function0;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/lang/Object;
+
+.field public final synthetic c:Ljava/lang/Object;
+
+
+# direct methods
+.method public synthetic constructor <init>(ILjava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
+
+    iput p1, p0, Lcom/arkivanov/essenty/lifecycle/c;->a:I
+
+    iput-object p2, p0, Lcom/arkivanov/essenty/lifecycle/c;->b:Ljava/lang/Object;
+
+    iput-object p3, p0, Lcom/arkivanov/essenty/lifecycle/c;->c:Ljava/lang/Object;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Lcom/arkivanov/essenty/lifecycle/c;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Lcom/arkivanov/essenty/lifecycle/c;->b:Ljava/lang/Object;
+
+    check-cast v1, Landroidx/compose/ui/focus/q;
+
+    invoke-interface {v1, v0}, Landroidx/compose/ui/focus/q;->u(Z)V
+
+    sget-object v0, Lcom/x/payments/screens/createbeneficiarytransaction/amount/PaymentCreateBeneficiaryTransactionAmountEvent$d;->a:Lcom/x/payments/screens/createbeneficiarytransaction/amount/PaymentCreateBeneficiaryTransactionAmountEvent$d;
+
+    iget-object v1, p0, Lcom/arkivanov/essenty/lifecycle/c;->c:Ljava/lang/Object;
+
+    check-cast v1, Lkotlin/jvm/functions/Function1;
+
+    invoke-interface {v1, v0}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v0, Lkotlin/Unit;->a:Lkotlin/Unit;
+
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lcom/arkivanov/essenty/lifecycle/c;->b:Ljava/lang/Object;
+
+    check-cast v0, Lcom/arkivanov/essenty/lifecycle/d;
+
+    iget-object v0, v0, Lcom/arkivanov/essenty/lifecycle/d;->b:Ljava/util/HashMap;
+
+    iget-object v1, p0, Lcom/arkivanov/essenty/lifecycle/c;->c:Ljava/lang/Object;
+
+    check-cast v1, Lcom/arkivanov/essenty/lifecycle/e$a;
+
+    invoke-virtual {v0, v1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v0, Lkotlin/Unit;->a:Lkotlin/Unit;
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method

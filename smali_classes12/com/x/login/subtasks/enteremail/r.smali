@@ -1,0 +1,216 @@
+.class public final Lcom/x/login/subtasks/enteremail/r;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lkotlin/jvm/functions/Function2;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Lkotlin/jvm/functions/Function2<",
+        "Landroidx/compose/runtime/n;",
+        "Ljava/lang/Integer;",
+        "Lkotlin/Unit;",
+        ">;"
+    }
+.end annotation
+
+.annotation build Lkotlin/jvm/internal/SourceDebugExtension;
+.end annotation
+
+
+# instance fields
+.field public final synthetic a:Lcom/x/thrift/onboarding/task/service/flows/subtasks/thriftjava/EnterEmailSubtask;
+
+.field public final synthetic b:Z
+
+.field public final synthetic c:Landroidx/compose/ui/platform/t4;
+
+.field public final synthetic d:Lkotlin/jvm/functions/Function1;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lkotlin/jvm/functions/Function1<",
+            "Lcom/x/login/subtasks/enteremail/EnterEmailEvent;",
+            "Lkotlin/Unit;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public final synthetic e:Ljava/lang/String;
+
+.field public final synthetic f:Z
+
+
+# direct methods
+.method public constructor <init>(Lcom/x/thrift/onboarding/task/service/flows/subtasks/thriftjava/EnterEmailSubtask;ZLandroidx/compose/ui/platform/t4;Lkotlin/jvm/functions/Function1;Ljava/lang/String;Z)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/x/thrift/onboarding/task/service/flows/subtasks/thriftjava/EnterEmailSubtask;",
+            "Z",
+            "Landroidx/compose/ui/platform/t4;",
+            "Lkotlin/jvm/functions/Function1<",
+            "-",
+            "Lcom/x/login/subtasks/enteremail/EnterEmailEvent;",
+            "Lkotlin/Unit;",
+            ">;",
+            "Ljava/lang/String;",
+            "Z)V"
+        }
+    .end annotation
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/x/login/subtasks/enteremail/r;->a:Lcom/x/thrift/onboarding/task/service/flows/subtasks/thriftjava/EnterEmailSubtask;
+
+    iput-boolean p2, p0, Lcom/x/login/subtasks/enteremail/r;->b:Z
+
+    iput-object p3, p0, Lcom/x/login/subtasks/enteremail/r;->c:Landroidx/compose/ui/platform/t4;
+
+    iput-object p4, p0, Lcom/x/login/subtasks/enteremail/r;->d:Lkotlin/jvm/functions/Function1;
+
+    iput-object p5, p0, Lcom/x/login/subtasks/enteremail/r;->e:Ljava/lang/String;
+
+    iput-boolean p6, p0, Lcom/x/login/subtasks/enteremail/r;->f:Z
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 10
+
+    move-object v7, p1
+
+    check-cast v7, Landroidx/compose/runtime/n;
+
+    check-cast p2, Ljava/lang/Number;
+
+    invoke-virtual {p2}, Ljava/lang/Number;->intValue()I
+
+    move-result p1
+
+    and-int/lit8 p1, p1, 0x3
+
+    const/4 p2, 0x2
+
+    if-ne p1, p2, :cond_1
+
+    invoke-interface {v7}, Landroidx/compose/runtime/n;->b()Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-interface {v7}, Landroidx/compose/runtime/n;->k()V
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    iget-object p1, p0, Lcom/x/login/subtasks/enteremail/r;->a:Lcom/x/thrift/onboarding/task/service/flows/subtasks/thriftjava/EnterEmailSubtask;
+
+    invoke-virtual {p1}, Lcom/x/thrift/onboarding/task/service/flows/subtasks/thriftjava/EnterEmailSubtask;->getSkipLink()Lcom/x/thrift/onboarding/task/service/flows/subtasks/thriftjava/NavigationLink;
+
+    move-result-object v0
+
+    sget-object v1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Lcom/x/thrift/onboarding/task/service/flows/subtasks/thriftjava/EnterEmailSubtask;->getNextLink()Lcom/x/thrift/onboarding/task/service/flows/subtasks/thriftjava/NavigationLink;
+
+    move-result-object v2
+
+    sget-object p1, Landroidx/compose/ui/m;->Companion:Landroidx/compose/ui/m$a;
+
+    const/high16 p2, 0x3f800000    # 1.0f
+
+    invoke-static {p1, p2}, Landroidx/compose/foundation/layout/t3;->e(Landroidx/compose/ui/m;F)Landroidx/compose/ui/m;
+
+    move-result-object v4
+
+    const p1, -0x48fade91
+
+    invoke-interface {v7, p1}, Landroidx/compose/runtime/n;->p(I)V
+
+    iget-object p1, p0, Lcom/x/login/subtasks/enteremail/r;->c:Landroidx/compose/ui/platform/t4;
+
+    invoke-interface {v7, p1}, Landroidx/compose/runtime/n;->o(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    iget-object v3, p0, Lcom/x/login/subtasks/enteremail/r;->d:Lkotlin/jvm/functions/Function1;
+
+    invoke-interface {v7, v3}, Landroidx/compose/runtime/n;->o(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    or-int/2addr p2, v5
+
+    iget-object v5, p0, Lcom/x/login/subtasks/enteremail/r;->e:Ljava/lang/String;
+
+    invoke-interface {v7, v5}, Landroidx/compose/runtime/n;->o(Ljava/lang/Object;)Z
+
+    move-result v6
+
+    or-int/2addr p2, v6
+
+    iget-boolean v6, p0, Lcom/x/login/subtasks/enteremail/r;->f:Z
+
+    invoke-interface {v7, v6}, Landroidx/compose/runtime/n;->q(Z)Z
+
+    move-result v8
+
+    or-int/2addr p2, v8
+
+    invoke-interface {v7}, Landroidx/compose/runtime/n;->J()Ljava/lang/Object;
+
+    move-result-object v8
+
+    if-nez p2, :cond_2
+
+    sget-object p2, Landroidx/compose/runtime/n;->Companion:Landroidx/compose/runtime/n$a;
+
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object p2, Landroidx/compose/runtime/n$a;->b:Landroidx/compose/runtime/n$a$a;
+
+    if-ne v8, p2, :cond_3
+
+    :cond_2
+    new-instance v8, Lcom/x/login/subtasks/enteremail/q;
+
+    invoke-direct {v8, p1, v3, v5, v6}, Lcom/x/login/subtasks/enteremail/q;-><init>(Landroidx/compose/ui/platform/t4;Lkotlin/jvm/functions/Function1;Ljava/lang/String;Z)V
+
+    invoke-interface {v7, v8}, Landroidx/compose/runtime/n;->D(Ljava/lang/Object;)V
+
+    :cond_3
+    move-object v6, v8
+
+    check-cast v6, Lkotlin/jvm/functions/Function1;
+
+    invoke-interface {v7}, Landroidx/compose/runtime/n;->m()V
+
+    const/16 v8, 0x6030
+
+    const/16 v9, 0x20
+
+    iget-boolean v3, p0, Lcom/x/login/subtasks/enteremail/r;->b:Z
+
+    const/4 v5, 0x0
+
+    invoke-static/range {v0 .. v9}, Lcom/x/login/subtasks/common/ui/p;->a(Lcom/x/thrift/onboarding/task/service/flows/subtasks/thriftjava/NavigationLink;Ljava/lang/Boolean;Lcom/x/thrift/onboarding/task/service/flows/subtasks/thriftjava/NavigationLink;ZLandroidx/compose/ui/m;ZLkotlin/jvm/functions/Function1;Landroidx/compose/runtime/n;II)V
+
+    :goto_1
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
+
+    return-object p1
+.end method

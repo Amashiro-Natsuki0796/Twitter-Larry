@@ -1,0 +1,140 @@
+.class public final Lcom/twitter/communities/subsystem/repositories/requests/spaces/b;
+.super Lcom/twitter/repository/common/network/datasource/d;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/twitter/communities/subsystem/repositories/requests/spaces/b$a;
+    }
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/twitter/repository/common/network/datasource/d<",
+        "Lcom/twitter/communities/subsystem/repositories/requests/spaces/b$a;",
+        "Lcom/twitter/graphql/schema/e$c;",
+        "Lcom/twitter/async/http/a<",
+        "Lcom/twitter/graphql/schema/e$c;",
+        "Lcom/twitter/api/common/TwitterErrors;",
+        ">;>;"
+    }
+.end annotation
+
+
+# instance fields
+.field public final b:Lcom/twitter/graphql/d;
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>(Lcom/twitter/graphql/d;)V
+    .locals 1
+    .param p1    # Lcom/twitter/graphql/d;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+
+    const-string v0, "factory"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, Lcom/twitter/repository/common/network/datasource/d;-><init>(I)V
+
+    iput-object p1, p0, Lcom/twitter/communities/subsystem/repositories/requests/spaces/b;->b:Lcom/twitter/graphql/d;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final g(Ljava/lang/Object;)Lcom/twitter/async/http/a;
+    .locals 3
+
+    check-cast p1, Lcom/twitter/communities/subsystem/repositories/requests/spaces/b$a;
+
+    const-string v0, "args"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    new-instance v0, Lcom/twitter/graphql/schema/e;
+
+    iget-object v1, p1, Lcom/twitter/communities/subsystem/repositories/requests/spaces/b$a;->b:Ljava/lang/String;
+
+    invoke-direct {v0, v1}, Lcom/twitter/graphql/schema/e;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lcom/twitter/communities/subsystem/repositories/requests/spaces/b;->b:Lcom/twitter/graphql/d;
+
+    invoke-interface {v1, v0}, Lcom/twitter/graphql/d;->a(Lcom/apollographql/apollo/api/u0;)Lcom/twitter/graphql/f;
+
+    move-result-object v0
+
+    new-instance v1, Lcom/twitter/communities/subsystem/repositories/requests/spaces/a;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, v2}, Lcom/twitter/communities/subsystem/repositories/requests/spaces/a;-><init>(I)V
+
+    iget-object p1, p1, Lcom/twitter/communities/subsystem/repositories/requests/spaces/b$a;->a:Lcom/twitter/util/user/UserIdentifier;
+
+    invoke-static {v0, p1, v1}, Lcom/twitter/api/requests/r;->b(Lcom/twitter/graphql/c;Lcom/twitter/util/user/UserIdentifier;Lkotlin/jvm/functions/Function1;)Lcom/twitter/api/requests/m;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final n(Lcom/twitter/async/http/a;)Ljava/lang/Object;
+    .locals 1
+
+    const-string v0, "request"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {p1}, Lcom/twitter/async/http/a;->V()Lcom/twitter/async/http/k;
+
+    move-result-object v0
+
+    iget-boolean v0, v0, Lcom/twitter/async/http/k;->b:Z
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p1}, Lcom/twitter/async/http/a;->V()Lcom/twitter/async/http/k;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/twitter/async/http/k;->g:Ljava/lang/Object;
+
+    check-cast v0, Lcom/twitter/graphql/schema/e$c;
+
+    if-eqz v0, :cond_0
+
+    return-object v0
+
+    :cond_0
+    sget-object v0, Lcom/twitter/async/http/HttpRequestResultException;->Companion:Lcom/twitter/async/http/HttpRequestResultException$a;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {p1}, Lcom/twitter/async/http/HttpRequestResultException$a;->a(Lcom/twitter/async/http/a;)Lcom/twitter/async/http/HttpRequestResultException;
+
+    move-result-object p1
+
+    throw p1
+
+    :cond_1
+    sget-object v0, Lcom/twitter/async/http/HttpRequestResultException;->Companion:Lcom/twitter/async/http/HttpRequestResultException$a;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {p1}, Lcom/twitter/async/http/HttpRequestResultException$a;->a(Lcom/twitter/async/http/a;)Lcom/twitter/async/http/HttpRequestResultException;
+
+    move-result-object p1
+
+    throw p1
+.end method

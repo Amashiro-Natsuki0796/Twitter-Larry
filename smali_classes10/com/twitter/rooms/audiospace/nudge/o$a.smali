@@ -1,0 +1,21 @@
+.class public final Lcom/twitter/rooms/audiospace/nudge/o$a;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/twitter/rooms/audiospace/nudge/o;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = "a"
+.end annotation
+
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/twitter/rooms/audiospace/nudge/o$a$a;,
+        Lcom/twitter/rooms/audiospace/nudge/o$a$b;
+    }
+.end annotation

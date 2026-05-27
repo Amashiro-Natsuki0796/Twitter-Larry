@@ -1,0 +1,17 @@
+.class public final Lcom/twitter/repository/notifications/di/user/b;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ldagger/internal/d;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ldagger/internal/d<",
+        "Lcom/twitter/util/concurrent/v;",
+        ">;"
+    }
+.end annotation

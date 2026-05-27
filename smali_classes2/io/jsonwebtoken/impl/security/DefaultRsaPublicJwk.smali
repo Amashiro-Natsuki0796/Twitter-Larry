@@ -1,0 +1,220 @@
+.class Lio/jsonwebtoken/impl/security/DefaultRsaPublicJwk;
+.super Lio/jsonwebtoken/impl/security/AbstractPublicJwk;
+.source "SourceFile"
+
+# interfaces
+.implements Lio/jsonwebtoken/security/RsaPublicJwk;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lio/jsonwebtoken/impl/security/AbstractPublicJwk<",
+        "Ljava/security/interfaces/RSAPublicKey;",
+        ">;",
+        "Lio/jsonwebtoken/security/RsaPublicJwk;"
+    }
+.end annotation
+
+
+# static fields
+.field static final MODULUS:Lio/jsonwebtoken/impl/lang/Parameter;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lio/jsonwebtoken/impl/lang/Parameter<",
+            "Ljava/math/BigInteger;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field static final PARAMS:Ljava/util/Set;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Set<",
+            "Lio/jsonwebtoken/impl/lang/Parameter<",
+            "*>;>;"
+        }
+    .end annotation
+.end field
+
+.field static final PUBLIC_EXPONENT:Lio/jsonwebtoken/impl/lang/Parameter;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lio/jsonwebtoken/impl/lang/Parameter<",
+            "Ljava/math/BigInteger;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field static final THUMBPRINT_PARAMS:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Lio/jsonwebtoken/impl/lang/Parameter<",
+            "*>;>;"
+        }
+    .end annotation
+.end field
+
+.field static final TYPE_VALUE:Ljava/lang/String; = "RSA"
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 7
+
+    const-string v0, "n"
+
+    const-string v1, "Modulus"
+
+    invoke-static {v0, v1}, Lio/jsonwebtoken/impl/lang/Parameters;->bigInt(Ljava/lang/String;Ljava/lang/String;)Lio/jsonwebtoken/impl/lang/ParameterBuilder;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lio/jsonwebtoken/lang/Builder;->build()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lio/jsonwebtoken/impl/lang/Parameter;
+
+    sput-object v0, Lio/jsonwebtoken/impl/security/DefaultRsaPublicJwk;->MODULUS:Lio/jsonwebtoken/impl/lang/Parameter;
+
+    const-string v1, "e"
+
+    const-string v2, "Public Exponent"
+
+    invoke-static {v1, v2}, Lio/jsonwebtoken/impl/lang/Parameters;->bigInt(Ljava/lang/String;Ljava/lang/String;)Lio/jsonwebtoken/impl/lang/ParameterBuilder;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Lio/jsonwebtoken/lang/Builder;->build()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lio/jsonwebtoken/impl/lang/Parameter;
+
+    sput-object v1, Lio/jsonwebtoken/impl/security/DefaultRsaPublicJwk;->PUBLIC_EXPONENT:Lio/jsonwebtoken/impl/lang/Parameter;
+
+    sget-object v2, Lio/jsonwebtoken/impl/security/AbstractAsymmetricJwk;->PARAMS:Ljava/util/Set;
+
+    const/4 v3, 0x2
+
+    new-array v4, v3, [Lio/jsonwebtoken/impl/lang/Parameter;
+
+    const/4 v5, 0x0
+
+    aput-object v0, v4, v5
+
+    const/4 v6, 0x1
+
+    aput-object v1, v4, v6
+
+    invoke-static {v2, v4}, Lio/jsonwebtoken/lang/Collections;->concat(Ljava/util/Set;[Ljava/lang/Object;)Ljava/util/Set;
+
+    move-result-object v2
+
+    sput-object v2, Lio/jsonwebtoken/impl/security/DefaultRsaPublicJwk;->PARAMS:Ljava/util/Set;
+
+    const/4 v2, 0x3
+
+    new-array v2, v2, [Lio/jsonwebtoken/impl/lang/Parameter;
+
+    aput-object v1, v2, v5
+
+    sget-object v1, Lio/jsonwebtoken/impl/security/AbstractJwk;->KTY:Lio/jsonwebtoken/impl/lang/Parameter;
+
+    aput-object v1, v2, v6
+
+    aput-object v0, v2, v3
+
+    invoke-static {v2}, Lio/jsonwebtoken/lang/Collections;->of([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    sput-object v0, Lio/jsonwebtoken/impl/security/DefaultRsaPublicJwk;->THUMBPRINT_PARAMS:Ljava/util/List;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lio/jsonwebtoken/impl/security/JwkContext;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lio/jsonwebtoken/impl/security/JwkContext<",
+            "Ljava/security/interfaces/RSAPublicKey;",
+            ">;)V"
+        }
+    .end annotation
+
+    sget-object v0, Lio/jsonwebtoken/impl/security/DefaultRsaPublicJwk;->THUMBPRINT_PARAMS:Ljava/util/List;
+
+    invoke-direct {p0, p1, v0}, Lio/jsonwebtoken/impl/security/AbstractPublicJwk;-><init>(Lio/jsonwebtoken/impl/security/JwkContext;Ljava/util/List;)V
+
+    return-void
+.end method
+
+.method public static equalsPublic(Lio/jsonwebtoken/impl/lang/ParameterReadable;Ljava/lang/Object;)Z
+    .locals 1
+
+    sget-object v0, Lio/jsonwebtoken/impl/security/DefaultRsaPublicJwk;->MODULUS:Lio/jsonwebtoken/impl/lang/Parameter;
+
+    invoke-static {p0, p1, v0}, Lio/jsonwebtoken/impl/lang/Parameters;->equals(Lio/jsonwebtoken/impl/lang/ParameterReadable;Ljava/lang/Object;Lio/jsonwebtoken/impl/lang/Parameter;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, Lio/jsonwebtoken/impl/security/DefaultRsaPublicJwk;->PUBLIC_EXPONENT:Lio/jsonwebtoken/impl/lang/Parameter;
+
+    invoke-static {p0, p1, v0}, Lio/jsonwebtoken/impl/lang/Parameters;->equals(Lio/jsonwebtoken/impl/lang/ParameterReadable;Ljava/lang/Object;Lio/jsonwebtoken/impl/lang/Parameter;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    :goto_0
+    return p0
+.end method
+
+
+# virtual methods
+.method public equals(Lio/jsonwebtoken/security/PublicJwk;)Z
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lio/jsonwebtoken/security/PublicJwk<",
+            "*>;)Z"
+        }
+    .end annotation
+
+    instance-of v0, p1, Lio/jsonwebtoken/security/RsaPublicJwk;
+
+    if-eqz v0, :cond_0
+
+    invoke-static {p0, p1}, Lio/jsonwebtoken/impl/security/DefaultRsaPublicJwk;->equalsPublic(Lio/jsonwebtoken/impl/lang/ParameterReadable;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    return p1
+.end method

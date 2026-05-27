@@ -1,0 +1,48 @@
+.class public final Lio/reactivex/internal/operators/observable/l2;
+.super Lio/reactivex/internal/operators/observable/a;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lio/reactivex/internal/operators/observable/l2$a;
+    }
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T:",
+        "Ljava/lang/Object;",
+        ">",
+        "Lio/reactivex/internal/operators/observable/a<",
+        "TT;",
+        "Lio/reactivex/m<",
+        "TT;>;>;"
+    }
+.end annotation
+
+
+# virtual methods
+.method public final subscribeActual(Lio/reactivex/t;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lio/reactivex/t<",
+            "-",
+            "Lio/reactivex/m<",
+            "TT;>;>;)V"
+        }
+    .end annotation
+
+    new-instance v0, Lio/reactivex/internal/operators/observable/l2$a;
+
+    invoke-direct {v0, p1}, Lio/reactivex/internal/operators/observable/l2$a;-><init>(Lio/reactivex/t;)V
+
+    iget-object p1, p0, Lio/reactivex/internal/operators/observable/a;->a:Lio/reactivex/r;
+
+    invoke-interface {p1, v0}, Lio/reactivex/r;->subscribe(Lio/reactivex/t;)V
+
+    return-void
+.end method

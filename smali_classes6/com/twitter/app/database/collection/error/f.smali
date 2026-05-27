@@ -1,0 +1,34 @@
+.class public final synthetic Lcom/twitter/app/database/collection/error/f;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lio/reactivex/functions/a;
+
+
+# instance fields
+.field public final synthetic a:Lio/reactivex/disposables/f;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lio/reactivex/disposables/f;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/twitter/app/database/collection/error/f;->a:Lio/reactivex/disposables/f;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 1
+
+    iget-object v0, p0, Lcom/twitter/app/database/collection/error/f;->a:Lio/reactivex/disposables/f;
+
+    invoke-virtual {v0}, Lio/reactivex/disposables/f;->dispose()V
+
+    return-void
+.end method

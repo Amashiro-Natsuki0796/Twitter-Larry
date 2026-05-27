@@ -1,0 +1,59 @@
+.class public final Landroidx/work/impl/constraints/l$b$a;
+.super Lkotlin/jvm/internal/Lambda;
+.source "SourceFile"
+
+# interfaces
+.implements Lkotlin/jvm/functions/Function0;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Landroidx/work/impl/constraints/l$b;->b(Lkotlinx/coroutines/flow/h;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lkotlin/jvm/internal/Lambda;",
+        "Lkotlin/jvm/functions/Function0<",
+        "[",
+        "Landroidx/work/impl/constraints/b;",
+        ">;"
+    }
+.end annotation
+
+
+# instance fields
+.field public final synthetic e:[Lkotlinx/coroutines/flow/g;
+
+
+# direct methods
+.method public constructor <init>([Lkotlinx/coroutines/flow/g;)V
+    .locals 0
+
+    iput-object p1, p0, Landroidx/work/impl/constraints/l$b$a;->e:[Lkotlinx/coroutines/flow/g;
+
+    const/4 p1, 0x0
+
+    invoke-direct {p0, p1}, Lkotlin/jvm/internal/Lambda;-><init>(I)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Landroidx/work/impl/constraints/l$b$a;->e:[Lkotlinx/coroutines/flow/g;
+
+    array-length v0, v0
+
+    new-array v0, v0, [Landroidx/work/impl/constraints/b;
+
+    return-object v0
+.end method

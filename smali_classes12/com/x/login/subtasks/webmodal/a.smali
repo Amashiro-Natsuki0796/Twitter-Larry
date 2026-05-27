@@ -1,0 +1,245 @@
+.class public final Lcom/x/login/subtasks/webmodal/a;
+.super Lkotlin/coroutines/jvm/internal/SuspendLambda;
+.source "SourceFile"
+
+# interfaces
+.implements Lkotlin/jvm/functions/Function2;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lkotlin/coroutines/jvm/internal/SuspendLambda;",
+        "Lkotlin/jvm/functions/Function2<",
+        "Lkotlinx/coroutines/l0;",
+        "Lkotlin/coroutines/Continuation<",
+        "-",
+        "Lkotlin/Unit;",
+        ">;",
+        "Ljava/lang/Object;",
+        ">;"
+    }
+.end annotation
+
+.annotation runtime Lkotlin/coroutines/jvm/internal/DebugMetadata;
+    c = "com.x.login.subtasks.webmodal.WebModalComponent$1$1"
+    f = "WebModalComponent.kt"
+    l = {
+        0x3f
+    }
+    m = "invokeSuspend"
+.end annotation
+
+.annotation build Lkotlin/jvm/internal/SourceDebugExtension;
+.end annotation
+
+
+# instance fields
+.field public q:I
+
+.field public final synthetic r:Lkotlin/coroutines/CoroutineContext;
+
+.field public final synthetic s:Lcom/x/login/subtasks/webmodal/b;
+
+
+# direct methods
+.method public constructor <init>(Lkotlin/coroutines/CoroutineContext;Lcom/x/login/subtasks/webmodal/b;Lkotlin/coroutines/Continuation;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lkotlin/coroutines/CoroutineContext;",
+            "Lcom/x/login/subtasks/webmodal/b;",
+            "Lkotlin/coroutines/Continuation<",
+            "-",
+            "Lcom/x/login/subtasks/webmodal/a;",
+            ">;)V"
+        }
+    .end annotation
+
+    iput-object p1, p0, Lcom/x/login/subtasks/webmodal/a;->r:Lkotlin/coroutines/CoroutineContext;
+
+    iput-object p2, p0, Lcom/x/login/subtasks/webmodal/a;->s:Lcom/x/login/subtasks/webmodal/b;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lkotlin/coroutines/jvm/internal/SuspendLambda;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final create(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Object;",
+            "Lkotlin/coroutines/Continuation<",
+            "*>;)",
+            "Lkotlin/coroutines/Continuation<",
+            "Lkotlin/Unit;",
+            ">;"
+        }
+    .end annotation
+
+    new-instance p1, Lcom/x/login/subtasks/webmodal/a;
+
+    iget-object v0, p0, Lcom/x/login/subtasks/webmodal/a;->r:Lkotlin/coroutines/CoroutineContext;
+
+    iget-object v1, p0, Lcom/x/login/subtasks/webmodal/a;->s:Lcom/x/login/subtasks/webmodal/b;
+
+    invoke-direct {p1, v0, v1, p2}, Lcom/x/login/subtasks/webmodal/a;-><init>(Lkotlin/coroutines/CoroutineContext;Lcom/x/login/subtasks/webmodal/b;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lkotlinx/coroutines/l0;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lcom/x/login/subtasks/webmodal/a;->create(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/x/login/subtasks/webmodal/a;
+
+    sget-object p2, Lkotlin/Unit;->a:Lkotlin/Unit;
+
+    invoke-virtual {p1, p2}, Lcom/x/login/subtasks/webmodal/a;->invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
+
+    sget-object v0, Lkotlin/coroutines/intrinsics/CoroutineSingletons;->COROUTINE_SUSPENDED:Lkotlin/coroutines/intrinsics/CoroutineSingletons;
+
+    iget v1, p0, Lcom/x/login/subtasks/webmodal/a;->q:I
+
+    const/4 v2, 0x1
+
+    iget-object v3, p0, Lcom/x/login/subtasks/webmodal/a;->s:Lcom/x/login/subtasks/webmodal/b;
+
+    if-eqz v1, :cond_1
+
+    if-ne v1, v2, :cond_0
+
+    invoke-static {p1}, Lkotlin/ResultKt;->b(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lkotlin/ResultKt;->b(Ljava/lang/Object;)V
+
+    new-instance p1, Lcom/x/login/subtasks/webmodal/a$a;
+
+    const/4 v1, 0x0
+
+    invoke-direct {p1, v3, v1}, Lcom/x/login/subtasks/webmodal/a$a;-><init>(Lcom/x/login/subtasks/webmodal/b;Lkotlin/coroutines/Continuation;)V
+
+    iput v2, p0, Lcom/x/login/subtasks/webmodal/a;->q:I
+
+    iget-object v1, p0, Lcom/x/login/subtasks/webmodal/a;->r:Lkotlin/coroutines/CoroutineContext;
+
+    invoke-static {v1, p1, p0}, Lkotlinx/coroutines/i;->f(Lkotlin/coroutines/CoroutineContext;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    check-cast p1, Ljava/lang/Number;
+
+    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v0
+
+    iget-object p1, v3, Lcom/x/login/subtasks/webmodal/b;->b:Lcom/x/thrift/onboarding/task/service/flows/subtasks/thriftjava/WebModalSubtask;
+
+    invoke-virtual {p1}, Lcom/x/thrift/onboarding/task/service/flows/subtasks/thriftjava/WebModalSubtask;->getUrl()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
+
+    move-result-object p1
+
+    const-string v2, "guestId"
+
+    invoke-static {v0, v1}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v2, v0}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "toString(...)"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->g(Ljava/lang/Object;Ljava/lang/String;)V
+
+    :cond_3
+    iget-object v0, v3, Lcom/x/login/subtasks/webmodal/b;->h:Lkotlinx/coroutines/flow/p2;
+
+    invoke-virtual {v0}, Lkotlinx/coroutines/flow/p2;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    move-object v2, v1
+
+    check-cast v2, Lcom/x/login/subtasks/webmodal/b$c;
+
+    iget-object v4, v2, Lcom/x/login/subtasks/webmodal/b$c;->b:Ljava/lang/String;
+
+    iget-object v2, v2, Lcom/x/login/subtasks/webmodal/b$c;->c:Lcom/x/login/subtasks/common/u;
+
+    const-string v5, "userAgent"
+
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    new-instance v5, Lcom/x/login/subtasks/webmodal/b$c;
+
+    invoke-direct {v5, p1, v4, v2}, Lcom/x/login/subtasks/webmodal/b$c;-><init>(Ljava/lang/String;Ljava/lang/String;Lcom/x/login/subtasks/common/u;)V
+
+    invoke-virtual {v0, v1, v5}, Lkotlinx/coroutines/flow/p2;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
+
+    return-object p1
+.end method

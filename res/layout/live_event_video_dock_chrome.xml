@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/av_loader_only_chrome_views" />
+    <ViewStub android:id="@id/live_event_video_auto_advance" android:layout_width="match_parent" android:layout_height="match_parent" />
+</FrameLayout>

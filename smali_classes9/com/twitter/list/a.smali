@@ -1,0 +1,38 @@
+.class public interface abstract Lcom/twitter/list/a;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/twitter/list/a$a;
+    }
+.end annotation
+
+
+# static fields
+.field public static final Companion:Lcom/twitter/list/a$a;
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+.end field
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    sget-object v0, Lcom/twitter/list/a$a;->a:Lcom/twitter/list/a$a;
+
+    sput-object v0, Lcom/twitter/list/a;->Companion:Lcom/twitter/list/a$a;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public abstract l()V
+.end method
+
+.method public abstract u()V
+.end method

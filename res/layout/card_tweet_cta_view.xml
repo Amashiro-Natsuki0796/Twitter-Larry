@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.ui.components.button.legacy.HashflagTwitterButton android:textSize="@dimen/font_size_small" android:id="@id/cta_button" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/card_default_spacing" style="@style/TwitterButtonMediumCondensedBold" />
+</FrameLayout>

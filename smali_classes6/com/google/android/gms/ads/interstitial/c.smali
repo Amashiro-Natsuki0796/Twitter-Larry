@@ -1,0 +1,74 @@
+.class public final synthetic Lcom/google/android/gms/ads/interstitial/c;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic a:Landroid/content/Context;
+
+.field public final synthetic b:Ljava/lang/String;
+
+.field public final synthetic c:Lcom/google/android/gms/ads/g;
+
+.field public final synthetic d:Lcom/google/android/gms/ads/interstitial/b;
+
+
+# direct methods
+.method public synthetic constructor <init>(Landroid/content/Context;Ljava/lang/String;Lcom/google/android/gms/ads/g;Lcom/google/android/gms/ads/interstitial/b;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/google/android/gms/ads/interstitial/c;->a:Landroid/content/Context;
+
+    iput-object p2, p0, Lcom/google/android/gms/ads/interstitial/c;->b:Ljava/lang/String;
+
+    iput-object p3, p0, Lcom/google/android/gms/ads/interstitial/c;->c:Lcom/google/android/gms/ads/g;
+
+    iput-object p4, p0, Lcom/google/android/gms/ads/interstitial/c;->d:Lcom/google/android/gms/ads/interstitial/b;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 5
+
+    iget-object v0, p0, Lcom/google/android/gms/ads/interstitial/c;->a:Landroid/content/Context;
+
+    iget-object v1, p0, Lcom/google/android/gms/ads/interstitial/c;->b:Ljava/lang/String;
+
+    iget-object v2, p0, Lcom/google/android/gms/ads/interstitial/c;->c:Lcom/google/android/gms/ads/g;
+
+    iget-object v3, p0, Lcom/google/android/gms/ads/interstitial/c;->d:Lcom/google/android/gms/ads/interstitial/b;
+
+    :try_start_0
+    new-instance v4, Lcom/google/android/gms/internal/ads/l00;
+
+    invoke-direct {v4, v0, v1}, Lcom/google/android/gms/internal/ads/l00;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+
+    iget-object v1, v2, Lcom/google/android/gms/ads/g;->a:Lcom/google/android/gms/ads/internal/client/g2;
+
+    invoke-virtual {v4, v1, v3}, Lcom/google/android/gms/internal/ads/l00;->f(Lcom/google/android/gms/ads/internal/client/g2;Lcom/google/android/gms/ads/e;)V
+    :try_end_0
+    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception v1
+
+    invoke-static {v0}, Lcom/google/android/gms/internal/ads/h70;->c(Landroid/content/Context;)Lcom/google/android/gms/internal/ads/j70;
+
+    move-result-object v0
+
+    const-string v2, "InterstitialAd.load"
+
+    invoke-interface {v0, v2, v1}, Lcom/google/android/gms/internal/ads/j70;->b(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-void
+.end method

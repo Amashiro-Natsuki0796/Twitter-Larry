@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.twitter.tweetview.core.GrokShareAttachmentView android:id="@id/tweet_grok_share_attachment" android:layout_width="match_parent" android:layout_height="wrap_content" android:importantForAccessibility="noHideDescendants"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <tag android:value="GrokShareAttachment" android:id="@id/weaverComponent" />
+</com.twitter.tweetview.core.GrokShareAttachmentView>

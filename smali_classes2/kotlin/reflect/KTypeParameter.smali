@@ -1,0 +1,55 @@
+.class public interface abstract Lkotlin/reflect/KTypeParameter;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lkotlin/reflect/KClassifier;
+
+
+# annotations
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000\n\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\u0008g\u0018\u00002\u00020\u0001\u00a8\u0006\u0002"
+    }
+    d2 = {
+        "Lkotlin/reflect/KTypeParameter;",
+        "Lkotlin/reflect/KClassifier;",
+        "kotlin-stdlib"
+    }
+    k = 0x1
+    mv = {
+        0x2,
+        0x1,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+.annotation build Lkotlin/SinceKotlin;
+.end annotation
+
+
+# virtual methods
+.method public abstract f()Lkotlin/reflect/KVariance;
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+.end method
+
+.method public abstract getName()Ljava/lang/String;
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+.end method
+
+.method public abstract getUpperBounds()Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List<",
+            "Lkotlin/reflect/KType;",
+            ">;"
+        }
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+.end method

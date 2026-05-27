@@ -1,0 +1,23 @@
+{
+    "default": {
+        "feature_set_token": "f565d81888ccec65046242178611e9f1e75c8113",
+        "config": {
+            "aaid_reset_prompt_enabled": {
+                "value": false
+            },
+            "account_2fa3_enabled": {
+                "value": false
+            },
+            "rweb_media_carousel_enabled": {
+                "value": false
+            },
+            "scribe_error_sample_size": {
+                "value": 10.0
+            }
+        }
+    },
+    "versions": {
+        "feature_switches": "5e73bcf5e40eec848fff2aa35ba4748f1f3cb70c",
+        "experiments": "5e73bcf5e40eec848fff2aa35ba4748f1f3cb70c"
+    }
+}

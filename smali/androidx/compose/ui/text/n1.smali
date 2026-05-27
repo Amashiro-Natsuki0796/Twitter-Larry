@@ -1,0 +1,20 @@
+.class public final synthetic Landroidx/compose/ui/text/n1;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lkotlin/jvm/functions/Function2;
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Landroidx/compose/runtime/saveable/d0;
+
+    check-cast p2, Landroidx/compose/ui/text/c3;
+
+    iget-object p1, p2, Landroidx/compose/ui/text/c3;->a:Ljava/lang/String;
+
+    return-object p1
+.end method

@@ -1,0 +1,27 @@
+.class public final Lio/ktor/utils/io/l;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# direct methods
+.method public static final a(Lio/ktor/utils/io/k;)V
+    .locals 2
+    .param p0    # Lio/ktor/utils/io/k;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+
+    const-string v0, "<this>"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    new-instance v0, Ljava/io/IOException;
+
+    const-string v1, "Channel was cancelled"
+
+    invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    invoke-interface {p0, v0}, Lio/ktor/utils/io/k;->d(Ljava/lang/Throwable;)V
+
+    return-void
+.end method

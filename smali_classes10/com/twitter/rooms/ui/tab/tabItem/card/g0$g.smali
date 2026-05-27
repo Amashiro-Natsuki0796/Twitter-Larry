@@ -1,0 +1,56 @@
+.class public final synthetic Lcom/twitter/rooms/ui/tab/tabItem/card/g0$g;
+.super Lkotlin/jvm/internal/PropertyReference1Impl;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/twitter/rooms/ui/tab/tabItem/card/g0;-><init>(Landroid/view/View;Lcom/twitter/common/utils/r;)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x1001
+    name = null
+.end annotation
+
+
+# static fields
+.field public static final f:Lcom/twitter/rooms/ui/tab/tabItem/card/g0$g;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 5
+
+    new-instance v0, Lcom/twitter/rooms/ui/tab/tabItem/card/g0$g;
+
+    const-string v1, "isSpaceAvailableForReplay()Z"
+
+    const/4 v2, 0x0
+
+    const-class v3, Lcom/twitter/rooms/ui/tab/tabItem/card/d0;
+
+    const-string v4, "isSpaceAvailableForReplay"
+
+    invoke-direct {v0, v3, v4, v1, v2}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/twitter/rooms/ui/tab/tabItem/card/g0$g;->f:Lcom/twitter/rooms/ui/tab/tabItem/card/g0$g;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final get(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lcom/twitter/rooms/ui/tab/tabItem/card/d0;
+
+    iget-boolean p1, p1, Lcom/twitter/rooms/ui/tab/tabItem/card/d0;->u:Z
+
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
+.end method

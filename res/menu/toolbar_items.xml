@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@id/premium_upsell_custom" android:visible="false" android:title="@string/premium_upsell_get_premium" app:actionLayout="@layout/home_nav_upsell_custom" app:showAsAction="always" />
+    <item android:id="@id/premium_upsell_get_premium" android:visible="false" android:title="@string/premium_upsell_get_premium" app:showAsAction="ifRoom" />
+    <item android:id="@id/premium_upsell_premium" android:visible="false" android:title="@string/premium_upsell_premium" app:showAsAction="ifRoom" />
+    <item android:id="@id/premium_upsell_upgrade" android:visible="false" android:title="@string/premium_upsell_upgrade" app:showAsAction="ifRoom" />
+    <item android:id="@id/premium_upsell_offer_percent_off" android:visible="false" android:title="@string/premium_upsell_offer_phrase" app:showAsAction="ifRoom" />
+    <item android:id="@id/premium_upsell_offer_expiring" android:visible="false" android:title="@string/premium_upsell_offer_expiring" app:showAsAction="ifRoom" />
+    <item android:id="@id/premium_upsell_offer_last_chance" android:visible="false" android:title="@string/premium_upsell_offer_last_chance" app:showAsAction="ifRoom" />
+    <item android:id="@id/premium_upsell_create" android:visible="false" android:title="@string/premium_upsell_create" app:showAsAction="ifRoom" />
+    <item android:icon="?iconSettings" android:id="@id/toolbar_settings_home" android:visible="false" android:title="@string/settings_timeline" app:showAsAction="never" />
+    <item android:icon="@drawable/ic_vector_follow" android:id="@id/toolbar_find_people" android:visible="false" android:title="@string/people_discovery_title" app:showAsAction="ifRoom" />
+    <item android:icon="?iconSettings" android:id="@id/trends_menu_settings" android:visible="false" android:title="@string/trends_menu_settings" app:showAsAction="ifRoom" />
+    <item android:icon="?iconSettings" android:id="@id/toolbar_settings_notif" android:visible="false" android:title="@string/notification_settings" app:showAsAction="ifRoom" />
+    <item android:icon="?iconSettings" android:id="@id/toolbar_settings_dm" android:visible="false" android:title="@string/settings_direct_messages" app:showAsAction="ifRoom" />
+    <item android:id="@id/toolbar_community_notes_profile" android:visible="false" android:title="@string/drawer_profile_title" app:showAsAction="always" />
+</menu>

@@ -1,0 +1,898 @@
+{
+    "status": "success",
+    "flow_token": "signUpSubtaskFlow",
+    "subtasks": [
+        {
+            "subtask_id": "signUpSubtaskID",
+            "sign_up": {
+                "primary_text": "Fill this out",
+                "name_hint": "Enter name",
+                "phone_hint": "Enter phone",
+                "email_hint": "Enter email",
+                "phone_email_hint": "Enter phone or email",
+                "birthday_hint": "Enter birthday",
+                "birthday_explanation": "This should be the date of birth of the person creating this account, whether it’s a personal or business account. This won’t be public unless you change your profile settings.",
+                "use_phone_text": "Use phone instead",
+                "use_email_text": "Use email instead",
+                "use_device_prefill": true,
+                "next_link": {
+                    "label": "Submit",
+                    "link_id": "next_link",
+                    "link_type": "subtask",
+                    "subtask_id": "settingsID"
+                }
+            }
+        },
+        {
+            "subtask_id": "signUpReviewSubtaskID",
+            "sign_up_review": {
+                "primary_text": "Looks good",
+                "name": {
+                    "subtask_data_reference": {
+                        "key": "name",
+                        "subtask_id": "signUpSubtaskID"
+                    }
+                },
+                "phone_number": {
+                    "subtask_data_reference": {
+                        "key": "phone_number",
+                        "subtask_id": "signUpSubtaskID"
+                    }
+                },
+                "email": {
+                    "subtask_data_reference": {
+                        "key": "email",
+                        "subtask_id": "signUpSubtaskID"
+                    }
+                },
+                "birthday": {
+                    "subtask_data_reference": {
+                        "key": "birthday",
+                        "subtask_id": "signUpSubtaskID"
+                    }
+                },
+                "ignore_birthday": false,
+                "birthday_requirement": {
+                    "day": 3,
+                    "month": 3,
+                    "year": 2004
+                },
+                "sign_in_text": {
+                    "text": "Have an account already? Log in",
+                    "entities": [
+                        {
+                            "from_index": 25,
+                            "to_index": 31,
+                            "navigation_link": {
+                                "link_id": "embedded_sign_in_link",
+                                "link_type": "finish"
+                            }
+                        }
+                    ]
+                },
+                "detail_text": {
+                    "text": "By signing up, you agree to Terms, Privacy Policy, and Cookie Use. Others can find you by email or phone • Privacy options",
+                    "entities": [
+                        {
+                            "from_index": 28,
+                            "to_index": 33,
+                            "navigation_link": {
+                                "label": "Terms of Service",
+                                "link_id": "terms",
+                                "link_type": "chromeless_web_link",
+                                "url": "http://twitter.com/privacy/"
+                            }
+                        },
+                        {
+                            "from_index": 35,
+                            "to_index": 49,
+                            "navigation_link": {
+                                "label": "Privacy Policy",
+                                "link_id": "privacypolicy",
+                                "link_type": "chromeless_web_link",
+                                "url": "http://twitter.com/privacy/"
+                            }
+                        },
+                        {
+                            "from_index": 55,
+                            "to_index": 65,
+                            "navigation_link": {
+                                "label": "Cookie Use",
+                                "link_id": "cookies",
+                                "link_type": "chromeless_web_link",
+                                "url": "http://twitter.com/privacy/"
+                            }
+                        },
+                        {
+                            "from_index": 107,
+                            "to_index": 122,
+                            "navigation_link": {
+                                "label": "Privacy Options",
+                                "link_id": "privacysettings",
+                                "link_type": "subtask",
+                                "subtask_id": "privacyID"
+                            }
+                        }
+                    ]
+                },
+                "phone_next_link": {
+                    "label": "Sign up",
+                    "link_id": "phone_next_link",
+                    "link_type": "abort"
+                },
+                "email_next_link": {
+                    "label": "Sign up",
+                    "link_id": "email_next_link",
+                    "link_type": "abort"
+                },
+                "invalid_birthday_link": {
+                    "link_id": "invalid_birthday_link",
+                    "link_type": "subtask",
+                    "suppress_client_events": true,
+                    "subtask_id": "signUpSubtaskFlowInvalidBirthdayAlert"
+                },
+                "name_edit_link": {
+                    "link_id": "name_edit_link",
+                    "link_type": "subtask",
+                    "is_destructive": false,
+                    "subtask_id": "signUpSubtaskID",
+                    "subtask_navigation_context": {
+                        "action": "select_name"
+                    }
+                },
+                "phone_edit_link": {
+                    "link_id": "phone_edit_link",
+                    "link_type": "subtask",
+                    "is_destructive": false,
+                    "subtask_id": "signUpSubtaskID",
+                    "subtask_navigation_context": {
+                        "action": "select_phone"
+                    }
+                },
+                "email_edit_link": {
+                    "link_id": "email_edit_link",
+                    "link_type": "subtask",
+                    "is_destructive": false,
+                    "subtask_id": "signUpSubtaskID",
+                    "subtask_navigation_context": {
+                        "action": "select_email"
+                    }
+                },
+                "birthday_edit_link": {
+                    "link_id": "birthday_edit_link",
+                    "link_type": "subtask",
+                    "is_destructive": false,
+                    "subtask_id": "signUpSubtaskID",
+                    "subtask_navigation_context": {
+                        "action": "select_birthday"
+                    }
+                }
+            }
+        },
+        {
+            "subtask_id": "privacyID",
+            "privacy_options": {
+                "primary_text": "Insecurity options",
+                "secondary_text": "Insecurity",
+                "discoverable_by_email_label": "Stalk me by my email address",
+                "discoverable_by_email_detail_text": {
+                    "text": "People who have your email address will be able to stalk you on Twitter."
+                },
+                "discoverable_by_phone_label": "Stalk me by my phone number",
+                "discoverable_by_phone_detail_text": {
+                    "text": "People who have your phone number will be able to stalk you on Twitter."
+                },
+                "next_link": {
+                    "label": "Done",
+                    "link_id": "next_link",
+                    "link_type": "subtask",
+                    "is_destructive": false,
+                    "subtask_id": "signUpReviewSubtaskID"
+                }
+            }
+        },
+        {
+            "subtask_id": "settingsID",
+            "subtask_back_navigation": "allow",
+            "settings_list": {
+                "next_link": {
+                    "link_type": "subtask",
+                    "subtask_id": "signUpReviewSubtaskID",
+                    "link_id": "next_link",
+                    "label": "Next"
+                },
+                "primary_text": {
+                    "text": "Review your current settings",
+                    "entities": [
+                    ]
+                },
+                "secondary_text": {
+                    "text": "Please take a moment to read and agree to your current selections.",
+                    "entities": [
+                    ]
+                },
+                "settings": [
+                    {
+                        "primary_text": {
+                            "text": "Discoverability",
+                            "entities": [
+                            ]
+                        },
+                        "value_type": "static_text"
+                    },
+                    {
+                        "primary_text": {
+                            "text": "Let others find you by your email address",
+                            "entities": [
+                            ]
+                        },
+                        "value_type": "boolean",
+                        "value_identifier": "email_disco",
+                        "value_data": {
+                            "boolean_data": {
+                                "initial_value": true
+                            }
+                        }
+                    },
+                    {
+                        "primary_text": {
+                            "text": "Let others find you by your phone number",
+                            "entities": [
+                            ]
+                        },
+                        "value_type": "boolean",
+                        "value_identifier": "phone_disco",
+                        "value_data": {
+                            "boolean_data": {
+                                "initial_value": true
+                            }
+                        }
+                    },
+                    {
+                        "primary_text": {
+                            "text": "Notifications",
+                            "entities": [
+                            ]
+                        },
+                        "value_type": "static_text"
+                    },
+                    {
+                        "primary_text": {
+                            "text": "Email updates",
+                            "entities": [
+                            ]
+                        },
+                        "value_type": "settings_group",
+                        "secondary_text": {
+                            "text": "Twitter will send you email including recommendations, marketing messages, and information about your Twitter activity.",
+                            "entities": [
+                            ]
+                        },
+                        "value_identifier": "email_notifications",
+                        "value_data": {
+                            "settings_group_data": {
+                                "status_text_quantity_pairs": [
+                                    {
+                                        "threshold": 0,
+                                        "text": {
+                                            "text": "Allow none",
+                                            "entities": [
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "threshold": 1,
+                                        "text": {
+                                            "text": "Allow some",
+                                            "entities": [
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "threshold": 13,
+                                        "text": {
+                                            "text": "Allow all",
+                                            "entities": [
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "settings": [
+                                    {
+                                        "primary_text": {
+                                            "text": "New notifications",
+                                            "entities": [
+                                            ]
+                                        },
+                                        "value_type": "boolean",
+                                        "value_identifier": "email_new_notification",
+                                        "value_data": {
+                                            "boolean_data": {
+                                                "initial_value": true
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "primary_text": {
+                                            "text": "Direct Messages",
+                                            "entities": [
+                                            ]
+                                        },
+                                        "value_type": "boolean",
+                                        "value_identifier": "email_sent_direct_message",
+                                        "value_data": {
+                                            "boolean_data": {
+                                                "initial_value": true
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "primary_text": {
+                                            "text": "Someone emails you a Tweet",
+                                            "entities": [
+                                            ]
+                                        },
+                                        "value_type": "boolean",
+                                        "value_identifier": "email_emailed_tweet",
+                                        "value_data": {
+                                            "boolean_data": {
+                                                "initial_value": true
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "primary_text": {
+                                            "text": "Top Tweets and stories",
+                                            "entities": [
+                                            ]
+                                        },
+                                        "value_type": "boolean",
+                                        "value_identifier": "email_top_tweets_and_stories",
+                                        "value_data": {
+                                            "boolean_data": {
+                                                "initial_value": false
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "primary_text": {
+                                            "text": "Updates about the performance of your Tweets",
+                                            "entities": [
+                                            ]
+                                        },
+                                        "value_type": "boolean",
+                                        "value_identifier": "email_tweet_performance",
+                                        "value_data": {
+                                            "boolean_data": {
+                                                "initial_value": false
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "primary_text": {
+                                            "text": "Updates about Twitter products and features",
+                                            "entities": [
+                                            ]
+                                        },
+                                        "value_type": "boolean",
+                                        "value_identifier": "email_news_product_updates",
+                                        "value_data": {
+                                            "boolean_data": {
+                                                "initial_value": true
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "primary_text": {
+                                            "text": "Tips about getting more from Twitter",
+                                            "entities": [
+                                            ]
+                                        },
+                                        "value_type": "boolean",
+                                        "value_identifier": "email_tips",
+                                        "value_data": {
+                                            "boolean_data": {
+                                                "initial_value": true
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "primary_text": {
+                                            "text": "Things you’ve missed since you logged in to Twitter",
+                                            "entities": [
+                                            ]
+                                        },
+                                        "value_type": "boolean",
+                                        "value_identifier": "email_things_you_missed",
+                                        "value_data": {
+                                            "boolean_data": {
+                                                "initial_value": false
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "primary_text": {
+                                            "text": "News about Twitter on partner products and other third-party services",
+                                            "entities": [
+                                            ]
+                                        },
+                                        "value_type": "boolean",
+                                        "value_identifier": "email_news_about_partners",
+                                        "value_data": {
+                                            "boolean_data": {
+                                                "initial_value": true
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "primary_text": {
+                                            "text": "Participation in Twitter research surveys",
+                                            "entities": [
+                                            ]
+                                        },
+                                        "value_type": "boolean",
+                                        "value_identifier": "email_twitter_research_surveys",
+                                        "value_data": {
+                                            "boolean_data": {
+                                                "initial_value": true
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "primary_text": {
+                                            "text": "Suggestions for recommended accounts",
+                                            "entities": [
+                                            ]
+                                        },
+                                        "value_type": "boolean",
+                                        "value_identifier": "email_suggested_accounts",
+                                        "value_data": {
+                                            "boolean_data": {
+                                                "initial_value": false
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "primary_text": {
+                                            "text": "Suggestions based on your recent follows",
+                                            "entities": [
+                                            ]
+                                        },
+                                        "value_type": "boolean",
+                                        "value_identifier": "email_suggestions_recent_follows",
+                                        "value_data": {
+                                            "boolean_data": {
+                                                "initial_value": true
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "primary_text": {
+                                            "text": "Tips on Twitter business products",
+                                            "entities": [
+                                            ]
+                                        },
+                                        "value_type": "boolean",
+                                        "value_identifier": "email_business_product_tips",
+                                        "value_data": {
+                                            "boolean_data": {
+                                                "initial_value": true
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "primary_text": {
+                            "text": "Location",
+                            "entities": [
+                            ]
+                        },
+                        "value_type": "static_text"
+                    },
+                    {
+                        "primary_text": {
+                            "text": "Precise location",
+                            "entities": [
+                            ]
+                        },
+                        "value_type": "precise_location",
+                        "secondary_text": {
+                            "text": "If enabled, Twitter will collect, store, and use your device’s precise location, such as GPS information. This lets Twitter improve your experience — for example, showing you more local content, ads, and recommendations.",
+                            "entities": [
+                            ]
+                        },
+                        "value_identifier": "precise_location",
+                        "value_data": {
+                            "boolean_data": {
+                                "initial_value": false
+                            }
+                        }
+                    },
+                    {
+                        "primary_text": {
+                            "text": "Personalization",
+                            "entities": [
+                            ]
+                        },
+                        "value_type": "static_text"
+                    },
+                    {
+                        "primary_text": {
+                            "text": "Personalized ads",
+                            "entities": [
+                            ]
+                        },
+                        "value_type": "boolean",
+                        "secondary_text": {
+                            "text": "You will always see ads on Twitter based on your Twitter activity. When this setting is enabled, Twitter may further personalize ads from Twitter advertisers, on and off Twitter, by combining your Twitter activity with other online activity and information from our partners. Learn more",
+                            "entities": [
+                                {
+                                    "from_index": 276,
+                                    "to_index": 286,
+                                    "navigation_link": {
+                                        "link_type": "chromeless_web_link",
+                                        "link_id": "learn_more_personalized_ads",
+                                        "url": "https://support.twitter.com/articles/20170405"
+                                    }
+                                }
+                            ]
+                        },
+                        "value_identifier": "personalize_ads",
+                        "value_data": {
+                            "boolean_data": {
+                                "initial_value": true
+                            }
+                        }
+                    },
+                    {
+                        "primary_text": {
+                            "text": "Personalize based on your devices",
+                            "entities": [
+                            ]
+                        },
+                        "value_type": "boolean",
+                        "secondary_text": {
+                            "text": "Twitter will always personalize across the devices you’ve used to log in. When this setting is enabled, Twitter may also link your Twitter account to your other devices — ones you’ve never used to log in to Twitter — to help measure and improve your experience. Learn more",
+                            "entities": [
+                                {
+                                    "from_index": 262,
+                                    "to_index": 272,
+                                    "navigation_link": {
+                                        "link_type": "chromeless_web_link",
+                                        "link_id": "learn_more_personalized_devices",
+                                        "url": "https://support.twitter.com/articles/20175257"
+                                    }
+                                }
+                            ]
+                        },
+                        "value_identifier": "personalize_across_devices",
+                        "value_data": {
+                            "boolean_data": {
+                                "initial_value": true
+                            }
+                        }
+                    },
+                    {
+                        "primary_text": {
+                            "text": "Personalize based on places you’ve been",
+                            "entities": [
+                            ]
+                        },
+                        "value_type": "boolean",
+                        "secondary_text": {
+                            "text": "Twitter always uses some information, like where you signed up and your current location, to help show you more relevant content. When this setting is enabled, Twitter may also personalize your experience based on other places you’ve been.",
+                            "entities": [
+                            ]
+                        },
+                        "value_identifier": "personalize_by_places",
+                        "value_data": {
+                            "boolean_data": {
+                                "initial_value": true
+                            }
+                        }
+                    },
+                    {
+                        "primary_text": {
+                            "text": "Data",
+                            "entities": [
+                            ]
+                        },
+                        "value_type": "static_text"
+                    },
+                    {
+                        "primary_text": {
+                            "text": "Action link primary text"
+                        },
+                        "value_identifier": "action_link_identifer",
+                        "value_type": "action",
+                        "value_data": {
+                            "action_data": {
+                                "link": {
+                                    "link_id": "link_id_1",
+                                    "label": "label1",
+                                    "link_type": "deep_link",
+                                    "url": "https://twitter.com/AstroKatie/status/803085144772984832",
+                                    "suppress_client_events": true
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "primary_text": {
+                            "text": "Allow additional information sharing with business partners",
+                            "entities": [
+                            ]
+                        },
+                        "value_type": "boolean",
+                        "secondary_text": {
+                            "text": "Twitter always shares information with business partners as a way to run and improve its products. When enabled, this allows Twitter to share additional information with those partners to help support running Twitter’s business, including making Twitter’s marketing activities on other sites and apps more relevant for you. Learn more",
+                            "entities": [
+                                {
+                                    "from_index": 167,
+                                    "to_index": 177,
+                                    "navigation_link": {
+                                        "link_type": "chromeless_web_link",
+                                        "link_id": "learn_more_shared_data",
+                                        "url": "https://support.twitter.com/articles/20175379"
+                                    }
+                                }
+                            ]
+                        },
+                        "value_identifier": "share_data",
+                        "value_data": {
+                            "boolean_data": {
+                                "initial_value": true
+                            }
+                        }
+                    },
+                    {
+                        "primary_text": {
+                            "text": "Contacts",
+                            "entities": [
+                            ]
+                        },
+                        "value_type": "static_text"
+                    },
+                    {
+                        "primary_text": {
+                            "text": "Uploaded contacts",
+                            "entities": [
+                            ]
+                        },
+                        "value_type": "destructive_action",
+                        "secondary_text": {
+                            "text": "Twitter uses your uploaded contacts to personalize content, such as making suggestions and showing accounts and Tweets for you and others. You can remove any contacts you've previously uploaded which also turns off syncing on all your devices. Learn more",
+                            "entities": [
+                                {
+                                    "from_index": 244,
+                                    "to_index": 254,
+                                    "navigation_link": {
+                                        "link_type": "chromeless_web_link",
+                                        "link_id": "learn_more_uploaded_contacts",
+                                        "url": "https://support.twitter.com/articles/101002"
+                                    }
+                                }
+                            ]
+                        },
+                        "value_data": {
+                            "action_data": {
+                                "link": {
+                                    "link_type": "deep_link_in_place",
+                                    "link_id": "deep_link",
+                                    "label": "Remove all contacts",
+                                    "url": "twitter://settings/remove_contacts"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "primary_text": {
+                            "text": "Uploading your profile picture",
+                            "entities": [
+                            ]
+                        },
+                        "value_type": "progress_indicator",
+                        "secondary_text": {
+                            "text": "Please wait while we process your image. This may take a few moments.",
+                            "entities": [
+                            ]
+                        }
+                    },
+                    {
+                        "value_type": "toggle_wrapper",
+                        "value_identifier": "advanced_privacy_settings",
+                        "value_data": {
+                            "toggle_wrapper_data": {
+                                "style": "tombstone",
+                                "title_text": { 
+                                    "text": "Advanced Privacy Settings",
+                                    "entities": []
+                                },
+                                "state": false,
+                                "off_content": {
+                                    "action_text": {
+                                        "text": "Show advanced options",
+                                        "entities": []
+                                    },
+                                    "components": [
+                                        {
+                                            "primary_text": {
+                                                "text": "Configure additional privacy controls for your account",
+                                                "entities": []
+                                            },
+                                            "value_identifier": "advanced_privacy_hint",
+                                            "value_type": "static_text"
+                                        }
+                                    ]
+                                },
+                                "on_content": {
+                                    "action_text": {
+                                        "text": "Hide advanced options",
+                                        "entities": []
+                                    },
+                                    "components": [
+                                        {
+                                            "primary_text": {
+                                                "text": "Account visibility",
+                                                "entities": []
+                                            },
+                                            "value_type": "static_text"
+                                        },
+                                        {
+                                            "primary_text": {
+                                                "text": "Protect your Tweets",
+                                                "entities": []
+                                            },
+                                            "value_type": "boolean",
+                                            "secondary_text": {
+                                                "text": "When selected, only your approved followers can see your Tweets",
+                                                "entities": []
+                                            },
+                                            "value_identifier": "protect_tweets",
+                                            "value_data": {
+                                                "boolean_data": {
+                                                    "initial_value": false
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "primary_text": {
+                                                "text": "Photo tagging",
+                                                "entities": []
+                                            },
+                                            "value_type": "boolean",
+                                            "secondary_text": {
+                                                "text": "Allow anyone to tag you in photos",
+                                                "entities": []
+                                            },
+                                            "value_identifier": "photo_tagging",
+                                            "value_data": {
+                                                "boolean_data": {
+                                                    "initial_value": true
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "primary_text": {
+                                                "text": "Content preferences",
+                                                "entities": []
+                                            },
+                                            "value_type": "static_text"
+                                        },
+                                        {
+                                            "primary_text": {
+                                                "text": "Display media that may contain sensitive content",
+                                                "entities": []
+                                            },
+                                            "value_type": "boolean",
+                                            "secondary_text": {
+                                                "text": "Show media that may contain sensitive content in your timeline",
+                                                "entities": []
+                                            },
+                                            "value_identifier": "display_sensitive_media",
+                                            "value_data": {
+                                                "boolean_data": {
+                                                    "initial_value": false
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "primary_text": {
+                                                "text": "Quality filter",
+                                                "entities": []
+                                            },
+                                            "value_type": "boolean",
+                                            "secondary_text": {
+                                                "text": "Filter lower-quality content from your notifications",
+                                                "entities": []
+                                            },
+                                            "value_identifier": "quality_filter",
+                                            "value_data": {
+                                                "boolean_data": {
+                                                    "initial_value": true
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "subtask_id": "signUpSubtaskFlowInvalidBirthdayAlert",
+            "alert_dialog": {
+                "primary_text": {
+                    "text": "Can't complete your signup right now"
+                },
+                "next_link": {
+                    "label": "Close",
+                    "link_id": "next_link",
+                    "link_type": "subtask",
+                    "suppress_client_events": true,
+                    "is_destructive": true,
+                    "subtask_id": "signUpSubtaskID",
+                    "subtask_navigation_context": {
+                        "action": "clear"
+                    }
+                }
+            }
+        },
+        {
+            "subtask_id": "signUpSubtaskFlowPhoneVerification",
+            "phone_verification": {
+                "primary_text": {
+                    "text": "We sent you a code.",
+                    "entities": []
+                },
+                "secondary_text": {
+                    "text": "Enter it below to verify ",
+                    "entities": [
+                        {
+                            "from_index": 25,
+                            "to_index": 25,
+                            "subtask_data_reference": {
+                                "subtask_id": "signUpReviewSubtaskID",
+                                "key": "phone_number"
+                            }
+                        }
+                    ]
+                },
+                "detail_text": {
+                    "text": "Didn't receive SMS?",
+                    "entities": [
+                        {
+                            "from_index": 0,
+                            "to_index": 19,
+                            "navigation_link": {
+                                "link_id": "embedded_link",
+                                "link_type": "finish"
+                            }
+                        }
+                    ]
+                },
+                "next_link": {
+                    "label": "Verify",
+                    "link_id": "next_link",
+                    "link_type": "finish"
+                },
+                "fail_link": {
+                    "link_id": "fail_link",
+                    "link_type": "subtask",
+                    "subtask_id": "signUpReviewSubtaskID"
+                },
+                "phone_number": {
+                    "subtask_data_reference": {
+                        "subtask_id": "signUpReviewSubtaskID",
+                        "key": "phone_number"
+                    }
+                }
+            }
+        }
+    ]
+}

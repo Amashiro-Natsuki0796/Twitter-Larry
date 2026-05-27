@@ -1,0 +1,139 @@
+.class public final Lcom/x/cards/impl/network/f;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ldagger/internal/d;
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/x/cards/impl/network/f$a;
+    }
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ldagger/internal/d<",
+        "Lcom/x/cards/impl/network/e;",
+        ">;"
+    }
+.end annotation
+
+
+# static fields
+.field public static final Companion:Lcom/x/cards/impl/network/f$a;
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+.end field
+
+
+# instance fields
+.field public final a:Ldagger/internal/h;
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+.end field
+
+.field public final b:Lcom/x/repositories/post/n;
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+.end field
+
+.field public final c:Ldagger/internal/e;
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+.end field
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lcom/x/cards/impl/network/f$a;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lcom/x/cards/impl/network/f;->Companion:Lcom/x/cards/impl/network/f$a;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ldagger/internal/h;Lcom/x/repositories/post/n;Ldagger/internal/e;)V
+    .locals 1
+    .param p1    # Ldagger/internal/h;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+    .param p2    # Lcom/x/repositories/post/n;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+    .param p3    # Ldagger/internal/e;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+
+    const-string v0, "postDetailRepository"
+
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "userCoroutineScope"
+
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/x/cards/impl/network/f;->a:Ldagger/internal/h;
+
+    iput-object p2, p0, Lcom/x/cards/impl/network/f;->b:Lcom/x/repositories/post/n;
+
+    iput-object p3, p0, Lcom/x/cards/impl/network/f;->c:Ldagger/internal/e;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final get()Ljava/lang/Object;
+    .locals 5
+
+    sget-object v0, Lcom/x/cards/impl/network/f;->Companion:Lcom/x/cards/impl/network/f$a;
+
+    iget-object v1, p0, Lcom/x/cards/impl/network/f;->a:Ldagger/internal/h;
+
+    invoke-interface {v1}, Ljavax/inject/a;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    const-string v2, "get(...)"
+
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->g(Ljava/lang/Object;Ljava/lang/String;)V
+
+    check-cast v1, Lcom/x/cards/impl/network/c;
+
+    iget-object v3, p0, Lcom/x/cards/impl/network/f;->b:Lcom/x/repositories/post/n;
+
+    invoke-virtual {v3}, Lcom/x/repositories/post/n;->get()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lcom/x/repositories/post/f;
+
+    iget-object v4, p0, Lcom/x/cards/impl/network/f;->c:Ldagger/internal/e;
+
+    iget-object v4, v4, Ldagger/internal/e;->a:Ljava/lang/Object;
+
+    invoke-static {v4, v2}, Lkotlin/jvm/internal/Intrinsics;->g(Ljava/lang/Object;Ljava/lang/String;)V
+
+    check-cast v4, Lkotlinx/coroutines/l0;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v0, Lcom/x/cards/impl/network/e;
+
+    invoke-direct {v0, v1, v3, v4}, Lcom/x/cards/impl/network/e;-><init>(Lcom/x/cards/impl/network/c;Lcom/x/repositories/post/f;Lkotlinx/coroutines/l0;)V
+
+    return-object v0
+.end method

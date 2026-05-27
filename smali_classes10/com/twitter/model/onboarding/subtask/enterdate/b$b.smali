@@ -1,0 +1,169 @@
+.class public final Lcom/twitter/model/onboarding/subtask/enterdate/b$b;
+.super Lcom/twitter/model/onboarding/subtask/k1$b;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/twitter/model/onboarding/subtask/enterdate/b;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = "b"
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/twitter/model/onboarding/subtask/k1$b<",
+        "Lcom/twitter/model/onboarding/subtask/enterdate/b;",
+        "Lcom/twitter/model/onboarding/subtask/enterdate/b$a;",
+        ">;"
+    }
+.end annotation
+
+
+# virtual methods
+.method public final h()Lcom/twitter/util/object/o;
+    .locals 1
+
+    new-instance v0, Lcom/twitter/model/onboarding/subtask/enterdate/b$a;
+
+    invoke-direct {v0}, Lcom/twitter/model/onboarding/subtask/enterdate/b$a;-><init>()V
+
+    return-object v0
+.end method
+
+.method public final j(Lcom/twitter/util/serialization/stream/e;Lcom/twitter/model/onboarding/subtask/k1$a;I)V
+    .locals 1
+
+    check-cast p2, Lcom/twitter/model/onboarding/subtask/enterdate/b$a;
+
+    const-string v0, "input"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "builder"
+
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-super {p0, p1, p2, p3}, Lcom/twitter/model/onboarding/subtask/k1$b;->j(Lcom/twitter/util/serialization/stream/e;Lcom/twitter/model/onboarding/subtask/k1$a;I)V
+
+    sget-object p3, Lcom/twitter/model/onboarding/common/n$b;->c:Lcom/twitter/model/onboarding/common/n$b;
+
+    invoke-virtual {p3, p1}, Lcom/twitter/util/serialization/serializer/g;->a(Lcom/twitter/util/serialization/stream/e;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/twitter/model/onboarding/common/n;
+
+    iput-object v0, p2, Lcom/twitter/model/onboarding/subtask/enterdate/b$a;->l:Lcom/twitter/model/onboarding/common/n;
+
+    invoke-virtual {p3, p1}, Lcom/twitter/util/serialization/serializer/g;->a(Lcom/twitter/util/serialization/stream/e;)Ljava/lang/Object;
+
+    move-result-object p3
+
+    check-cast p3, Lcom/twitter/model/onboarding/common/n;
+
+    iput-object p3, p2, Lcom/twitter/model/onboarding/subtask/enterdate/b$a;->m:Lcom/twitter/model/onboarding/common/n;
+
+    invoke-virtual {p1}, Lcom/twitter/util/serialization/stream/e;->I()Ljava/lang/String;
+
+    move-result-object p3
+
+    const-string v0, "readNotNullString(...)"
+
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->g(Ljava/lang/Object;Ljava/lang/String;)V
+
+    iput-object p3, p2, Lcom/twitter/model/onboarding/subtask/enterdate/b$a;->k:Ljava/lang/String;
+
+    sget-object p3, Lcom/twitter/model/onboarding/common/a0;->h:Lcom/twitter/model/onboarding/common/b0;
+
+    invoke-virtual {p3, p1}, Lcom/twitter/util/serialization/serializer/g;->a(Lcom/twitter/util/serialization/stream/e;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/twitter/model/onboarding/common/a0;
+
+    iput-object v0, p2, Lcom/twitter/model/onboarding/subtask/enterdate/b$a;->q:Lcom/twitter/model/onboarding/common/a0;
+
+    sget-object v0, Lcom/twitter/model/core/entity/onboarding/common/f;->a:Lcom/twitter/util/serialization/serializer/d;
+
+    invoke-virtual {v0, p1}, Lcom/twitter/util/serialization/serializer/g;->a(Lcom/twitter/util/serialization/stream/e;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/twitter/model/core/entity/onboarding/common/f;
+
+    iput-object v0, p2, Lcom/twitter/model/onboarding/subtask/enterdate/b$a;->x:Lcom/twitter/model/core/entity/onboarding/common/f;
+
+    invoke-virtual {p3, p1}, Lcom/twitter/util/serialization/serializer/g;->a(Lcom/twitter/util/serialization/stream/e;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/twitter/model/onboarding/common/a0;
+
+    iput-object v0, p2, Lcom/twitter/model/onboarding/subtask/enterdate/b$a;->r:Lcom/twitter/model/onboarding/common/a0;
+
+    invoke-virtual {p3, p1}, Lcom/twitter/util/serialization/serializer/g;->a(Lcom/twitter/util/serialization/stream/e;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/twitter/model/onboarding/common/a0;
+
+    iput-object p1, p2, Lcom/twitter/model/onboarding/subtask/enterdate/b$a;->s:Lcom/twitter/model/onboarding/common/a0;
+
+    return-void
+.end method
+
+.method public final k(Lcom/twitter/util/serialization/stream/f;Lcom/twitter/model/onboarding/subtask/k1;)V
+    .locals 3
+
+    check-cast p2, Lcom/twitter/model/onboarding/subtask/enterdate/b;
+
+    const-string v0, "output"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "subtaskProperties"
+
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-super {p0, p1, p2}, Lcom/twitter/model/onboarding/subtask/k1$b;->k(Lcom/twitter/util/serialization/stream/f;Lcom/twitter/model/onboarding/subtask/k1;)V
+
+    sget-object v0, Lcom/twitter/model/onboarding/common/n$b;->c:Lcom/twitter/model/onboarding/common/n$b;
+
+    iget-object v1, p2, Lcom/twitter/model/onboarding/subtask/enterdate/b;->j:Lcom/twitter/model/onboarding/common/n;
+
+    invoke-virtual {v0, p1, v1}, Lcom/twitter/util/serialization/serializer/g;->c(Lcom/twitter/util/serialization/stream/f;Ljava/lang/Object;)V
+
+    iget-object v1, p2, Lcom/twitter/model/onboarding/subtask/enterdate/b;->k:Lcom/twitter/model/onboarding/common/n;
+
+    invoke-virtual {v0, p1, v1}, Lcom/twitter/util/serialization/serializer/g;->c(Lcom/twitter/util/serialization/stream/f;Ljava/lang/Object;)V
+
+    iget-object v0, p2, Lcom/twitter/model/onboarding/subtask/enterdate/b;->n:Ljava/lang/String;
+
+    invoke-virtual {p1, v0}, Lcom/twitter/util/serialization/stream/f;->L(Ljava/lang/String;)Lcom/twitter/util/serialization/stream/bytebuffer/e;
+
+    sget-object v0, Lcom/twitter/model/onboarding/common/a0;->h:Lcom/twitter/model/onboarding/common/b0;
+
+    iget-object v1, p2, Lcom/twitter/model/onboarding/subtask/enterdate/b;->o:Lcom/twitter/model/onboarding/common/a0;
+
+    invoke-virtual {v0, p1, v1}, Lcom/twitter/util/serialization/serializer/g;->c(Lcom/twitter/util/serialization/stream/f;Ljava/lang/Object;)V
+
+    sget-object v1, Lcom/twitter/model/core/entity/onboarding/common/f;->a:Lcom/twitter/util/serialization/serializer/d;
+
+    iget-object v2, p2, Lcom/twitter/model/onboarding/subtask/enterdate/b;->p:Lcom/twitter/model/core/entity/onboarding/common/f;
+
+    invoke-virtual {v1, p1, v2}, Lcom/twitter/util/serialization/serializer/g;->c(Lcom/twitter/util/serialization/stream/f;Ljava/lang/Object;)V
+
+    iget-object v1, p2, Lcom/twitter/model/onboarding/subtask/enterdate/b;->l:Lcom/twitter/model/onboarding/common/a0;
+
+    invoke-virtual {v0, p1, v1}, Lcom/twitter/util/serialization/serializer/g;->c(Lcom/twitter/util/serialization/stream/f;Ljava/lang/Object;)V
+
+    iget-object p2, p2, Lcom/twitter/model/onboarding/subtask/enterdate/b;->m:Lcom/twitter/model/onboarding/common/a0;
+
+    invoke-virtual {v0, p1, p2}, Lcom/twitter/util/serialization/serializer/g;->c(Lcom/twitter/util/serialization/stream/f;Ljava/lang/Object;)V
+
+    return-void
+.end method

@@ -1,0 +1,205 @@
+.class public final Lcom/google/android/gms/internal/ads/d3;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# instance fields
+.field public final a:[B
+
+.field public b:Z
+
+.field public c:I
+
+.field public d:J
+
+.field public e:I
+
+.field public f:I
+
+.field public g:I
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/16 v0, 0xa
+
+    new-array v0, v0, [B
+
+    iput-object v0, p0, Lcom/google/android/gms/internal/ads/d3;->a:[B
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Lcom/google/android/gms/internal/ads/c3;Lcom/google/android/gms/internal/ads/a3;)V
+    .locals 8
+
+    iget v0, p0, Lcom/google/android/gms/internal/ads/d3;->c:I
+
+    if-lez v0, :cond_0
+
+    iget-wide v2, p0, Lcom/google/android/gms/internal/ads/d3;->d:J
+
+    iget v4, p0, Lcom/google/android/gms/internal/ads/d3;->e:I
+
+    iget v5, p0, Lcom/google/android/gms/internal/ads/d3;->f:I
+
+    iget v6, p0, Lcom/google/android/gms/internal/ads/d3;->g:I
+
+    move-object v1, p1
+
+    move-object v7, p2
+
+    invoke-interface/range {v1 .. v7}, Lcom/google/android/gms/internal/ads/c3;->b(JIIILcom/google/android/gms/internal/ads/a3;)V
+
+    const/4 p1, 0x0
+
+    iput p1, p0, Lcom/google/android/gms/internal/ads/d3;->c:I
+
+    :cond_0
+    return-void
+.end method
+
+.method public final b(Lcom/google/android/gms/internal/ads/c3;JIIILcom/google/android/gms/internal/ads/a3;)V
+    .locals 3
+
+    iget v0, p0, Lcom/google/android/gms/internal/ads/d3;->g:I
+
+    add-int v1, p5, p6
+
+    const/4 v2, 0x0
+
+    if-gt v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    move v0, v2
+
+    :goto_0
+    if-eqz v0, :cond_4
+
+    iget-boolean v0, p0, Lcom/google/android/gms/internal/ads/d3;->b:Z
+
+    if-nez v0, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    iget v0, p0, Lcom/google/android/gms/internal/ads/d3;->c:I
+
+    add-int/lit8 v1, v0, 0x1
+
+    iput v1, p0, Lcom/google/android/gms/internal/ads/d3;->c:I
+
+    if-nez v0, :cond_2
+
+    iput-wide p2, p0, Lcom/google/android/gms/internal/ads/d3;->d:J
+
+    iput p4, p0, Lcom/google/android/gms/internal/ads/d3;->e:I
+
+    iput v2, p0, Lcom/google/android/gms/internal/ads/d3;->f:I
+
+    :cond_2
+    iget p2, p0, Lcom/google/android/gms/internal/ads/d3;->f:I
+
+    add-int/2addr p2, p5
+
+    iput p2, p0, Lcom/google/android/gms/internal/ads/d3;->f:I
+
+    iput p6, p0, Lcom/google/android/gms/internal/ads/d3;->g:I
+
+    const/16 p2, 0x10
+
+    if-lt v1, p2, :cond_3
+
+    invoke-virtual {p0, p1, p7}, Lcom/google/android/gms/internal/ads/d3;->a(Lcom/google/android/gms/internal/ads/c3;Lcom/google/android/gms/internal/ads/a3;)V
+
+    :cond_3
+    :goto_1
+    return-void
+
+    :cond_4
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "TrueHD chunk samples must be contiguous in the sample queue."
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final c(Lcom/google/android/gms/internal/ads/x1;)V
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    iget-boolean v0, p0, Lcom/google/android/gms/internal/ads/d3;->b:Z
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p0, Lcom/google/android/gms/internal/ads/d3;->a:[B
+
+    const/4 v1, 0x0
+
+    const/16 v2, 0xa
+
+    invoke-interface {p1, v1, v0, v2}, Lcom/google/android/gms/internal/ads/x1;->g(I[BI)V
+
+    invoke-interface {p1}, Lcom/google/android/gms/internal/ads/x1;->zzj()V
+
+    const/4 p1, 0x4
+
+    aget-byte p1, v0, p1
+
+    const/4 v1, -0x8
+
+    if-ne p1, v1, :cond_1
+
+    const/4 p1, 0x5
+
+    aget-byte p1, v0, p1
+
+    const/16 v1, 0x72
+
+    if-ne p1, v1, :cond_1
+
+    const/4 p1, 0x6
+
+    aget-byte p1, v0, p1
+
+    const/16 v1, 0x6f
+
+    if-ne p1, v1, :cond_1
+
+    const/4 p1, 0x7
+
+    aget-byte p1, v0, p1
+
+    and-int/lit16 p1, p1, 0xfe
+
+    const/16 v0, 0xba
+
+    if-ne p1, v0, :cond_1
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lcom/google/android/gms/internal/ads/d3;->b:Z
+
+    :cond_1
+    :goto_0
+    return-void
+.end method

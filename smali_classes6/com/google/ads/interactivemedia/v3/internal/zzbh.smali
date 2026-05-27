@@ -1,0 +1,16 @@
+.class public final Lcom/google/ads/interactivemedia/v3/internal/zzbh;
+.super Lcom/google/ads/interactivemedia/v3/internal/zzadu;
+.source "SourceFile"
+
+# interfaces
+.implements Lcom/google/ads/interactivemedia/v3/internal/zzafc;
+
+
+# direct methods
+.method private constructor <init>()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    throw v0
+.end method

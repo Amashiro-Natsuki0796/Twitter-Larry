@@ -1,0 +1,48 @@
+.class public interface abstract Lcom/apollographql/cache/normalized/memory/internal/store/d$j;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/apollographql/cache/normalized/memory/internal/store/d;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x609
+    name = "j"
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;"
+    }
+.end annotation
+
+
+# virtual methods
+.method public abstract add(Ljava/lang/Object;)V
+    .param p1    # Ljava/lang/Object;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TT;)V"
+        }
+    .end annotation
+.end method
+
+.method public abstract poll()Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()TT;"
+        }
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/b;
+    .end annotation
+.end method

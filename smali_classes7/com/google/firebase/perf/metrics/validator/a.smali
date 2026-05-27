@@ -1,0 +1,144 @@
+.class public final Lcom/google/firebase/perf/metrics/validator/a;
+.super Lcom/google/firebase/perf/metrics/validator/e;
+.source "SourceFile"
+
+
+# static fields
+.field public static final b:Lcom/google/firebase/perf/logging/a;
+
+
+# instance fields
+.field public final a:Lcom/google/firebase/perf/v1/ApplicationInfo;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    invoke-static {}, Lcom/google/firebase/perf/logging/a;->d()Lcom/google/firebase/perf/logging/a;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/google/firebase/perf/metrics/validator/a;->b:Lcom/google/firebase/perf/logging/a;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lcom/google/firebase/perf/v1/ApplicationInfo;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/google/firebase/perf/metrics/validator/e;-><init>()V
+
+    iput-object p1, p0, Lcom/google/firebase/perf/metrics/validator/a;->a:Lcom/google/firebase/perf/v1/ApplicationInfo;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()Z
+    .locals 3
+
+    sget-object v0, Lcom/google/firebase/perf/metrics/validator/a;->b:Lcom/google/firebase/perf/logging/a;
+
+    iget-object v1, p0, Lcom/google/firebase/perf/metrics/validator/a;->a:Lcom/google/firebase/perf/v1/ApplicationInfo;
+
+    if-nez v1, :cond_0
+
+    const-string v1, "ApplicationInfo is null"
+
+    invoke-virtual {v0, v1}, Lcom/google/firebase/perf/logging/a;->f(Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Lcom/google/firebase/perf/v1/ApplicationInfo;->hasGoogleAppId()Z
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    const-string v1, "GoogleAppId is null"
+
+    invoke-virtual {v0, v1}, Lcom/google/firebase/perf/logging/a;->f(Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {v1}, Lcom/google/firebase/perf/v1/ApplicationInfo;->hasAppInstanceId()Z
+
+    move-result v2
+
+    if-nez v2, :cond_2
+
+    const-string v1, "AppInstanceId is null"
+
+    invoke-virtual {v0, v1}, Lcom/google/firebase/perf/logging/a;->f(Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {v1}, Lcom/google/firebase/perf/v1/ApplicationInfo;->hasApplicationProcessState()Z
+
+    move-result v2
+
+    if-nez v2, :cond_3
+
+    const-string v1, "ApplicationProcessState is null"
+
+    invoke-virtual {v0, v1}, Lcom/google/firebase/perf/logging/a;->f(Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_3
+    invoke-virtual {v1}, Lcom/google/firebase/perf/v1/ApplicationInfo;->hasAndroidAppInfo()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_5
+
+    invoke-virtual {v1}, Lcom/google/firebase/perf/v1/ApplicationInfo;->getAndroidAppInfo()Lcom/google/firebase/perf/v1/AndroidApplicationInfo;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lcom/google/firebase/perf/v1/AndroidApplicationInfo;->hasPackageName()Z
+
+    move-result v2
+
+    if-nez v2, :cond_4
+
+    const-string v1, "AndroidAppInfo.packageName is null"
+
+    invoke-virtual {v0, v1}, Lcom/google/firebase/perf/logging/a;->f(Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_4
+    invoke-virtual {v1}, Lcom/google/firebase/perf/v1/ApplicationInfo;->getAndroidAppInfo()Lcom/google/firebase/perf/v1/AndroidApplicationInfo;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/google/firebase/perf/v1/AndroidApplicationInfo;->hasSdkVersion()Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
+
+    const-string v1, "AndroidAppInfo.sdkVersion is null"
+
+    invoke-virtual {v0, v1}, Lcom/google/firebase/perf/logging/a;->f(Ljava/lang/String;)V
+
+    :goto_0
+    const-string v1, "ApplicationInfo is invalid"
+
+    invoke-virtual {v0, v1}, Lcom/google/firebase/perf/logging/a;->f(Ljava/lang/String;)V
+
+    const/4 v0, 0x0
+
+    return v0
+
+    :cond_5
+    const/4 v0, 0x1
+
+    return v0
+.end method

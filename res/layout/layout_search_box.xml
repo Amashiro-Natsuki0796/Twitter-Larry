@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@drawable/bg_search_bar" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingHorizontal="@dimen/space_12" android:paddingVertical="@dimen/space_12"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.ui.components.text.legacy.TypefacesTextView android:textSize="@dimen/font_size_normal" android:textColor="?coreColorSecondaryText" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/search_bookmarks" android:maxLines="1" android:drawablePadding="@dimen/space_8" android:drawableStart="@drawable/ic_search_hint_dark" />
+</FrameLayout>

@@ -1,0 +1,18 @@
+.class public interface abstract Landroid/javax/sip/address/a;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Cloneable;
+.implements Ljava/io/Serializable;
+
+
+# virtual methods
+.method public abstract equals(Ljava/lang/Object;)Z
+.end method
+
+.method public abstract getURI()Landroid/javax/sip/address/f;
+.end method
+
+.method public abstract toString()Ljava/lang/String;
+.end method

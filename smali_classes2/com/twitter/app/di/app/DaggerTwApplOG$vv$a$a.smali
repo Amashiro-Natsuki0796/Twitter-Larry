@@ -1,0 +1,107 @@
+.class public final Lcom/twitter/app/di/app/DaggerTwApplOG$vv$a$a;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lcom/twitter/identity/verification/a$b;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/twitter/app/di/app/DaggerTwApplOG$vv$a;->get()Ljava/lang/Object;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x1
+    name = null
+.end annotation
+
+
+# instance fields
+.field public final synthetic a:Lcom/twitter/app/di/app/DaggerTwApplOG$vv$a;
+
+
+# direct methods
+.method public constructor <init>(Lcom/twitter/app/di/app/DaggerTwApplOG$vv$a;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/twitter/app/di/app/DaggerTwApplOG$vv$a$a;->a:Lcom/twitter/app/di/app/DaggerTwApplOG$vv$a;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Landroid/view/View;)Lcom/twitter/identity/verification/a;
+    .locals 8
+
+    new-instance v7, Lcom/twitter/identity/verification/a;
+
+    iget-object v0, p0, Lcom/twitter/app/di/app/DaggerTwApplOG$vv$a$a;->a:Lcom/twitter/app/di/app/DaggerTwApplOG$vv$a;
+
+    iget-object v1, v0, Lcom/twitter/app/di/app/DaggerTwApplOG$vv$a;->b:Lcom/twitter/app/di/app/DaggerTwApplOG$tv;
+
+    iget-object v1, v1, Lcom/twitter/app/di/app/DaggerTwApplOG$tv;->m:Ldagger/internal/h;
+
+    invoke-interface {v1}, Ljavax/inject/a;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    move-object v2, v1
+
+    check-cast v2, Lcom/twitter/identity/verification/IdentityVerificationContentViewArgs;
+
+    iget-object v0, v0, Lcom/twitter/app/di/app/DaggerTwApplOG$vv$a;->c:Lcom/twitter/app/di/app/DaggerTwApplOG$vv;
+
+    iget-object v1, v0, Lcom/twitter/app/di/app/DaggerTwApplOG$vv;->c:Ldagger/internal/h;
+
+    invoke-interface {v1}, Ljavax/inject/a;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/app/Activity;
+
+    invoke-static {v1}, Lcom/twitter/app/common/inject/view/l;->a(Landroid/app/Activity;)Lcom/twitter/app/common/inject/o;
+
+    move-result-object v3
+
+    iget-object v1, v0, Lcom/twitter/app/di/app/DaggerTwApplOG$vv;->B:Ldagger/internal/h;
+
+    invoke-interface {v1}, Ljavax/inject/a;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    move-object v4, v1
+
+    check-cast v4, Lcom/twitter/app/common/t;
+
+    iget-object v1, v0, Lcom/twitter/app/di/app/DaggerTwApplOG$vv;->u:Ldagger/internal/h;
+
+    invoke-interface {v1}, Ljavax/inject/a;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    move-object v5, v1
+
+    check-cast v5, Lcom/twitter/app/common/z;
+
+    iget-object v0, v0, Lcom/twitter/app/di/app/DaggerTwApplOG$vv;->s:Ldagger/internal/h;
+
+    invoke-interface {v0}, Ljavax/inject/a;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v6, v0
+
+    check-cast v6, Lcom/twitter/app/common/activity/b;
+
+    move-object v0, v7
+
+    move-object v1, p1
+
+    invoke-direct/range {v0 .. v6}, Lcom/twitter/identity/verification/a;-><init>(Landroid/view/View;Lcom/twitter/identity/verification/IdentityVerificationContentViewArgs;Lcom/twitter/app/common/inject/o;Lcom/twitter/app/common/t;Lcom/twitter/app/common/z;Lcom/twitter/app/common/activity/b;)V
+
+    return-object v7
+.end method

@@ -1,0 +1,22 @@
+.class public interface abstract Lkotlin/reflect/jvm/internal/impl/load/kotlin/PackagePartProvider;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lkotlin/reflect/jvm/internal/impl/load/kotlin/PackagePartProvider$Empty;
+    }
+.end annotation
+
+
+# virtual methods
+.method public abstract a(Ljava/lang/String;)Lkotlin/collections/EmptyList;
+    .param p1    # Ljava/lang/String;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+.end method

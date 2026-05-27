@@ -1,0 +1,92 @@
+.class public final synthetic Lcom/twitter/rooms/manager/q4;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lkotlin/jvm/functions/Function1;
+
+
+# instance fields
+.field public final synthetic a:Lcom/twitter/rooms/manager/RoomStateManager;
+
+.field public final synthetic b:Lcom/twitter/rooms/manager/d3;
+
+.field public final synthetic c:Z
+
+.field public final synthetic d:Ljava/lang/String;
+
+.field public final synthetic e:Lcom/twitter/rooms/di/room/RoomObjectGraph;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lcom/twitter/rooms/manager/RoomStateManager;Lcom/twitter/rooms/manager/d3;ZLjava/lang/String;Lcom/twitter/rooms/di/room/RoomObjectGraph;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/twitter/rooms/manager/q4;->a:Lcom/twitter/rooms/manager/RoomStateManager;
+
+    iput-object p2, p0, Lcom/twitter/rooms/manager/q4;->b:Lcom/twitter/rooms/manager/d3;
+
+    iput-boolean p3, p0, Lcom/twitter/rooms/manager/q4;->c:Z
+
+    iput-object p4, p0, Lcom/twitter/rooms/manager/q4;->d:Ljava/lang/String;
+
+    iput-object p5, p0, Lcom/twitter/rooms/manager/q4;->e:Lcom/twitter/rooms/di/room/RoomObjectGraph;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 10
+
+    check-cast p1, Lcom/twitter/weaver/mvi/dsl/k;
+
+    sget-object v0, Lcom/twitter/rooms/manager/RoomStateManager;->Companion:Lcom/twitter/rooms/manager/RoomStateManager$m0;
+
+    const-string v0, "$this$intoWeaver"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    new-instance v0, Lcom/twitter/rooms/manager/q7;
+
+    iget-object v5, p0, Lcom/twitter/rooms/manager/q4;->d:Ljava/lang/String;
+
+    iget-object v6, p0, Lcom/twitter/rooms/manager/q4;->e:Lcom/twitter/rooms/di/room/RoomObjectGraph;
+
+    iget-object v8, p0, Lcom/twitter/rooms/manager/q4;->a:Lcom/twitter/rooms/manager/RoomStateManager;
+
+    iget-object v9, p0, Lcom/twitter/rooms/manager/q4;->b:Lcom/twitter/rooms/manager/d3;
+
+    iget-boolean v4, p0, Lcom/twitter/rooms/manager/q4;->c:Z
+
+    const/4 v7, 0x0
+
+    move-object v1, v0
+
+    move-object v2, v8
+
+    move-object v3, v9
+
+    invoke-direct/range {v1 .. v7}, Lcom/twitter/rooms/manager/q7;-><init>(Lcom/twitter/rooms/manager/RoomStateManager;Lcom/twitter/rooms/manager/d3;ZLjava/lang/String;Lcom/twitter/rooms/di/room/RoomObjectGraph;Lkotlin/coroutines/Continuation;)V
+
+    iget-object v1, p1, Lcom/twitter/weaver/mvi/dsl/k;->g:Ljava/util/ArrayList;
+
+    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    new-instance v0, Lcom/twitter/rooms/manager/r7;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v8, v9, v1}, Lcom/twitter/rooms/manager/r7;-><init>(Lcom/twitter/rooms/manager/RoomStateManager;Lcom/twitter/rooms/manager/d3;Lkotlin/coroutines/Continuation;)V
+
+    iget-object p1, p1, Lcom/twitter/weaver/mvi/dsl/k;->f:Ljava/util/ArrayList;
+
+    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
+
+    return-object p1
+.end method

@@ -1,0 +1,56 @@
+.class public final Lcom/twitter/app/di/app/yu1;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lcom/x/payments/utils/PaymentPreferencesManager$b;
+
+
+# instance fields
+.field public final synthetic a:Lcom/twitter/app/di/app/DaggerTwApplOG$n41$a;
+
+
+# direct methods
+.method public constructor <init>(Lcom/twitter/app/di/app/DaggerTwApplOG$n41$a;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/twitter/app/di/app/yu1;->a:Lcom/twitter/app/di/app/DaggerTwApplOG$n41$a;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Lcom/x/payments/utils/PaymentPreferencesManager$State;Lcom/x/payments/utils/PaymentPreferencesManager$a;)Lcom/x/payments/utils/c0;
+    .locals 3
+
+    new-instance v0, Lcom/x/payments/utils/c0;
+
+    iget-object v1, p0, Lcom/twitter/app/di/app/yu1;->a:Lcom/twitter/app/di/app/DaggerTwApplOG$n41$a;
+
+    iget-object v2, v1, Lcom/twitter/app/di/app/DaggerTwApplOG$n41$a;->b:Lcom/twitter/app/di/app/DaggerTwApplOG$rx0;
+
+    iget-object v2, v2, Lcom/twitter/app/di/app/DaggerTwApplOG$rx0;->E8:Ldagger/internal/h;
+
+    invoke-interface {v2}, Ljavax/inject/a;->get()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/x/payments/repositories/p1;
+
+    iget-object v1, v1, Lcom/twitter/app/di/app/DaggerTwApplOG$n41$a;->a:Lcom/twitter/app/di/app/DaggerTwApplOG$px0;
+
+    iget-object v1, v1, Lcom/twitter/app/di/app/DaggerTwApplOG$px0;->xf:Ldagger/internal/h;
+
+    invoke-interface {v1}, Ljavax/inject/a;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lkotlin/coroutines/CoroutineContext;
+
+    invoke-direct {v0, p1, p2, v2, v1}, Lcom/x/payments/utils/c0;-><init>(Lcom/x/payments/utils/PaymentPreferencesManager$State;Lcom/x/payments/utils/PaymentPreferencesManager$a;Lcom/x/payments/repositories/p1;Lkotlin/coroutines/CoroutineContext;)V
+
+    return-object v0
+.end method

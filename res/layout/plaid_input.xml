@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.textfield.TextInputLayout android:textColorHint="?plaidTextColorBSecondary" android:id="@id/plaid_input_layout" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="@dimen/plaid_min_input_height" app:endIconDrawable="@drawable/pl_icon_lock" app:endIconTint="?plaidTextColorH" app:hintEnabled="true" app:hintTextColor="?plaidTextColorBSecondary" app:placeholderTextColor="?plaidTextColorBSecondary" style="@style/PlaidInput">
+        <com.google.android.material.textfield.TextInputEditText android:textColorHint="?plaidTextColorBSecondary" android:id="@id/plaid_input_edit_text" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLines="1" android:lines="1" style="@style/PlaidInput.Regular" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.plaid.internal.core.ui_components.shimmer.ShimmerFrameLayout android:gravity="center" android:id="@id/loading_layout" android:background="@android:color/transparent" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="match_parent" android:layout_height="0.0dp" app:layout_constraintBottom_toBottomOf="@id/plaid_input_layout" app:layout_constraintEnd_toEndOf="@id/plaid_input_layout" app:layout_constraintStart_toStartOf="@id/plaid_input_layout" app:layout_constraintTop_toTopOf="@id/plaid_input_layout">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/loading_layout_view" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_centerInParent="true">
+            <ImageView android:layout_width="@dimen/plaid_space_3x" android:layout_height="@dimen/plaid_space_3x" android:src="@drawable/pl_icon_checkmark" android:layout_marginStart="@dimen/plaid_space_2x" android:layout_marginEnd="@dimen/plaid_space_1x" app:tint="?plaidTextColorH" />
+            <View android:background="@drawable/plaid_loading_background" android:layout_width="match_parent" android:layout_height="@dimen/plaid_space_2x" android:layout_marginEnd="@dimen/plaid_space_2x" />
+        </LinearLayout>
+    </com.plaid.internal.core.ui_components.shimmer.ShimmerFrameLayout>
+    <View android:id="@id/error_guide" android:visibility="gone" android:layout_width="0.0dp" android:layout_height="0.0dp" android:layout_marginTop="12.0dp" app:layout_constraintEnd_toEndOf="@id/plaid_input_layout" app:layout_constraintStart_toStartOf="@id/plaid_input_layout" app:layout_constraintTop_toBottomOf="@id/plaid_input_layout" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/error_view" android:focusable="false" android:visibility="gone" android:clickable="false" android:layout_width="0.0dp" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="@id/plaid_input_layout" app:layout_constraintStart_toStartOf="@id/plaid_input_layout" app:layout_constraintTop_toBottomOf="@id/plaid_input_layout">
+        <ImageView android:id="@id/error_icon" android:visibility="visible" android:layout_width="@dimen/plaid_space_3x" android:layout_height="@dimen/plaid_space_3x" android:src="@drawable/pl_icon_information" app:tint="@color/plaid_red_800" />
+        <androidx.appcompat.widget.AppCompatTextView android:id="@id/error_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="@dimen/plaid_space_1x" style="@style/PlaidText.B1.Regular" />
+    </LinearLayout>
+</merge>

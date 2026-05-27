@@ -1,0 +1,724 @@
+.class public final Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ltv/periscope/android/api/serialized/ApiBundle;
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams$$serializer;,
+        Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams$Companion;
+    }
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000@\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\u000b\n\u0002\u0008\u0006\n\u0002\u0010\u0008\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\u0008\u0010\n\u0002\u0010\u0000\n\u0002\u0008\u000c\u0008\u0087\u0008\u0018\u0000 02\u00020\u0001:\u000201B/\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012\u0006\u0010\u0006\u001a\u00020\u0002\u0012\u0006\u0010\u0007\u001a\u00020\u0002\u0012\u0006\u0010\u0008\u001a\u00020\u0004\u00a2\u0006\u0004\u0008\t\u0010\nBI\u0008\u0010\u0012\u0006\u0010\u000c\u001a\u00020\u000b\u0012\u0008\u0010\u0003\u001a\u0004\u0018\u00010\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012\u0008\u0010\u0006\u001a\u0004\u0018\u00010\u0002\u0012\u0008\u0010\u0007\u001a\u0004\u0018\u00010\u0002\u0012\u0006\u0010\u0008\u001a\u00020\u0004\u0012\u0008\u0010\u000e\u001a\u0004\u0018\u00010\r\u00a2\u0006\u0004\u0008\t\u0010\u000fJ\'\u0010\u0018\u001a\u00020\u00152\u0006\u0010\u0010\u001a\u00020\u00002\u0006\u0010\u0012\u001a\u00020\u00112\u0006\u0010\u0014\u001a\u00020\u0013H\u0001\u00a2\u0006\u0004\u0008\u0016\u0010\u0017J\r\u0010\u0019\u001a\u00020\u0002\u00a2\u0006\u0004\u0008\u0019\u0010\u001aJ\u0010\u0010\u001b\u001a\u00020\u0002H\u00c6\u0003\u00a2\u0006\u0004\u0008\u001b\u0010\u001aJ\u0010\u0010\u001c\u001a\u00020\u0004H\u00c6\u0003\u00a2\u0006\u0004\u0008\u001c\u0010\u001dJ\u0010\u0010\u001e\u001a\u00020\u0002H\u00c6\u0003\u00a2\u0006\u0004\u0008\u001e\u0010\u001aJ\u0010\u0010\u001f\u001a\u00020\u0002H\u00c6\u0003\u00a2\u0006\u0004\u0008\u001f\u0010\u001aJ\u0010\u0010 \u001a\u00020\u0004H\u00c6\u0003\u00a2\u0006\u0004\u0008 \u0010\u001dJB\u0010!\u001a\u00020\u00002\u0008\u0008\u0002\u0010\u0003\u001a\u00020\u00022\u0008\u0008\u0002\u0010\u0005\u001a\u00020\u00042\u0008\u0008\u0002\u0010\u0006\u001a\u00020\u00022\u0008\u0008\u0002\u0010\u0007\u001a\u00020\u00022\u0008\u0008\u0002\u0010\u0008\u001a\u00020\u0004H\u00c6\u0001\u00a2\u0006\u0004\u0008!\u0010\"J\u0010\u0010#\u001a\u00020\u0002H\u00d6\u0001\u00a2\u0006\u0004\u0008#\u0010\u001aJ\u0010\u0010$\u001a\u00020\u000bH\u00d6\u0001\u00a2\u0006\u0004\u0008$\u0010%J\u001a\u0010(\u001a\u00020\u00042\u0008\u0010\'\u001a\u0004\u0018\u00010&H\u00d6\u0003\u00a2\u0006\u0004\u0008(\u0010)R\u0017\u0010\u0003\u001a\u00020\u00028\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0003\u0010*\u001a\u0004\u0008+\u0010\u001aR\u0017\u0010\u0005\u001a\u00020\u00048\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0005\u0010,\u001a\u0004\u0008-\u0010\u001dR\u0017\u0010\u0006\u001a\u00020\u00028\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0006\u0010*\u001a\u0004\u0008.\u0010\u001aR\u001a\u0010\u0007\u001a\u00020\u00028\u0016X\u0096\u0004\u00a2\u0006\u000c\n\u0004\u0008\u0007\u0010*\u001a\u0004\u0008/\u0010\u001aR\u001a\u0010\u0008\u001a\u00020\u00048\u0016X\u0096\u0004\u00a2\u0006\u000c\n\u0004\u0008\u0008\u0010,\u001a\u0004\u0008\u0008\u0010\u001d\u00a8\u00062"
+    }
+    d2 = {
+        "Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;",
+        "Ltv/periscope/android/api/serialized/ApiBundle;",
+        "",
+        "broadcastId",
+        "",
+        "background",
+        "loggerName",
+        "sessionCookie",
+        "isTwitterDirect",
+        "<init>",
+        "(Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;Z)V",
+        "",
+        "seen0",
+        "Lkotlinx/serialization/internal/j2;",
+        "serializationConstructorMarker",
+        "(ILjava/lang/String;ZLjava/lang/String;Ljava/lang/String;ZLkotlinx/serialization/internal/j2;)V",
+        "self",
+        "Lkotlinx/serialization/encoding/d;",
+        "output",
+        "Lkotlinx/serialization/descriptors/SerialDescriptor;",
+        "serialDesc",
+        "",
+        "write$Self$subsystem_live_video_requests_api_legacy_release",
+        "(Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;Lkotlinx/serialization/encoding/d;Lkotlinx/serialization/descriptors/SerialDescriptor;)V",
+        "write$Self",
+        "encode",
+        "()Ljava/lang/String;",
+        "component1",
+        "component2",
+        "()Z",
+        "component3",
+        "component4",
+        "component5",
+        "copy",
+        "(Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;Z)Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;",
+        "toString",
+        "hashCode",
+        "()I",
+        "",
+        "other",
+        "equals",
+        "(Ljava/lang/Object;)Z",
+        "Ljava/lang/String;",
+        "getBroadcastId",
+        "Z",
+        "getBackground",
+        "getLoggerName",
+        "getSessionCookie",
+        "Companion",
+        "$serializer",
+        "subsystem.live-video.requests.api-legacy_release"
+    }
+    k = 0x1
+    mv = {
+        0x2,
+        0x1,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+.annotation runtime Lkotlinx/serialization/h;
+.end annotation
+
+
+# static fields
+.field public static final Companion:Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams$Companion;
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+.end field
+
+.field private static final json:Lkotlinx/serialization/json/b;
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+.end field
+
+
+# instance fields
+.field private final background:Z
+
+.field private final broadcastId:Ljava/lang/String;
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+.end field
+
+.field private final isTwitterDirect:Z
+
+.field private final loggerName:Ljava/lang/String;
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+.end field
+
+.field private final sessionCookie:Ljava/lang/String;
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+.end field
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams$Companion;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams$Companion;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+
+    sput-object v0, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;->Companion:Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams$Companion;
+
+    new-instance v0, Landroidx/compose/animation/core/s3;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v0, v1}, Landroidx/compose/animation/core/s3;-><init>(I)V
+
+    invoke-static {v0}, Lkotlinx/serialization/json/m;->a(Lkotlin/jvm/functions/Function1;)Lkotlinx/serialization/json/l;
+
+    move-result-object v0
+
+    sput-object v0, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;->json:Lkotlinx/serialization/json/b;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(ILjava/lang/String;ZLjava/lang/String;Ljava/lang/String;ZLkotlinx/serialization/internal/j2;)V
+    .locals 1
+
+    and-int/lit8 p7, p1, 0x1f
+
+    const/16 v0, 0x1f
+
+    if-ne v0, p7, :cond_0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p2, p0, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;->broadcastId:Ljava/lang/String;
+
+    iput-boolean p3, p0, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;->background:Z
+
+    iput-object p4, p0, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;->loggerName:Ljava/lang/String;
+
+    iput-object p5, p0, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;->sessionCookie:Ljava/lang/String;
+
+    iput-boolean p6, p0, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;->isTwitterDirect:Z
+
+    return-void
+
+    :cond_0
+    sget-object p2, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams$$serializer;->INSTANCE:Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams$$serializer;
+
+    invoke-virtual {p2}, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams$$serializer;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
+
+    move-result-object p2
+
+    invoke-static {p1, v0, p2}, Lkotlinx/serialization/internal/z1;->b(IILkotlinx/serialization/descriptors/SerialDescriptor;)V
+
+    const/4 p1, 0x0
+
+    throw p1
+.end method
+
+.method public constructor <init>(Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;Z)V
+    .locals 1
+    .param p1    # Ljava/lang/String;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+    .param p3    # Ljava/lang/String;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+    .param p4    # Ljava/lang/String;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+
+    const-string v0, "broadcastId"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "loggerName"
+
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "sessionCookie"
+
+    invoke-static {p4, v0}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 3
+    iput-object p1, p0, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;->broadcastId:Ljava/lang/String;
+
+    .line 4
+    iput-boolean p2, p0, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;->background:Z
+
+    .line 5
+    iput-object p3, p0, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;->loggerName:Ljava/lang/String;
+
+    .line 6
+    iput-object p4, p0, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;->sessionCookie:Ljava/lang/String;
+
+    .line 7
+    iput-boolean p5, p0, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;->isTwitterDirect:Z
+
+    return-void
+.end method
+
+.method public static synthetic a(Lkotlinx/serialization/json/c;)Lkotlin/Unit;
+    .locals 0
+
+    invoke-static {p0}, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;->json$lambda$0(Lkotlinx/serialization/json/c;)Lkotlin/Unit;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static final synthetic access$getJson$cp()Lkotlinx/serialization/json/b;
+    .locals 1
+
+    sget-object v0, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;->json:Lkotlinx/serialization/json/b;
+
+    return-object v0
+.end method
+
+.method public static synthetic copy$default(Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;
+    .locals 3
+
+    and-int/lit8 p7, p6, 0x1
+
+    if-eqz p7, :cond_0
+
+    iget-object p1, p0, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;->broadcastId:Ljava/lang/String;
+
+    :cond_0
+    and-int/lit8 p7, p6, 0x2
+
+    if-eqz p7, :cond_1
+
+    iget-boolean p2, p0, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;->background:Z
+
+    :cond_1
+    move p7, p2
+
+    and-int/lit8 p2, p6, 0x4
+
+    if-eqz p2, :cond_2
+
+    iget-object p3, p0, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;->loggerName:Ljava/lang/String;
+
+    :cond_2
+    move-object v0, p3
+
+    and-int/lit8 p2, p6, 0x8
+
+    if-eqz p2, :cond_3
+
+    iget-object p4, p0, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;->sessionCookie:Ljava/lang/String;
+
+    :cond_3
+    move-object v1, p4
+
+    and-int/lit8 p2, p6, 0x10
+
+    if-eqz p2, :cond_4
+
+    iget-boolean p5, p0, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;->isTwitterDirect:Z
+
+    :cond_4
+    move v2, p5
+
+    move-object p2, p0
+
+    move-object p3, p1
+
+    move p4, p7
+
+    move-object p5, v0
+
+    move-object p6, v1
+
+    move p7, v2
+
+    invoke-virtual/range {p2 .. p7}, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;->copy(Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;Z)Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static final decode(Ljava/lang/String;)Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;
+    .locals 1
+    .param p0    # Ljava/lang/String;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+    .annotation runtime Lkotlin/jvm/JvmStatic;
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+
+    sget-object v0, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;->Companion:Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams$Companion;
+
+    invoke-virtual {v0, p0}, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams$Companion;->decode(Ljava/lang/String;)Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method private static final json$lambda$0(Lkotlinx/serialization/json/c;)Lkotlin/Unit;
+    .locals 1
+
+    const-string v0, "$this$Json"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lkotlinx/serialization/json/c;->c:Z
+
+    sget-object p0, Lkotlin/Unit;->a:Lkotlin/Unit;
+
+    return-object p0
+.end method
+
+.method public static final synthetic write$Self$subsystem_live_video_requests_api_legacy_release(Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;Lkotlinx/serialization/encoding/d;Lkotlinx/serialization/descriptors/SerialDescriptor;)V
+    .locals 2
+    .annotation runtime Lkotlin/jvm/JvmStatic;
+    .end annotation
+
+    iget-object v0, p0, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;->broadcastId:Ljava/lang/String;
+
+    const/4 v1, 0x0
+
+    invoke-interface {p1, p2, v1, v0}, Lkotlinx/serialization/encoding/d;->o(Lkotlinx/serialization/descriptors/SerialDescriptor;ILjava/lang/String;)V
+
+    const/4 v0, 0x1
+
+    iget-boolean v1, p0, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;->background:Z
+
+    invoke-interface {p1, p2, v0, v1}, Lkotlinx/serialization/encoding/d;->n(Lkotlinx/serialization/descriptors/SerialDescriptor;IZ)V
+
+    const/4 v0, 0x2
+
+    iget-object v1, p0, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;->loggerName:Ljava/lang/String;
+
+    invoke-interface {p1, p2, v0, v1}, Lkotlinx/serialization/encoding/d;->o(Lkotlinx/serialization/descriptors/SerialDescriptor;ILjava/lang/String;)V
+
+    const/4 v0, 0x3
+
+    invoke-virtual {p0}, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;->getSessionCookie()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-interface {p1, p2, v0, v1}, Lkotlinx/serialization/encoding/d;->o(Lkotlinx/serialization/descriptors/SerialDescriptor;ILjava/lang/String;)V
+
+    const/4 v0, 0x4
+
+    invoke-virtual {p0}, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;->isTwitterDirect()Z
+
+    move-result p0
+
+    invoke-interface {p1, p2, v0, p0}, Lkotlinx/serialization/encoding/d;->n(Lkotlinx/serialization/descriptors/SerialDescriptor;IZ)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final component1()Ljava/lang/String;
+    .locals 1
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+
+    iget-object v0, p0, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;->broadcastId:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final component2()Z
+    .locals 1
+
+    iget-boolean v0, p0, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;->background:Z
+
+    return v0
+.end method
+
+.method public final component3()Ljava/lang/String;
+    .locals 1
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+
+    iget-object v0, p0, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;->loggerName:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final component4()Ljava/lang/String;
+    .locals 1
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+
+    iget-object v0, p0, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;->sessionCookie:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final component5()Z
+    .locals 1
+
+    iget-boolean v0, p0, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;->isTwitterDirect:Z
+
+    return v0
+.end method
+
+.method public final copy(Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;Z)Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;
+    .locals 7
+    .param p1    # Ljava/lang/String;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+    .param p3    # Ljava/lang/String;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+    .param p4    # Ljava/lang/String;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+
+    const-string v0, "broadcastId"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "loggerName"
+
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "sessionCookie"
+
+    invoke-static {p4, v0}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    new-instance v0, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;
+
+    move-object v1, v0
+
+    move-object v2, p1
+
+    move v3, p2
+
+    move-object v4, p3
+
+    move-object v5, p4
+
+    move v6, p5
+
+    invoke-direct/range {v1 .. v6}, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;-><init>(Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;Z)V
+
+    return-object v0
+.end method
+
+.method public final encode()Ljava/lang/String;
+    .locals 2
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+
+    sget-object v0, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;->json:Lkotlinx/serialization/json/b;
+
+    sget-object v1, Ltv/periscope/android/api/serialized/ApiBundle;->Companion:Ltv/periscope/android/api/serialized/ApiBundle$Companion;
+
+    invoke-virtual {v1}, Ltv/periscope/android/api/serialized/ApiBundle$Companion;->serializer()Lkotlinx/serialization/KSerializer;
+
+    move-result-object v1
+
+    check-cast v1, Lkotlinx/serialization/i;
+
+    invoke-virtual {v0, p0, v1}, Lkotlinx/serialization/json/b;->b(Ljava/lang/Object;Lkotlinx/serialization/i;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public equals(Ljava/lang/Object;)Z
+    .locals 4
+    .param p1    # Ljava/lang/Object;
+        .annotation build Lorg/jetbrains/annotations/b;
+        .end annotation
+    .end param
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;
+
+    iget-object v1, p0, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;->broadcastId:Ljava/lang/String;
+
+    iget-object v3, p1, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;->broadcastId:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-boolean v1, p0, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;->background:Z
+
+    iget-boolean v3, p1, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;->background:Z
+
+    if-eq v1, v3, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;->loggerName:Ljava/lang/String;
+
+    iget-object v3, p1, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;->loggerName:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-object v1, p0, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;->sessionCookie:Ljava/lang/String;
+
+    iget-object v3, p1, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;->sessionCookie:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-boolean v1, p0, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;->isTwitterDirect:Z
+
+    iget-boolean p1, p1, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;->isTwitterDirect:Z
+
+    if-eq v1, p1, :cond_6
+
+    return v2
+
+    :cond_6
+    return v0
+.end method
+
+.method public final getBackground()Z
+    .locals 1
+
+    iget-boolean v0, p0, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;->background:Z
+
+    return v0
+.end method
+
+.method public final getBroadcastId()Ljava/lang/String;
+    .locals 1
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+
+    iget-object v0, p0, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;->broadcastId:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final getLoggerName()Ljava/lang/String;
+    .locals 1
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+
+    iget-object v0, p0, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;->loggerName:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getSessionCookie()Ljava/lang/String;
+    .locals 1
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+
+    iget-object v0, p0, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;->sessionCookie:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public hashCode()I
+    .locals 3
+
+    iget-object v0, p0, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;->broadcastId:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-boolean v2, p0, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;->background:Z
+
+    invoke-static {v0, v1, v2}, Landroidx/camera/viewfinder/core/d;->a(IIZ)I
+
+    move-result v0
+
+    iget-object v2, p0, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;->loggerName:Ljava/lang/String;
+
+    invoke-static {v0, v1, v2}, Landroidx/compose/foundation/text/modifiers/d0;->a(IILjava/lang/String;)I
+
+    move-result v0
+
+    iget-object v2, p0, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;->sessionCookie:Ljava/lang/String;
+
+    invoke-static {v0, v1, v2}, Landroidx/compose/foundation/text/modifiers/d0;->a(IILjava/lang/String;)I
+
+    move-result v0
+
+    iget-boolean v1, p0, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;->isTwitterDirect:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public isTwitterDirect()Z
+    .locals 1
+
+    iget-boolean v0, p0, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;->isTwitterDirect:Z
+
+    return v0
+.end method
+
+.method public toString()Ljava/lang/String;
+    .locals 8
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+
+    iget-object v0, p0, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;->broadcastId:Ljava/lang/String;
+
+    iget-boolean v1, p0, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;->background:Z
+
+    iget-object v2, p0, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;->loggerName:Ljava/lang/String;
+
+    iget-object v3, p0, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;->sessionCookie:Ljava/lang/String;
+
+    iget-boolean v4, p0, Ltv/periscope/android/api/serialized/UploadBroadcasterLogsParams;->isTwitterDirect:Z
+
+    const-string v5, "UploadBroadcasterLogsParams(broadcastId="
+
+    const-string v6, ", background="
+
+    const-string v7, ", loggerName="
+
+    invoke-static {v5, v0, v6, v1, v7}, Lcom/twitter/app/di/app/or;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", sessionCookie="
+
+    const-string v5, ", isTwitterDirect="
+
+    invoke-static {v0, v2, v1, v3, v5}, Landroid/gov/nist/javax/sip/clientauthutils/b;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v1, ")"
+
+    invoke-static {v0, v4, v1}, Landroidx/appcompat/app/l;->b(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method

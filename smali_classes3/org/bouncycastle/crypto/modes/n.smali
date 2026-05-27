@@ -1,0 +1,269 @@
+.class public final Lorg/bouncycastle/crypto/modes/n;
+.super Lorg/bouncycastle/crypto/f0;
+.source "SourceFile"
+
+
+# instance fields
+.field public b:I
+
+.field public c:I
+
+.field public d:[B
+
+.field public e:[B
+
+.field public f:[B
+
+.field public g:Lorg/bouncycastle/crypto/engines/x;
+
+.field public h:I
+
+.field public i:Z
+
+
+# virtual methods
+.method public final b()I
+    .locals 1
+
+    iget v0, p0, Lorg/bouncycastle/crypto/modes/n;->c:I
+
+    return v0
+.end method
+
+.method public final d([BII[B)I
+    .locals 6
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lorg/bouncycastle/crypto/DataLengthException;,
+            Ljava/lang/IllegalStateException;
+        }
+    .end annotation
+
+    iget v3, p0, Lorg/bouncycastle/crypto/modes/n;->c:I
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move v2, p2
+
+    move-object v4, p4
+
+    move v5, p3
+
+    invoke-virtual/range {v0 .. v5}, Lorg/bouncycastle/crypto/f0;->processBytes([BII[BI)I
+
+    iget p1, p0, Lorg/bouncycastle/crypto/modes/n;->c:I
+
+    return p1
+.end method
+
+.method public final e(B)B
+    .locals 6
+
+    iget v0, p0, Lorg/bouncycastle/crypto/modes/n;->h:I
+
+    iget v1, p0, Lorg/bouncycastle/crypto/modes/n;->c:I
+
+    iget-object v2, p0, Lorg/bouncycastle/crypto/modes/n;->f:[B
+
+    const/4 v3, 0x0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lorg/bouncycastle/crypto/modes/n;->d:[B
+
+    invoke-static {v1, v0}, Lorg/bouncycastle/util/a;->m(I[B)[B
+
+    move-result-object v0
+
+    iget-object v4, p0, Lorg/bouncycastle/crypto/modes/n;->g:Lorg/bouncycastle/crypto/engines/x;
+
+    invoke-virtual {v4, v0, v3, v3, v2}, Lorg/bouncycastle/crypto/engines/x;->d([BII[B)I
+
+    :cond_0
+    iget v0, p0, Lorg/bouncycastle/crypto/modes/n;->h:I
+
+    aget-byte v4, v2, v0
+
+    xor-int/2addr p1, v4
+
+    int-to-byte p1, p1
+
+    add-int/lit8 v0, v0, 0x1
+
+    iput v0, p0, Lorg/bouncycastle/crypto/modes/n;->h:I
+
+    if-ne v0, v1, :cond_1
+
+    iput v3, p0, Lorg/bouncycastle/crypto/modes/n;->h:I
+
+    iget-object v0, p0, Lorg/bouncycastle/crypto/modes/n;->d:[B
+
+    iget v4, p0, Lorg/bouncycastle/crypto/modes/n;->b:I
+
+    sub-int/2addr v4, v1
+
+    new-array v1, v4, [B
+
+    array-length v5, v0
+
+    sub-int/2addr v5, v4
+
+    invoke-static {v0, v5, v1, v3, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    iget-object v0, p0, Lorg/bouncycastle/crypto/modes/n;->d:[B
+
+    invoke-static {v1, v3, v0, v3, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    iget-object v0, p0, Lorg/bouncycastle/crypto/modes/n;->d:[B
+
+    iget v1, p0, Lorg/bouncycastle/crypto/modes/n;->b:I
+
+    sub-int/2addr v1, v4
+
+    invoke-static {v2, v3, v0, v4, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    :cond_1
+    return p1
+.end method
+
+.method public final getAlgorithmName()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lorg/bouncycastle/crypto/modes/n;->g:Lorg/bouncycastle/crypto/engines/x;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string v0, "GOST3412_2015/OFB"
+
+    return-object v0
+.end method
+
+.method public final init(ZLorg/bouncycastle/crypto/i;)V
+    .locals 5
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/IllegalArgumentException;
+        }
+    .end annotation
+
+    instance-of p1, p2, Lorg/bouncycastle/crypto/params/d1;
+
+    iget-object v0, p0, Lorg/bouncycastle/crypto/modes/n;->g:Lorg/bouncycastle/crypto/engines/x;
+
+    iget v1, p0, Lorg/bouncycastle/crypto/modes/n;->c:I
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x0
+
+    if-eqz p1, :cond_1
+
+    check-cast p2, Lorg/bouncycastle/crypto/params/d1;
+
+    iget-object p1, p2, Lorg/bouncycastle/crypto/params/d1;->a:[B
+
+    array-length v4, p1
+
+    if-lt v4, v1, :cond_0
+
+    array-length v1, p1
+
+    iput v1, p0, Lorg/bouncycastle/crypto/modes/n;->b:I
+
+    new-array v4, v1, [B
+
+    iput-object v4, p0, Lorg/bouncycastle/crypto/modes/n;->d:[B
+
+    new-array v1, v1, [B
+
+    iput-object v1, p0, Lorg/bouncycastle/crypto/modes/n;->e:[B
+
+    invoke-static {p1}, Lorg/bouncycastle/util/a;->b([B)[B
+
+    move-result-object p1
+
+    iput-object p1, p0, Lorg/bouncycastle/crypto/modes/n;->e:[B
+
+    iget-object v1, p0, Lorg/bouncycastle/crypto/modes/n;->d:[B
+
+    array-length v4, p1
+
+    invoke-static {p1, v3, v1, v3, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    iget-object p1, p2, Lorg/bouncycastle/crypto/params/d1;->b:Lorg/bouncycastle/crypto/i;
+
+    if-eqz p1, :cond_2
+
+    invoke-virtual {v0, v2, p1}, Lorg/bouncycastle/crypto/engines/x;->init(ZLorg/bouncycastle/crypto/i;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "Parameter m must blockSize <= m"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    mul-int/lit8 v1, v1, 0x2
+
+    iput v1, p0, Lorg/bouncycastle/crypto/modes/n;->b:I
+
+    new-array p1, v1, [B
+
+    iput-object p1, p0, Lorg/bouncycastle/crypto/modes/n;->d:[B
+
+    new-array v1, v1, [B
+
+    iput-object v1, p0, Lorg/bouncycastle/crypto/modes/n;->e:[B
+
+    array-length v4, v1
+
+    invoke-static {v1, v3, p1, v3, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    if-eqz p2, :cond_2
+
+    invoke-virtual {v0, v2, p2}, Lorg/bouncycastle/crypto/engines/x;->init(ZLorg/bouncycastle/crypto/i;)V
+
+    :cond_2
+    :goto_0
+    iput-boolean v2, p0, Lorg/bouncycastle/crypto/modes/n;->i:Z
+
+    return-void
+.end method
+
+.method public final reset()V
+    .locals 4
+
+    iget-boolean v0, p0, Lorg/bouncycastle/crypto/modes/n;->i:Z
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lorg/bouncycastle/crypto/modes/n;->e:[B
+
+    iget-object v1, p0, Lorg/bouncycastle/crypto/modes/n;->d:[B
+
+    array-length v2, v0
+
+    const/4 v3, 0x0
+
+    invoke-static {v0, v3, v1, v3, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    iget-object v0, p0, Lorg/bouncycastle/crypto/modes/n;->f:[B
+
+    invoke-static {v0}, Lorg/bouncycastle/util/a;->a([B)V
+
+    iput v3, p0, Lorg/bouncycastle/crypto/modes/n;->h:I
+
+    iget-object v0, p0, Lorg/bouncycastle/crypto/modes/n;->g:Lorg/bouncycastle/crypto/engines/x;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    :cond_0
+    return-void
+.end method

@@ -1,0 +1,318 @@
+.class public Lorg/bouncycastle/jcajce/provider/asymmetric/mldsa/SignatureSpi;
+.super Lorg/bouncycastle/jcajce/provider/asymmetric/util/BaseDeterministicOrRandomSignature;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lorg/bouncycastle/jcajce/provider/asymmetric/mldsa/SignatureSpi$MLDSA;,
+        Lorg/bouncycastle/jcajce/provider/asymmetric/mldsa/SignatureSpi$MLDSA44;,
+        Lorg/bouncycastle/jcajce/provider/asymmetric/mldsa/SignatureSpi$MLDSA65;,
+        Lorg/bouncycastle/jcajce/provider/asymmetric/mldsa/SignatureSpi$MLDSA87;,
+        Lorg/bouncycastle/jcajce/provider/asymmetric/mldsa/SignatureSpi$MLDSACalcMu;,
+        Lorg/bouncycastle/jcajce/provider/asymmetric/mldsa/SignatureSpi$MLDSAExtMu;
+    }
+.end annotation
+
+
+# instance fields
+.field protected parameters:Lorg/bouncycastle/pqc/crypto/mldsa/f;
+
+.field protected signer:Lorg/bouncycastle/pqc/crypto/mldsa/i;
+
+
+# direct methods
+.method public constructor <init>(Lorg/bouncycastle/pqc/crypto/mldsa/i;)V
+    .locals 1
+
+    .line 1
+    const-string v0, "MLDSA"
+
+    invoke-direct {p0, v0}, Lorg/bouncycastle/jcajce/provider/asymmetric/util/BaseDeterministicOrRandomSignature;-><init>(Ljava/lang/String;)V
+
+    iput-object p1, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/mldsa/SignatureSpi;->signer:Lorg/bouncycastle/pqc/crypto/mldsa/i;
+
+    const/4 p1, 0x0
+
+    iput-object p1, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/mldsa/SignatureSpi;->parameters:Lorg/bouncycastle/pqc/crypto/mldsa/f;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lorg/bouncycastle/pqc/crypto/mldsa/i;Lorg/bouncycastle/pqc/crypto/mldsa/f;)V
+    .locals 1
+
+    .line 2
+    iget-object v0, p2, Lorg/bouncycastle/pqc/crypto/mldsa/f;->b:Ljava/lang/String;
+
+    .line 3
+    invoke-static {v0}, Lorg/bouncycastle/jcajce/spec/t;->a(Ljava/lang/String;)Lorg/bouncycastle/jcajce/spec/t;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lorg/bouncycastle/jcajce/spec/t;->a:Ljava/lang/String;
+
+    invoke-direct {p0, v0}, Lorg/bouncycastle/jcajce/provider/asymmetric/util/BaseDeterministicOrRandomSignature;-><init>(Ljava/lang/String;)V
+
+    iput-object p1, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/mldsa/SignatureSpi;->signer:Lorg/bouncycastle/pqc/crypto/mldsa/i;
+
+    iput-object p2, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/mldsa/SignatureSpi;->parameters:Lorg/bouncycastle/pqc/crypto/mldsa/f;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public engineSign()[B
+    .locals 2
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/security/SignatureException;
+        }
+    .end annotation
+
+    :try_start_0
+    iget-object v0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/mldsa/SignatureSpi;->signer:Lorg/bouncycastle/pqc/crypto/mldsa/i;
+
+    invoke-virtual {v0}, Lorg/bouncycastle/pqc/crypto/mldsa/i;->b()[B
+
+    move-result-object v0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object v0
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Ljava/security/SignatureException;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v1, v0}, Ljava/security/SignatureException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+.end method
+
+.method public engineVerify([B)Z
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/security/SignatureException;
+        }
+    .end annotation
+
+    iget-object v0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/mldsa/SignatureSpi;->signer:Lorg/bouncycastle/pqc/crypto/mldsa/i;
+
+    invoke-virtual {v0, p1}, Lorg/bouncycastle/pqc/crypto/mldsa/i;->a([B)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public reInitialize(ZLorg/bouncycastle/crypto/i;)V
+    .locals 1
+
+    iget-object v0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/mldsa/SignatureSpi;->signer:Lorg/bouncycastle/pqc/crypto/mldsa/i;
+
+    invoke-virtual {v0, p1, p2}, Lorg/bouncycastle/pqc/crypto/mldsa/i;->init(ZLorg/bouncycastle/crypto/i;)V
+
+    return-void
+.end method
+
+.method public signInit(Ljava/security/PrivateKey;Ljava/security/SecureRandom;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/security/InvalidKeyException;
+        }
+    .end annotation
+
+    iput-object p2, p0, Ljava/security/Signature;->appRandom:Ljava/security/SecureRandom;
+
+    instance-of p2, p1, Lorg/bouncycastle/jcajce/provider/asymmetric/mldsa/BCMLDSAPrivateKey;
+
+    if-eqz p2, :cond_2
+
+    check-cast p1, Lorg/bouncycastle/jcajce/provider/asymmetric/mldsa/BCMLDSAPrivateKey;
+
+    invoke-virtual {p1}, Lorg/bouncycastle/jcajce/provider/asymmetric/mldsa/BCMLDSAPrivateKey;->getKeyParams()Lorg/bouncycastle/pqc/crypto/mldsa/g;
+
+    move-result-object p2
+
+    iput-object p2, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/BaseDeterministicOrRandomSignature;->keyParams:Lorg/bouncycastle/crypto/params/b;
+
+    iget-object p2, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/mldsa/SignatureSpi;->parameters:Lorg/bouncycastle/pqc/crypto/mldsa/f;
+
+    if-eqz p2, :cond_1
+
+    iget-object p2, p2, Lorg/bouncycastle/pqc/crypto/mldsa/f;->b:Ljava/lang/String;
+
+    invoke-static {p2}, Lorg/bouncycastle/jcajce/spec/t;->a(Ljava/lang/String;)Lorg/bouncycastle/jcajce/spec/t;
+
+    move-result-object p2
+
+    invoke-virtual {p1}, Lorg/bouncycastle/jcajce/provider/asymmetric/mldsa/BCMLDSAPrivateKey;->getAlgorithm()Ljava/lang/String;
+
+    move-result-object p1
+
+    iget-object p2, p2, Lorg/bouncycastle/jcajce/spec/t;->a:Ljava/lang/String;
+
+    invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/security/InvalidKeyException;
+
+    const-string v0, "signature configured for "
+
+    invoke-virtual {v0, p2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Ljava/security/InvalidKeyException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    :goto_0
+    return-void
+
+    :cond_2
+    instance-of p2, p1, Lorg/bouncycastle/jcajce/g;
+
+    if-eqz p2, :cond_3
+
+    instance-of p2, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/mldsa/SignatureSpi$MLDSACalcMu;
+
+    if-eqz p2, :cond_3
+
+    check-cast p1, Lorg/bouncycastle/jcajce/g;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 p1, 0x0
+
+    throw p1
+
+    :cond_3
+    new-instance p1, Ljava/security/InvalidKeyException;
+
+    const-string p2, "unknown private key passed to ML-DSA"
+
+    invoke-direct {p1, p2}, Ljava/security/InvalidKeyException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public updateEngine(B)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/security/SignatureException;
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/mldsa/SignatureSpi;->signer:Lorg/bouncycastle/pqc/crypto/mldsa/i;
+
+    invoke-virtual {v0, p1}, Lorg/bouncycastle/pqc/crypto/mldsa/i;->update(B)V
+
+    return-void
+.end method
+
+.method public updateEngine([BII)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/security/SignatureException;
+        }
+    .end annotation
+
+    .line 2
+    iget-object v0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/mldsa/SignatureSpi;->signer:Lorg/bouncycastle/pqc/crypto/mldsa/i;
+
+    invoke-virtual {v0, p1, p2, p3}, Lorg/bouncycastle/pqc/crypto/mldsa/i;->update([BII)V
+
+    return-void
+.end method
+
+.method public verifyInit(Ljava/security/PublicKey;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/security/InvalidKeyException;
+        }
+    .end annotation
+
+    instance-of v0, p1, Lorg/bouncycastle/jcajce/provider/asymmetric/mldsa/BCMLDSAPublicKey;
+
+    if-eqz v0, :cond_2
+
+    check-cast p1, Lorg/bouncycastle/jcajce/provider/asymmetric/mldsa/BCMLDSAPublicKey;
+
+    invoke-virtual {p1}, Lorg/bouncycastle/jcajce/provider/asymmetric/mldsa/BCMLDSAPublicKey;->getKeyParams()Lorg/bouncycastle/pqc/crypto/mldsa/h;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/BaseDeterministicOrRandomSignature;->keyParams:Lorg/bouncycastle/crypto/params/b;
+
+    iget-object v0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/mldsa/SignatureSpi;->parameters:Lorg/bouncycastle/pqc/crypto/mldsa/f;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, v0, Lorg/bouncycastle/pqc/crypto/mldsa/f;->b:Ljava/lang/String;
+
+    invoke-static {v0}, Lorg/bouncycastle/jcajce/spec/t;->a(Ljava/lang/String;)Lorg/bouncycastle/jcajce/spec/t;
+
+    move-result-object v0
+
+    invoke-virtual {p1}, Lorg/bouncycastle/jcajce/provider/asymmetric/mldsa/BCMLDSAPublicKey;->getAlgorithm()Ljava/lang/String;
+
+    move-result-object p1
+
+    iget-object v0, v0, Lorg/bouncycastle/jcajce/spec/t;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/security/InvalidKeyException;
+
+    const-string v1, "signature configured for "
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {p1, v0}, Ljava/security/InvalidKeyException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    :goto_0
+    return-void
+
+    :cond_2
+    new-instance p1, Ljava/security/InvalidKeyException;
+
+    const-string v0, "unknown public key passed to ML-DSA"
+
+    invoke-direct {p1, v0}, Ljava/security/InvalidKeyException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method

@@ -1,0 +1,1518 @@
+.class public final Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;
+.super Lcom/squareup/wire/Message;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep$Companion;
+    }
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000l\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0001\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000b\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0002\u0008\u0002\n\u0002\u0010\u000e\n\u0002\u0008!\u0018\u0000 D2\u000e\u0012\u0004\u0012\u00020\u0000\u0012\u0004\u0012\u00020\u00020\u0001:\u0001DB\u0081\u0001\u0012\n\u0008\u0002\u0010\u0004\u001a\u0004\u0018\u00010\u0003\u0012\n\u0008\u0002\u0010\u0006\u001a\u0004\u0018\u00010\u0005\u0012\n\u0008\u0002\u0010\u0008\u001a\u0004\u0018\u00010\u0007\u0012\n\u0008\u0002\u0010\n\u001a\u0004\u0018\u00010\t\u0012\n\u0008\u0002\u0010\u000c\u001a\u0004\u0018\u00010\u000b\u0012\n\u0008\u0002\u0010\u000e\u001a\u0004\u0018\u00010\r\u0012\n\u0008\u0002\u0010\u0010\u001a\u0004\u0018\u00010\u000f\u0012\n\u0008\u0002\u0010\u0012\u001a\u0004\u0018\u00010\u0011\u0012\u000e\u0008\u0002\u0010\u0015\u001a\u0008\u0012\u0004\u0012\u00020\u00140\u0013\u0012\u0008\u0008\u0002\u0010\u0017\u001a\u00020\u0016\u00a2\u0006\u0004\u0008\u0018\u0010\u0019J\u000f\u0010\u001a\u001a\u00020\u0002H\u0017\u00a2\u0006\u0004\u0008\u001a\u0010\u001bJ\u001a\u0010\u001f\u001a\u00020\u001e2\u0008\u0010\u001d\u001a\u0004\u0018\u00010\u001cH\u0096\u0002\u00a2\u0006\u0004\u0008\u001f\u0010 J\u000f\u0010\"\u001a\u00020!H\u0016\u00a2\u0006\u0004\u0008\"\u0010#J\u000f\u0010%\u001a\u00020$H\u0016\u00a2\u0006\u0004\u0008%\u0010&J\u0087\u0001\u0010\'\u001a\u00020\u00002\n\u0008\u0002\u0010\u0004\u001a\u0004\u0018\u00010\u00032\n\u0008\u0002\u0010\u0006\u001a\u0004\u0018\u00010\u00052\n\u0008\u0002\u0010\u0008\u001a\u0004\u0018\u00010\u00072\n\u0008\u0002\u0010\n\u001a\u0004\u0018\u00010\t2\n\u0008\u0002\u0010\u000c\u001a\u0004\u0018\u00010\u000b2\n\u0008\u0002\u0010\u000e\u001a\u0004\u0018\u00010\r2\n\u0008\u0002\u0010\u0010\u001a\u0004\u0018\u00010\u000f2\n\u0008\u0002\u0010\u0012\u001a\u0004\u0018\u00010\u00112\u000e\u0008\u0002\u0010\u0015\u001a\u0008\u0012\u0004\u0012\u00020\u00140\u00132\u0008\u0008\u0002\u0010\u0017\u001a\u00020\u0016\u00a2\u0006\u0004\u0008\'\u0010(R\u001c\u0010\u0004\u001a\u0004\u0018\u00010\u00038\u0006X\u0087\u0004\u00a2\u0006\u000c\n\u0004\u0008\u0004\u0010)\u001a\u0004\u0008*\u0010+R\u001c\u0010\u0006\u001a\u0004\u0018\u00010\u00058\u0006X\u0087\u0004\u00a2\u0006\u000c\n\u0004\u0008\u0006\u0010,\u001a\u0004\u0008-\u0010.R\u001c\u0010\u0008\u001a\u0004\u0018\u00010\u00078\u0006X\u0087\u0004\u00a2\u0006\u000c\n\u0004\u0008\u0008\u0010/\u001a\u0004\u00080\u00101R\u001c\u0010\n\u001a\u0004\u0018\u00010\t8\u0006X\u0087\u0004\u00a2\u0006\u000c\n\u0004\u0008\n\u00102\u001a\u0004\u00083\u00104R\u001c\u0010\u000c\u001a\u0004\u0018\u00010\u000b8\u0006X\u0087\u0004\u00a2\u0006\u000c\n\u0004\u0008\u000c\u00105\u001a\u0004\u00086\u00107R\u001c\u0010\u000e\u001a\u0004\u0018\u00010\r8\u0006X\u0087\u0004\u00a2\u0006\u000c\n\u0004\u0008\u000e\u00108\u001a\u0004\u00089\u0010:R\u001c\u0010\u0010\u001a\u0004\u0018\u00010\u000f8\u0006X\u0087\u0004\u00a2\u0006\u000c\n\u0004\u0008\u0010\u0010;\u001a\u0004\u0008<\u0010=R\u001c\u0010\u0012\u001a\u0004\u0018\u00010\u00118\u0006X\u0087\u0004\u00a2\u0006\u000c\n\u0004\u0008\u0012\u0010>\u001a\u0004\u0008?\u0010@R \u0010\u0015\u001a\u0008\u0012\u0004\u0012\u00020\u00140\u00138\u0006X\u0087\u0004\u00a2\u0006\u000c\n\u0004\u0008\u0015\u0010A\u001a\u0004\u0008B\u0010C\u00a8\u0006E"
+    }
+    d2 = {
+        "Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;",
+        "Lcom/squareup/wire/Message;",
+        "",
+        "Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullAddress;",
+        "full_address",
+        "Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullUsSsn;",
+        "full_us_ssn",
+        "Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullName;",
+        "full_name",
+        "Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullUsTaxId;",
+        "full_us_tax_id",
+        "Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepUsState;",
+        "us_state",
+        "Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFirstName;",
+        "first_name",
+        "Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepLastName;",
+        "last_name",
+        "Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepDateOfBirth;",
+        "date_of_birth",
+        "",
+        "Lcom/twitter/money_service/xpayments/orchestrator/service/FieldViolation;",
+        "field_violations",
+        "Lokio/h;",
+        "unknownFields",
+        "<init>",
+        "(Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullAddress;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullUsSsn;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullName;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullUsTaxId;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepUsState;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFirstName;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepLastName;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepDateOfBirth;Ljava/util/List;Lokio/h;)V",
+        "newBuilder",
+        "()Ljava/lang/Void;",
+        "",
+        "other",
+        "",
+        "equals",
+        "(Ljava/lang/Object;)Z",
+        "",
+        "hashCode",
+        "()I",
+        "",
+        "toString",
+        "()Ljava/lang/String;",
+        "copy",
+        "(Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullAddress;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullUsSsn;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullName;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullUsTaxId;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepUsState;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFirstName;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepLastName;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepDateOfBirth;Ljava/util/List;Lokio/h;)Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;",
+        "Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullAddress;",
+        "getFull_address",
+        "()Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullAddress;",
+        "Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullUsSsn;",
+        "getFull_us_ssn",
+        "()Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullUsSsn;",
+        "Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullName;",
+        "getFull_name",
+        "()Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullName;",
+        "Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullUsTaxId;",
+        "getFull_us_tax_id",
+        "()Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullUsTaxId;",
+        "Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepUsState;",
+        "getUs_state",
+        "()Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepUsState;",
+        "Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFirstName;",
+        "getFirst_name",
+        "()Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFirstName;",
+        "Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepLastName;",
+        "getLast_name",
+        "()Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepLastName;",
+        "Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepDateOfBirth;",
+        "getDate_of_birth",
+        "()Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepDateOfBirth;",
+        "Ljava/util/List;",
+        "getField_violations",
+        "()Ljava/util/List;",
+        "Companion",
+        "-features-payments-grpc"
+    }
+    k = 0x1
+    mv = {
+        0x2,
+        0x1,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# static fields
+.field public static final ADAPTER:Lcom/squareup/wire/ProtoAdapter;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/squareup/wire/ProtoAdapter<",
+            "Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;",
+            ">;"
+        }
+    .end annotation
+
+    .annotation build Lkotlin/jvm/JvmField;
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+.end field
+
+.field public static final Companion:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep$Companion;
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+.end field
+
+.field private static final serialVersionUID:J
+
+
+# instance fields
+.field private final date_of_birth:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepDateOfBirth;
+    .annotation runtime Lcom/squareup/wire/WireField;
+        adapter = "com.twitter.money_service.xpayments.orchestrator.service.VerificationStepDateOfBirth#ADAPTER"
+        jsonName = "dateOfBirth"
+        oneofName = "verification_step"
+        schemaIndex = 0x7
+        tag = 0x8
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/b;
+    .end annotation
+.end field
+
+.field private final field_violations:Ljava/util/List;
+    .annotation runtime Lcom/squareup/wire/WireField;
+        adapter = "com.twitter.money_service.xpayments.orchestrator.service.FieldViolation#ADAPTER"
+        jsonName = "fieldViolations"
+        label = .enum Lcom/squareup/wire/WireField$Label;->REPEATED:Lcom/squareup/wire/WireField$Label;
+        schemaIndex = 0x8
+        tag = 0x1d
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Lcom/twitter/money_service/xpayments/orchestrator/service/FieldViolation;",
+            ">;"
+        }
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+.end field
+
+.field private final first_name:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFirstName;
+    .annotation runtime Lcom/squareup/wire/WireField;
+        adapter = "com.twitter.money_service.xpayments.orchestrator.service.VerificationStepFirstName#ADAPTER"
+        jsonName = "firstName"
+        oneofName = "verification_step"
+        schemaIndex = 0x5
+        tag = 0x6
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/b;
+    .end annotation
+.end field
+
+.field private final full_address:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullAddress;
+    .annotation runtime Lcom/squareup/wire/WireField;
+        adapter = "com.twitter.money_service.xpayments.orchestrator.service.VerificationStepFullAddress#ADAPTER"
+        jsonName = "fullAddress"
+        oneofName = "verification_step"
+        schemaIndex = 0x0
+        tag = 0x1
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/b;
+    .end annotation
+.end field
+
+.field private final full_name:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullName;
+    .annotation runtime Lcom/squareup/wire/WireField;
+        adapter = "com.twitter.money_service.xpayments.orchestrator.service.VerificationStepFullName#ADAPTER"
+        jsonName = "fullName"
+        oneofName = "verification_step"
+        schemaIndex = 0x2
+        tag = 0x3
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/b;
+    .end annotation
+.end field
+
+.field private final full_us_ssn:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullUsSsn;
+    .annotation runtime Lcom/squareup/wire/WireField;
+        adapter = "com.twitter.money_service.xpayments.orchestrator.service.VerificationStepFullUsSsn#ADAPTER"
+        jsonName = "fullUsSsn"
+        oneofName = "verification_step"
+        schemaIndex = 0x1
+        tag = 0x2
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/b;
+    .end annotation
+.end field
+
+.field private final full_us_tax_id:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullUsTaxId;
+    .annotation runtime Lcom/squareup/wire/WireField;
+        adapter = "com.twitter.money_service.xpayments.orchestrator.service.VerificationStepFullUsTaxId#ADAPTER"
+        jsonName = "fullUsTaxId"
+        oneofName = "verification_step"
+        schemaIndex = 0x3
+        tag = 0x4
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/b;
+    .end annotation
+.end field
+
+.field private final last_name:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepLastName;
+    .annotation runtime Lcom/squareup/wire/WireField;
+        adapter = "com.twitter.money_service.xpayments.orchestrator.service.VerificationStepLastName#ADAPTER"
+        jsonName = "lastName"
+        oneofName = "verification_step"
+        schemaIndex = 0x6
+        tag = 0x7
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/b;
+    .end annotation
+.end field
+
+.field private final us_state:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepUsState;
+    .annotation runtime Lcom/squareup/wire/WireField;
+        adapter = "com.twitter.money_service.xpayments.orchestrator.service.VerificationStepUsState#ADAPTER"
+        jsonName = "usState"
+        oneofName = "verification_step"
+        schemaIndex = 0x4
+        tag = 0x5
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/b;
+    .end annotation
+.end field
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 4
+
+    new-instance v0, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep$Companion;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep$Companion;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+
+    sput-object v0, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->Companion:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep$Companion;
+
+    sget-object v0, Lcom/squareup/wire/FieldEncoding;->LENGTH_DELIMITED:Lcom/squareup/wire/FieldEncoding;
+
+    sget-object v1, Lkotlin/jvm/internal/Reflection;->a:Lkotlin/jvm/internal/ReflectionFactory;
+
+    const-class v2, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;
+
+    invoke-virtual {v1, v2}, Lkotlin/jvm/internal/ReflectionFactory;->b(Ljava/lang/Class;)Lkotlin/reflect/KClass;
+
+    move-result-object v1
+
+    sget-object v2, Lcom/squareup/wire/Syntax;->PROTO_3:Lcom/squareup/wire/Syntax;
+
+    new-instance v3, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep$Companion$ADAPTER$1;
+
+    invoke-direct {v3, v0, v1, v2}, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep$Companion$ADAPTER$1;-><init>(Lcom/squareup/wire/FieldEncoding;Lkotlin/reflect/KClass;Lcom/squareup/wire/Syntax;)V
+
+    sput-object v3, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->ADAPTER:Lcom/squareup/wire/ProtoAdapter;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 13
+
+    .line 1
+    const/16 v11, 0x3ff
+
+    const/4 v12, 0x0
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    const/4 v8, 0x0
+
+    const/4 v9, 0x0
+
+    const/4 v10, 0x0
+
+    move-object v0, p0
+
+    invoke-direct/range {v0 .. v12}, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;-><init>(Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullAddress;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullUsSsn;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullName;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullUsTaxId;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepUsState;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFirstName;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepLastName;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepDateOfBirth;Ljava/util/List;Lokio/h;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullAddress;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullUsSsn;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullName;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullUsTaxId;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepUsState;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFirstName;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepLastName;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepDateOfBirth;Ljava/util/List;Lokio/h;)V
+    .locals 2
+    .param p1    # Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullAddress;
+        .annotation build Lorg/jetbrains/annotations/b;
+        .end annotation
+    .end param
+    .param p2    # Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullUsSsn;
+        .annotation build Lorg/jetbrains/annotations/b;
+        .end annotation
+    .end param
+    .param p3    # Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullName;
+        .annotation build Lorg/jetbrains/annotations/b;
+        .end annotation
+    .end param
+    .param p4    # Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullUsTaxId;
+        .annotation build Lorg/jetbrains/annotations/b;
+        .end annotation
+    .end param
+    .param p5    # Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepUsState;
+        .annotation build Lorg/jetbrains/annotations/b;
+        .end annotation
+    .end param
+    .param p6    # Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFirstName;
+        .annotation build Lorg/jetbrains/annotations/b;
+        .end annotation
+    .end param
+    .param p7    # Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepLastName;
+        .annotation build Lorg/jetbrains/annotations/b;
+        .end annotation
+    .end param
+    .param p8    # Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepDateOfBirth;
+        .annotation build Lorg/jetbrains/annotations/b;
+        .end annotation
+    .end param
+    .param p9    # Ljava/util/List;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+    .param p10    # Lokio/h;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullAddress;",
+            "Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullUsSsn;",
+            "Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullName;",
+            "Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullUsTaxId;",
+            "Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepUsState;",
+            "Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFirstName;",
+            "Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepLastName;",
+            "Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepDateOfBirth;",
+            "Ljava/util/List<",
+            "Lcom/twitter/money_service/xpayments/orchestrator/service/FieldViolation;",
+            ">;",
+            "Lokio/h;",
+            ")V"
+        }
+    .end annotation
+
+    const-string v0, "field_violations"
+
+    invoke-static {p9, v0}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v1, "unknownFields"
+
+    invoke-static {p10, v1}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 5
+    sget-object v1, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->ADAPTER:Lcom/squareup/wire/ProtoAdapter;
+
+    invoke-direct {p0, v1, p10}, Lcom/squareup/wire/Message;-><init>(Lcom/squareup/wire/ProtoAdapter;Lokio/h;)V
+
+    .line 6
+    iput-object p1, p0, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->full_address:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullAddress;
+
+    .line 7
+    iput-object p2, p0, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->full_us_ssn:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullUsSsn;
+
+    .line 8
+    iput-object p3, p0, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->full_name:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullName;
+
+    .line 9
+    iput-object p4, p0, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->full_us_tax_id:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullUsTaxId;
+
+    .line 10
+    iput-object p5, p0, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->us_state:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepUsState;
+
+    .line 11
+    iput-object p6, p0, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->first_name:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFirstName;
+
+    .line 12
+    iput-object p7, p0, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->last_name:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepLastName;
+
+    .line 13
+    iput-object p8, p0, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->date_of_birth:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepDateOfBirth;
+
+    .line 14
+    invoke-static {v0, p9}, Lcom/squareup/wire/internal/Internal;->immutableCopyOf(Ljava/lang/String;Ljava/util/List;)Ljava/util/List;
+
+    move-result-object p9
+
+    iput-object p9, p0, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->field_violations:Ljava/util/List;
+
+    .line 15
+    filled-new-array {p5, p6, p7, p8}, [Ljava/lang/Object;
+
+    move-result-object p5
+
+    invoke-static {p1, p2, p3, p4, p5}, Lcom/squareup/wire/internal/Internal;->countNonNull(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)I
+
+    move-result p1
+
+    const/4 p2, 0x1
+
+    if-gt p1, p2, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "At most one of full_address, full_us_ssn, full_name, full_us_tax_id, us_state, first_name, last_name, date_of_birth may be non-null"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public constructor <init>(Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullAddress;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullUsSsn;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullName;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullUsTaxId;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepUsState;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFirstName;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepLastName;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepDateOfBirth;Ljava/util/List;Lokio/h;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    .locals 10
+
+    move/from16 v0, p11
+
+    and-int/lit8 v1, v0, 0x1
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_0
+
+    move-object v1, v2
+
+    goto :goto_0
+
+    :cond_0
+    move-object v1, p1
+
+    :goto_0
+    and-int/lit8 v3, v0, 0x2
+
+    if-eqz v3, :cond_1
+
+    move-object v3, v2
+
+    goto :goto_1
+
+    :cond_1
+    move-object v3, p2
+
+    :goto_1
+    and-int/lit8 v4, v0, 0x4
+
+    if-eqz v4, :cond_2
+
+    move-object v4, v2
+
+    goto :goto_2
+
+    :cond_2
+    move-object v4, p3
+
+    :goto_2
+    and-int/lit8 v5, v0, 0x8
+
+    if-eqz v5, :cond_3
+
+    move-object v5, v2
+
+    goto :goto_3
+
+    :cond_3
+    move-object v5, p4
+
+    :goto_3
+    and-int/lit8 v6, v0, 0x10
+
+    if-eqz v6, :cond_4
+
+    move-object v6, v2
+
+    goto :goto_4
+
+    :cond_4
+    move-object v6, p5
+
+    :goto_4
+    and-int/lit8 v7, v0, 0x20
+
+    if-eqz v7, :cond_5
+
+    move-object v7, v2
+
+    goto :goto_5
+
+    :cond_5
+    move-object/from16 v7, p6
+
+    :goto_5
+    and-int/lit8 v8, v0, 0x40
+
+    if-eqz v8, :cond_6
+
+    move-object v8, v2
+
+    goto :goto_6
+
+    :cond_6
+    move-object/from16 v8, p7
+
+    :goto_6
+    and-int/lit16 v9, v0, 0x80
+
+    if-eqz v9, :cond_7
+
+    goto :goto_7
+
+    :cond_7
+    move-object/from16 v2, p8
+
+    :goto_7
+    and-int/lit16 v9, v0, 0x100
+
+    if-eqz v9, :cond_8
+
+    .line 2
+    sget-object v9, Lkotlin/collections/EmptyList;->a:Lkotlin/collections/EmptyList;
+
+    goto :goto_8
+
+    :cond_8
+    move-object/from16 v9, p9
+
+    :goto_8
+    and-int/lit16 v0, v0, 0x200
+
+    if-eqz v0, :cond_9
+
+    .line 3
+    sget-object v0, Lokio/h;->d:Lokio/h;
+
+    goto :goto_9
+
+    :cond_9
+    move-object/from16 v0, p10
+
+    :goto_9
+    move-object p1, p0
+
+    move-object p2, v1
+
+    move-object p3, v3
+
+    move-object p4, v4
+
+    move-object p5, v5
+
+    move-object/from16 p6, v6
+
+    move-object/from16 p7, v7
+
+    move-object/from16 p8, v8
+
+    move-object/from16 p9, v2
+
+    move-object/from16 p10, v9
+
+    move-object/from16 p11, v0
+
+    .line 4
+    invoke-direct/range {p1 .. p11}, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;-><init>(Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullAddress;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullUsSsn;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullName;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullUsTaxId;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepUsState;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFirstName;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepLastName;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepDateOfBirth;Ljava/util/List;Lokio/h;)V
+
+    return-void
+.end method
+
+.method public static synthetic copy$default(Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullAddress;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullUsSsn;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullName;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullUsTaxId;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepUsState;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFirstName;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepLastName;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepDateOfBirth;Ljava/util/List;Lokio/h;ILjava/lang/Object;)Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;
+    .locals 11
+
+    move-object v0, p0
+
+    move/from16 v1, p11
+
+    and-int/lit8 v2, v1, 0x1
+
+    if-eqz v2, :cond_0
+
+    iget-object v2, v0, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->full_address:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullAddress;
+
+    goto :goto_0
+
+    :cond_0
+    move-object v2, p1
+
+    :goto_0
+    and-int/lit8 v3, v1, 0x2
+
+    if-eqz v3, :cond_1
+
+    iget-object v3, v0, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->full_us_ssn:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullUsSsn;
+
+    goto :goto_1
+
+    :cond_1
+    move-object v3, p2
+
+    :goto_1
+    and-int/lit8 v4, v1, 0x4
+
+    if-eqz v4, :cond_2
+
+    iget-object v4, v0, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->full_name:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullName;
+
+    goto :goto_2
+
+    :cond_2
+    move-object v4, p3
+
+    :goto_2
+    and-int/lit8 v5, v1, 0x8
+
+    if-eqz v5, :cond_3
+
+    iget-object v5, v0, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->full_us_tax_id:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullUsTaxId;
+
+    goto :goto_3
+
+    :cond_3
+    move-object v5, p4
+
+    :goto_3
+    and-int/lit8 v6, v1, 0x10
+
+    if-eqz v6, :cond_4
+
+    iget-object v6, v0, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->us_state:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepUsState;
+
+    goto :goto_4
+
+    :cond_4
+    move-object/from16 v6, p5
+
+    :goto_4
+    and-int/lit8 v7, v1, 0x20
+
+    if-eqz v7, :cond_5
+
+    iget-object v7, v0, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->first_name:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFirstName;
+
+    goto :goto_5
+
+    :cond_5
+    move-object/from16 v7, p6
+
+    :goto_5
+    and-int/lit8 v8, v1, 0x40
+
+    if-eqz v8, :cond_6
+
+    iget-object v8, v0, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->last_name:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepLastName;
+
+    goto :goto_6
+
+    :cond_6
+    move-object/from16 v8, p7
+
+    :goto_6
+    and-int/lit16 v9, v1, 0x80
+
+    if-eqz v9, :cond_7
+
+    iget-object v9, v0, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->date_of_birth:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepDateOfBirth;
+
+    goto :goto_7
+
+    :cond_7
+    move-object/from16 v9, p8
+
+    :goto_7
+    and-int/lit16 v10, v1, 0x100
+
+    if-eqz v10, :cond_8
+
+    iget-object v10, v0, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->field_violations:Ljava/util/List;
+
+    goto :goto_8
+
+    :cond_8
+    move-object/from16 v10, p9
+
+    :goto_8
+    and-int/lit16 v1, v1, 0x200
+
+    if-eqz v1, :cond_9
+
+    invoke-virtual {p0}, Lcom/squareup/wire/Message;->unknownFields()Lokio/h;
+
+    move-result-object v1
+
+    goto :goto_9
+
+    :cond_9
+    move-object/from16 v1, p10
+
+    :goto_9
+    move-object p1, v2
+
+    move-object p2, v3
+
+    move-object p3, v4
+
+    move-object p4, v5
+
+    move-object/from16 p5, v6
+
+    move-object/from16 p6, v7
+
+    move-object/from16 p7, v8
+
+    move-object/from16 p8, v9
+
+    move-object/from16 p9, v10
+
+    move-object/from16 p10, v1
+
+    invoke-virtual/range {p0 .. p10}, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->copy(Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullAddress;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullUsSsn;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullName;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullUsTaxId;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepUsState;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFirstName;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepLastName;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepDateOfBirth;Ljava/util/List;Lokio/h;)Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final copy(Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullAddress;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullUsSsn;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullName;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullUsTaxId;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepUsState;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFirstName;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepLastName;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepDateOfBirth;Ljava/util/List;Lokio/h;)Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;
+    .locals 12
+    .param p1    # Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullAddress;
+        .annotation build Lorg/jetbrains/annotations/b;
+        .end annotation
+    .end param
+    .param p2    # Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullUsSsn;
+        .annotation build Lorg/jetbrains/annotations/b;
+        .end annotation
+    .end param
+    .param p3    # Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullName;
+        .annotation build Lorg/jetbrains/annotations/b;
+        .end annotation
+    .end param
+    .param p4    # Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullUsTaxId;
+        .annotation build Lorg/jetbrains/annotations/b;
+        .end annotation
+    .end param
+    .param p5    # Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepUsState;
+        .annotation build Lorg/jetbrains/annotations/b;
+        .end annotation
+    .end param
+    .param p6    # Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFirstName;
+        .annotation build Lorg/jetbrains/annotations/b;
+        .end annotation
+    .end param
+    .param p7    # Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepLastName;
+        .annotation build Lorg/jetbrains/annotations/b;
+        .end annotation
+    .end param
+    .param p8    # Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepDateOfBirth;
+        .annotation build Lorg/jetbrains/annotations/b;
+        .end annotation
+    .end param
+    .param p9    # Ljava/util/List;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+    .param p10    # Lokio/h;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullAddress;",
+            "Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullUsSsn;",
+            "Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullName;",
+            "Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullUsTaxId;",
+            "Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepUsState;",
+            "Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFirstName;",
+            "Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepLastName;",
+            "Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepDateOfBirth;",
+            "Ljava/util/List<",
+            "Lcom/twitter/money_service/xpayments/orchestrator/service/FieldViolation;",
+            ">;",
+            "Lokio/h;",
+            ")",
+            "Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;"
+        }
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+
+    const-string v0, "field_violations"
+
+    move-object/from16 v10, p9
+
+    invoke-static {v10, v0}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "unknownFields"
+
+    move-object/from16 v11, p10
+
+    invoke-static {v11, v0}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    new-instance v0, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;
+
+    move-object v1, v0
+
+    move-object v2, p1
+
+    move-object v3, p2
+
+    move-object v4, p3
+
+    move-object/from16 v5, p4
+
+    move-object/from16 v6, p5
+
+    move-object/from16 v7, p6
+
+    move-object/from16 v8, p7
+
+    move-object/from16 v9, p8
+
+    invoke-direct/range {v1 .. v11}, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;-><init>(Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullAddress;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullUsSsn;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullName;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullUsTaxId;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepUsState;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFirstName;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepLastName;Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepDateOfBirth;Ljava/util/List;Lokio/h;)V
+
+    return-object v0
+.end method
+
+.method public equals(Ljava/lang/Object;)Z
+    .locals 4
+    .param p1    # Ljava/lang/Object;
+        .annotation build Lorg/jetbrains/annotations/b;
+        .end annotation
+    .end param
+
+    const/4 v0, 0x1
+
+    if-ne p1, p0, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    invoke-virtual {p0}, Lcom/squareup/wire/Message;->unknownFields()Lokio/h;
+
+    move-result-object v1
+
+    check-cast p1, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;
+
+    invoke-virtual {p1}, Lcom/squareup/wire/Message;->unknownFields()Lokio/h;
+
+    move-result-object v3
+
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->full_address:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullAddress;
+
+    iget-object v3, p1, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->full_address:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullAddress;
+
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->full_us_ssn:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullUsSsn;
+
+    iget-object v3, p1, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->full_us_ssn:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullUsSsn;
+
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-object v1, p0, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->full_name:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullName;
+
+    iget-object v3, p1, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->full_name:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullName;
+
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-object v1, p0, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->full_us_tax_id:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullUsTaxId;
+
+    iget-object v3, p1, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->full_us_tax_id:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullUsTaxId;
+
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_6
+
+    return v2
+
+    :cond_6
+    iget-object v1, p0, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->us_state:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepUsState;
+
+    iget-object v3, p1, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->us_state:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepUsState;
+
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_7
+
+    return v2
+
+    :cond_7
+    iget-object v1, p0, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->first_name:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFirstName;
+
+    iget-object v3, p1, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->first_name:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFirstName;
+
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_8
+
+    return v2
+
+    :cond_8
+    iget-object v1, p0, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->last_name:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepLastName;
+
+    iget-object v3, p1, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->last_name:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepLastName;
+
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_9
+
+    return v2
+
+    :cond_9
+    iget-object v1, p0, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->date_of_birth:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepDateOfBirth;
+
+    iget-object v3, p1, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->date_of_birth:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepDateOfBirth;
+
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_a
+
+    return v2
+
+    :cond_a
+    iget-object v1, p0, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->field_violations:Ljava/util/List;
+
+    iget-object p1, p1, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->field_violations:Ljava/util/List;
+
+    invoke-static {v1, p1}, Lkotlin/jvm/internal/Intrinsics;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_b
+
+    return v2
+
+    :cond_b
+    return v0
+.end method
+
+.method public final getDate_of_birth()Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepDateOfBirth;
+    .locals 1
+    .annotation build Lorg/jetbrains/annotations/b;
+    .end annotation
+
+    iget-object v0, p0, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->date_of_birth:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepDateOfBirth;
+
+    return-object v0
+.end method
+
+.method public final getField_violations()Ljava/util/List;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List<",
+            "Lcom/twitter/money_service/xpayments/orchestrator/service/FieldViolation;",
+            ">;"
+        }
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+
+    iget-object v0, p0, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->field_violations:Ljava/util/List;
+
+    return-object v0
+.end method
+
+.method public final getFirst_name()Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFirstName;
+    .locals 1
+    .annotation build Lorg/jetbrains/annotations/b;
+    .end annotation
+
+    iget-object v0, p0, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->first_name:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFirstName;
+
+    return-object v0
+.end method
+
+.method public final getFull_address()Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullAddress;
+    .locals 1
+    .annotation build Lorg/jetbrains/annotations/b;
+    .end annotation
+
+    iget-object v0, p0, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->full_address:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullAddress;
+
+    return-object v0
+.end method
+
+.method public final getFull_name()Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullName;
+    .locals 1
+    .annotation build Lorg/jetbrains/annotations/b;
+    .end annotation
+
+    iget-object v0, p0, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->full_name:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullName;
+
+    return-object v0
+.end method
+
+.method public final getFull_us_ssn()Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullUsSsn;
+    .locals 1
+    .annotation build Lorg/jetbrains/annotations/b;
+    .end annotation
+
+    iget-object v0, p0, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->full_us_ssn:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullUsSsn;
+
+    return-object v0
+.end method
+
+.method public final getFull_us_tax_id()Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullUsTaxId;
+    .locals 1
+    .annotation build Lorg/jetbrains/annotations/b;
+    .end annotation
+
+    iget-object v0, p0, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->full_us_tax_id:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullUsTaxId;
+
+    return-object v0
+.end method
+
+.method public final getLast_name()Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepLastName;
+    .locals 1
+    .annotation build Lorg/jetbrains/annotations/b;
+    .end annotation
+
+    iget-object v0, p0, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->last_name:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepLastName;
+
+    return-object v0
+.end method
+
+.method public final getUs_state()Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepUsState;
+    .locals 1
+    .annotation build Lorg/jetbrains/annotations/b;
+    .end annotation
+
+    iget-object v0, p0, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->us_state:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepUsState;
+
+    return-object v0
+.end method
+
+.method public hashCode()I
+    .locals 3
+
+    iget v0, p0, Lcom/squareup/wire/Message;->hashCode:I
+
+    if-nez v0, :cond_8
+
+    invoke-virtual {p0}, Lcom/squareup/wire/Message;->unknownFields()Lokio/h;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lokio/h;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x25
+
+    iget-object v1, p0, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->full_address:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullAddress;
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullAddress;->hashCode()I
+
+    move-result v1
+
+    goto :goto_0
+
+    :cond_0
+    move v1, v2
+
+    :goto_0
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x25
+
+    iget-object v1, p0, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->full_us_ssn:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullUsSsn;
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v1}, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullUsSsn;->hashCode()I
+
+    move-result v1
+
+    goto :goto_1
+
+    :cond_1
+    move v1, v2
+
+    :goto_1
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x25
+
+    iget-object v1, p0, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->full_name:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullName;
+
+    if-eqz v1, :cond_2
+
+    invoke-virtual {v1}, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullName;->hashCode()I
+
+    move-result v1
+
+    goto :goto_2
+
+    :cond_2
+    move v1, v2
+
+    :goto_2
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x25
+
+    iget-object v1, p0, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->full_us_tax_id:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullUsTaxId;
+
+    if-eqz v1, :cond_3
+
+    invoke-virtual {v1}, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullUsTaxId;->hashCode()I
+
+    move-result v1
+
+    goto :goto_3
+
+    :cond_3
+    move v1, v2
+
+    :goto_3
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x25
+
+    iget-object v1, p0, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->us_state:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepUsState;
+
+    if-eqz v1, :cond_4
+
+    invoke-virtual {v1}, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepUsState;->hashCode()I
+
+    move-result v1
+
+    goto :goto_4
+
+    :cond_4
+    move v1, v2
+
+    :goto_4
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x25
+
+    iget-object v1, p0, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->first_name:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFirstName;
+
+    if-eqz v1, :cond_5
+
+    invoke-virtual {v1}, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFirstName;->hashCode()I
+
+    move-result v1
+
+    goto :goto_5
+
+    :cond_5
+    move v1, v2
+
+    :goto_5
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x25
+
+    iget-object v1, p0, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->last_name:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepLastName;
+
+    if-eqz v1, :cond_6
+
+    invoke-virtual {v1}, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepLastName;->hashCode()I
+
+    move-result v1
+
+    goto :goto_6
+
+    :cond_6
+    move v1, v2
+
+    :goto_6
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x25
+
+    iget-object v1, p0, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->date_of_birth:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepDateOfBirth;
+
+    if-eqz v1, :cond_7
+
+    invoke-virtual {v1}, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepDateOfBirth;->hashCode()I
+
+    move-result v2
+
+    :cond_7
+    add-int/2addr v0, v2
+
+    mul-int/lit8 v0, v0, 0x25
+
+    iget-object v1, p0, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->field_violations:Ljava/util/List;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    iput v0, p0, Lcom/squareup/wire/Message;->hashCode:I
+
+    :cond_8
+    return v0
+.end method
+
+.method public bridge synthetic newBuilder()Lcom/squareup/wire/Message$Builder;
+    .locals 1
+
+    .line 1
+    invoke-virtual {p0}, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->newBuilder()Ljava/lang/Void;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/squareup/wire/Message$Builder;
+
+    return-object v0
+.end method
+
+.method public synthetic newBuilder()Ljava/lang/Void;
+    .locals 2
+    .annotation runtime Lkotlin/Deprecated;
+    .end annotation
+
+    .line 2
+    new-instance v0, Ljava/lang/AssertionError;
+
+    const-string v1, "Builders are deprecated and only available in a javaInterop build; see https://square.github.io/wire/wire_compiler/#kotlin"
+
+    invoke-direct {v0, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v0
+.end method
+
+.method public toString()Ljava/lang/String;
+    .locals 6
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iget-object v1, p0, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->full_address:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullAddress;
+
+    if-eqz v1, :cond_0
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "full_address="
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_0
+    iget-object v1, p0, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->full_us_ssn:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullUsSsn;
+
+    if-eqz v1, :cond_1
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "full_us_ssn="
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_1
+    iget-object v1, p0, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->full_name:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullName;
+
+    if-eqz v1, :cond_2
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "full_name="
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_2
+    iget-object v1, p0, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->full_us_tax_id:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFullUsTaxId;
+
+    if-eqz v1, :cond_3
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "full_us_tax_id="
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_3
+    iget-object v1, p0, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->us_state:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepUsState;
+
+    if-eqz v1, :cond_4
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "us_state="
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_4
+    iget-object v1, p0, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->first_name:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepFirstName;
+
+    if-eqz v1, :cond_5
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "first_name="
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_5
+    iget-object v1, p0, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->last_name:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepLastName;
+
+    if-eqz v1, :cond_6
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "last_name="
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_6
+    iget-object v1, p0, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->date_of_birth:Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStepDateOfBirth;
+
+    if-eqz v1, :cond_7
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "date_of_birth="
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_7
+    iget-object v1, p0, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->field_violations:Ljava/util/List;
+
+    check-cast v1, Ljava/util/Collection;
+
+    invoke-interface {v1}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result v1
+
+    if-nez v1, :cond_8
+
+    iget-object v1, p0, Lcom/twitter/money_service/xpayments/orchestrator/service/VerificationStep;->field_violations:Ljava/util/List;
+
+    const-string v2, "field_violations="
+
+    invoke-static {v2, v0, v1}, Landroidx/media3/exoplayer/analytics/e;->a(Ljava/lang/String;Ljava/util/ArrayList;Ljava/util/List;)V
+
+    :cond_8
+    const-string v3, "}"
+
+    const/4 v4, 0x0
+
+    const-string v1, ", "
+
+    const-string v2, "VerificationStep{"
+
+    const/16 v5, 0x38
+
+    invoke-static/range {v0 .. v5}, Lkotlin/collections/o;->Z(Ljava/lang/Iterable;Ljava/lang/CharSequence;Ljava/lang/String;Ljava/lang/CharSequence;Lkotlin/jvm/functions/Function1;I)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method

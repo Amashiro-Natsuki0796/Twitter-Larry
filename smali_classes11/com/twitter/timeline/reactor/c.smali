@@ -1,0 +1,89 @@
+.class public final Lcom/twitter/timeline/reactor/c;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lcom/twitter/repository/common/datasource/z;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Lcom/twitter/repository/common/datasource/z<",
+        "Ljava/lang/Long;",
+        "Lcom/twitter/util/collection/p0<",
+        "Lcom/twitter/database/schema/reactivity/a;",
+        ">;>;"
+    }
+.end annotation
+
+
+# instance fields
+.field public final a:Lcom/twitter/database/schema/TwitterSchema;
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+.end field
+
+.field public final b:Lio/reactivex/u;
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>(Lcom/twitter/database/schema/TwitterSchema;Lio/reactivex/u;)V
+    .locals 1
+    .param p1    # Lcom/twitter/database/schema/TwitterSchema;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+    .param p2    # Lio/reactivex/u;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+
+    const-string v0, "schema"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "ioScheduler"
+
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/twitter/timeline/reactor/c;->a:Lcom/twitter/database/schema/TwitterSchema;
+
+    iput-object p2, p0, Lcom/twitter/timeline/reactor/c;->b:Lio/reactivex/u;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final S(Ljava/lang/Object;)Lio/reactivex/v;
+    .locals 2
+
+    check-cast p1, Ljava/lang/Number;
+
+    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v0
+
+    new-instance p1, Lcom/twitter/timeline/reactor/b;
+
+    invoke-direct {p1, p0, v0, v1}, Lcom/twitter/timeline/reactor/b;-><init>(Lcom/twitter/timeline/reactor/c;J)V
+
+    invoke-static {p1}, Lio/reactivex/v;->g(Ljava/util/concurrent/Callable;)Lio/reactivex/internal/operators/single/r;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lcom/twitter/timeline/reactor/c;->b:Lio/reactivex/u;
+
+    invoke-virtual {p1, v0}, Lio/reactivex/v;->o(Lio/reactivex/u;)Lio/reactivex/internal/operators/single/a0;
+
+    move-result-object p1
+
+    return-object p1
+.end method

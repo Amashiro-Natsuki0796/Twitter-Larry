@@ -1,0 +1,22 @@
+.class public interface abstract Lcom/x/dms/repository/u$a;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/x/dms/repository/u;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x609
+    name = "a"
+.end annotation
+
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/x/dms/repository/u$a$a;,
+        Lcom/x/dms/repository/u$a$b;,
+        Lcom/x/dms/repository/u$a$c;
+    }
+.end annotation

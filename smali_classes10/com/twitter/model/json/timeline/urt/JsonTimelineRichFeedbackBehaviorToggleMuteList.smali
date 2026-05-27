@@ -1,0 +1,74 @@
+.class public Lcom/twitter/model/json/timeline/urt/JsonTimelineRichFeedbackBehaviorToggleMuteList;
+.super Lcom/twitter/model/json/common/l;
+.source "SourceFile"
+
+
+# annotations
+.annotation build Lcom/bluelinelabs/logansquare/annotation/JsonObject;
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/twitter/model/json/common/l<",
+        "Lcom/twitter/model/timeline/urt/h4;",
+        ">;"
+    }
+.end annotation
+
+
+# instance fields
+.field public a:J
+    .annotation build Lcom/bluelinelabs/logansquare/annotation/JsonField;
+    .end annotation
+.end field
+
+.field public b:Lcom/twitter/model/json/core/JsonTwitterList;
+    .annotation build Lcom/bluelinelabs/logansquare/annotation/JsonField;
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/twitter/model/json/common/l;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final s()Lcom/twitter/util/object/o;
+    .locals 3
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+
+    iget-object v0, p0, Lcom/twitter/model/json/timeline/urt/JsonTimelineRichFeedbackBehaviorToggleMuteList;->b:Lcom/twitter/model/json/core/JsonTwitterList;
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Lcom/twitter/model/timeline/urt/h4$a;
+
+    invoke-direct {v0}, Lcom/twitter/model/timeline/urt/h4$a;-><init>()V
+
+    iget-object v1, p0, Lcom/twitter/model/json/timeline/urt/JsonTimelineRichFeedbackBehaviorToggleMuteList;->b:Lcom/twitter/model/json/core/JsonTwitterList;
+
+    iget-wide v1, v1, Lcom/twitter/model/json/core/JsonTwitterList;->c:J
+
+    iput-wide v1, v0, Lcom/twitter/model/timeline/urt/h4$a;->a:J
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Lcom/twitter/model/timeline/urt/h4$a;
+
+    invoke-direct {v0}, Lcom/twitter/model/timeline/urt/h4$a;-><init>()V
+
+    iget-wide v1, p0, Lcom/twitter/model/json/timeline/urt/JsonTimelineRichFeedbackBehaviorToggleMuteList;->a:J
+
+    iput-wide v1, v0, Lcom/twitter/model/timeline/urt/h4$a;->a:J
+
+    :goto_0
+    return-object v0
+.end method

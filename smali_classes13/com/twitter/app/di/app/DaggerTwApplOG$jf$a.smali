@@ -1,0 +1,361 @@
+.class public final Lcom/twitter/app/di/app/DaggerTwApplOG$jf$a;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ldagger/internal/h;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/twitter/app/di/app/DaggerTwApplOG$jf;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = "a"
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;",
+        "Ldagger/internal/h<",
+        "TT;>;"
+    }
+.end annotation
+
+
+# instance fields
+.field public final a:Lcom/twitter/app/di/app/DaggerTwApplOG$rx0;
+
+.field public final b:Lcom/twitter/app/di/app/DaggerTwApplOG$jf;
+
+.field public final c:I
+
+
+# direct methods
+.method public constructor <init>(Lcom/twitter/app/di/app/DaggerTwApplOG$rx0;Lcom/twitter/app/di/app/DaggerTwApplOG$jf;I)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/twitter/app/di/app/DaggerTwApplOG$jf$a;->a:Lcom/twitter/app/di/app/DaggerTwApplOG$rx0;
+
+    iput-object p2, p0, Lcom/twitter/app/di/app/DaggerTwApplOG$jf$a;->b:Lcom/twitter/app/di/app/DaggerTwApplOG$jf;
+
+    iput p3, p0, Lcom/twitter/app/di/app/DaggerTwApplOG$jf$a;->c:I
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final get()Ljava/lang/Object;
+    .locals 7
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()TT;"
+        }
+    .end annotation
+
+    const-class v0, Lcom/twitter/communities/settings/edittextinput/di/CommunityEditTextInputSettingsActivityRetainedObjectGraph$BindingDeclarations;
+
+    iget-object v1, p0, Lcom/twitter/app/di/app/DaggerTwApplOG$jf$a;->b:Lcom/twitter/app/di/app/DaggerTwApplOG$jf;
+
+    iget v2, p0, Lcom/twitter/app/di/app/DaggerTwApplOG$jf$a;->c:I
+
+    packed-switch v2, :pswitch_data_0
+
+    new-instance v0, Ljava/lang/AssertionError;
+
+    invoke-direct {v0, v2}, Ljava/lang/AssertionError;-><init>(I)V
+
+    throw v0
+
+    :pswitch_0
+    new-instance v0, Lcom/twitter/communities/settings/edittextinput/m;
+
+    iget-object v1, p0, Lcom/twitter/app/di/app/DaggerTwApplOG$jf$a;->a:Lcom/twitter/app/di/app/DaggerTwApplOG$rx0;
+
+    iget-object v1, v1, Lcom/twitter/app/di/app/DaggerTwApplOG$rx0;->C1:Ldagger/internal/h;
+
+    invoke-interface {v1}, Ljavax/inject/a;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/twitter/communities/subsystem/api/repositories/e;
+
+    invoke-direct {v0, v1}, Lcom/twitter/communities/settings/edittextinput/m;-><init>(Lcom/twitter/communities/subsystem/api/repositories/e;)V
+
+    return-object v0
+
+    :pswitch_1
+    new-instance v0, Lcom/twitter/communities/dispatchers/a;
+
+    invoke-direct {v0}, Lcom/twitter/communities/dispatchers/a;-><init>()V
+
+    return-object v0
+
+    :pswitch_2
+    iget-object v1, v1, Lcom/twitter/app/di/app/DaggerTwApplOG$jf;->j:Ldagger/internal/h;
+
+    invoke-interface {v1}, Ljavax/inject/a;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/twitter/communities/subsystem/api/args/CommunityEditTextInputSettingsContentViewArgs;
+
+    invoke-static {v0}, Lcom/twitter/scythe/common/b;->a(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/twitter/communities/settings/edittextinput/di/CommunityEditTextInputSettingsActivityRetainedObjectGraph$BindingDeclarations;
+
+    const-string v2, "contentViewArgs"
+
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v1}, Lcom/twitter/communities/subsystem/api/args/CommunityEditTextInputSettingsContentViewArgs;->getType()Lcom/twitter/communities/subsystem/api/args/CommunityEditTextInputSettingsContentViewArgs$a;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/twitter/communities/settings/edittextinput/w;->a(Lcom/twitter/communities/subsystem/api/args/CommunityEditTextInputSettingsContentViewArgs$a;)Lcom/twitter/communities/settings/edittextinput/v$a;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_3
+    invoke-static {v0}, Lcom/twitter/scythe/common/b;->a(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/twitter/communities/settings/edittextinput/di/CommunityEditTextInputSettingsActivityRetainedObjectGraph$BindingDeclarations;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v0, Lcom/twitter/twittertext/b;
+
+    invoke-direct {v0}, Lcom/twitter/twittertext/b;-><init>()V
+
+    return-object v0
+
+    :pswitch_4
+    new-instance v0, Lcom/twitter/communities/settings/edittextinput/v;
+
+    iget-object v2, v1, Lcom/twitter/app/di/app/DaggerTwApplOG$jf;->k:Ldagger/internal/h;
+
+    invoke-interface {v2}, Ljavax/inject/a;->get()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/twitter/twittertext/b;
+
+    iget-object v1, v1, Lcom/twitter/app/di/app/DaggerTwApplOG$jf;->l:Ldagger/internal/h;
+
+    invoke-interface {v1}, Ljavax/inject/a;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/twitter/communities/settings/edittextinput/v$a;
+
+    invoke-direct {v0, v2, v1}, Lcom/twitter/communities/settings/edittextinput/v;-><init>(Lcom/twitter/twittertext/b;Lcom/twitter/communities/settings/edittextinput/v$a;)V
+
+    return-object v0
+
+    :pswitch_5
+    iget-object v1, v1, Lcom/twitter/app/di/app/DaggerTwApplOG$jf;->f:Ldagger/internal/h;
+
+    invoke-interface {v1}, Ljavax/inject/a;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/twitter/app/common/f0;
+
+    invoke-static {v0}, Lcom/twitter/scythe/common/b;->a(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/twitter/communities/settings/edittextinput/di/CommunityEditTextInputSettingsActivityRetainedObjectGraph$BindingDeclarations;
+
+    const-string v2, "retainedArguments"
+
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v0, v1, Lcom/twitter/app/common/f0;->a:Landroid/content/Intent;
+
+    const-class v1, Lcom/twitter/communities/subsystem/api/args/CommunityEditTextInputSettingsContentViewArgs;
+
+    invoke-static {v0, v1}, Lcom/twitter/app/di/app/k;->a(Landroid/content/Intent;Ljava/lang/Class;)Lcom/twitter/app/common/ContentViewArgs;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/twitter/communities/subsystem/api/args/CommunityEditTextInputSettingsContentViewArgs;
+
+    return-object v0
+
+    :pswitch_6
+    new-instance v0, Lcom/twitter/communities/settings/edittextinput/CommunityEditTextInputSettingsViewModel;
+
+    iget-object v2, v1, Lcom/twitter/app/di/app/DaggerTwApplOG$jf;->j:Ldagger/internal/h;
+
+    invoke-interface {v2}, Ljavax/inject/a;->get()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/twitter/communities/subsystem/api/args/CommunityEditTextInputSettingsContentViewArgs;
+
+    iget-object v3, v1, Lcom/twitter/app/di/app/DaggerTwApplOG$jf;->h:Ldagger/internal/h;
+
+    invoke-interface {v3}, Ljavax/inject/a;->get()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lcom/twitter/util/di/scope/g;
+
+    iget-object v4, v1, Lcom/twitter/app/di/app/DaggerTwApplOG$jf;->m:Ldagger/internal/h;
+
+    invoke-interface {v4}, Ljavax/inject/a;->get()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lcom/twitter/communities/settings/edittextinput/v;
+
+    iget-object v5, v1, Lcom/twitter/app/di/app/DaggerTwApplOG$jf;->n:Ldagger/internal/h;
+
+    invoke-interface {v5}, Ljavax/inject/a;->get()Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Lcom/twitter/communities/dispatchers/a;
+
+    iget-object v1, v1, Lcom/twitter/app/di/app/DaggerTwApplOG$jf;->o:Ldagger/internal/h;
+
+    invoke-interface {v1}, Ljavax/inject/a;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    move-object v6, v1
+
+    check-cast v6, Lcom/twitter/communities/settings/edittextinput/m;
+
+    move-object v1, v0
+
+    invoke-direct/range {v1 .. v6}, Lcom/twitter/communities/settings/edittextinput/CommunityEditTextInputSettingsViewModel;-><init>(Lcom/twitter/communities/subsystem/api/args/CommunityEditTextInputSettingsContentViewArgs;Lcom/twitter/util/di/scope/g;Lcom/twitter/communities/settings/edittextinput/v;Lcom/twitter/communities/dispatchers/a;Lcom/twitter/communities/settings/edittextinput/m;)V
+
+    return-object v0
+
+    :pswitch_7
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v0, Lcom/twitter/weaver/di/retained/a;
+
+    const-class v2, Lcom/twitter/communities/settings/edittextinput/CommunityEditTextInputSettingsViewModel;
+
+    const-string v3, ""
+
+    invoke-direct {v0, v2, v3}, Lcom/twitter/weaver/di/retained/a;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
+
+    iget-object v1, v1, Lcom/twitter/app/di/app/DaggerTwApplOG$jf;->p:Ldagger/internal/h;
+
+    invoke-static {v0, v1}, Lcom/twitter/app/di/app/g;->a(Lcom/twitter/weaver/di/retained/a;Ldagger/internal/h;)Lcom/twitter/weaver/j;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_8
+    iget-object v0, v1, Lcom/twitter/app/di/app/DaggerTwApplOG$jf;->q:Ldagger/internal/h;
+
+    invoke-interface {v0}, Ljavax/inject/a;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/twitter/weaver/a0;
+
+    invoke-static {v0}, Lcom/twitter/weaver/di/retained/d;->a(Lcom/twitter/weaver/a0;)Lcom/twitter/weaver/cache/d;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_9
+    new-instance v0, Lcom/twitter/app/common/di/scope/f;
+
+    iget-object v1, v1, Lcom/twitter/app/di/app/DaggerTwApplOG$jf;->g:Ldagger/internal/h;
+
+    invoke-interface {v1}, Ljavax/inject/a;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/twitter/util/di/scope/i;
+
+    invoke-direct {v0, v1}, Lcom/twitter/app/common/di/scope/f;-><init>(Lcom/twitter/util/di/scope/i;)V
+
+    return-object v0
+
+    :pswitch_a
+    new-instance v0, Lcom/twitter/app/common/di/scope/b;
+
+    invoke-direct {v0}, Lcom/twitter/app/common/di/scope/b;-><init>()V
+
+    return-object v0
+
+    :pswitch_b
+    iget-object v0, v1, Lcom/twitter/app/di/app/DaggerTwApplOG$jf;->g:Ldagger/internal/h;
+
+    invoke-interface {v0}, Ljavax/inject/a;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/twitter/util/di/scope/i;
+
+    const-string v1, "Retained"
+
+    invoke-interface {v0, v1}, Lcom/twitter/util/di/scope/i;->s0(Ljava/lang/String;)Lcom/twitter/util/di/scope/g;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_c
+    iget-object v0, v1, Lcom/twitter/app/di/app/DaggerTwApplOG$jf;->a:Lcom/twitter/app/common/inject/retained/e;
+
+    iget-object v0, v0, Lcom/twitter/app/common/inject/retained/e;->b:Lcom/twitter/app/common/f0;
+
+    invoke-static {v0}, Ldagger/internal/g;->d(Ljava/lang/Object;)V
+
+    return-object v0
+
+    :pswitch_d
+    iget-object v0, v1, Lcom/twitter/app/di/app/DaggerTwApplOG$jf;->a:Lcom/twitter/app/common/inject/retained/e;
+
+    iget-object v0, v0, Lcom/twitter/app/common/inject/retained/e;->d:Lcom/twitter/app/common/g0;
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method

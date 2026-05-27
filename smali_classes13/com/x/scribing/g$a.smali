@@ -1,0 +1,43 @@
+.class public final Lcom/x/scribing/g$a;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/x/scribing/g;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = "a"
+.end annotation
+
+
+# static fields
+.field public static final synthetic a:Lcom/x/scribing/g$a;
+
+.field public static final b:Lcom/x/scribing/f;
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+.end field
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lcom/x/scribing/g$a;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lcom/x/scribing/g$a;->a:Lcom/x/scribing/g$a;
+
+    new-instance v0, Lcom/x/scribing/f;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lcom/x/scribing/g$a;->b:Lcom/x/scribing/f;
+
+    return-void
+.end method

@@ -1,0 +1,163 @@
+.class public final Lio/reactivex/internal/operators/maybe/u$a;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lio/reactivex/j;
+.implements Lio/reactivex/disposables/c;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lio/reactivex/internal/operators/maybe/u;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = "a"
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;",
+        "Lio/reactivex/j<",
+        "TT;>;",
+        "Lio/reactivex/disposables/c;"
+    }
+.end annotation
+
+
+# instance fields
+.field public final a:Lio/reactivex/j;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lio/reactivex/j<",
+            "-TT;>;"
+        }
+    .end annotation
+.end field
+
+.field public final b:Lio/reactivex/internal/functions/a$e0;
+
+.field public c:Lio/reactivex/disposables/c;
+
+
+# direct methods
+.method public constructor <init>(Lio/reactivex/j;Lio/reactivex/internal/functions/a$e0;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lio/reactivex/internal/operators/maybe/u$a;->a:Lio/reactivex/j;
+
+    iput-object p2, p0, Lio/reactivex/internal/operators/maybe/u$a;->b:Lio/reactivex/internal/functions/a$e0;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final dispose()V
+    .locals 1
+
+    iget-object v0, p0, Lio/reactivex/internal/operators/maybe/u$a;->c:Lio/reactivex/disposables/c;
+
+    invoke-interface {v0}, Lio/reactivex/disposables/c;->dispose()V
+
+    return-void
+.end method
+
+.method public final isDisposed()Z
+    .locals 1
+
+    iget-object v0, p0, Lio/reactivex/internal/operators/maybe/u$a;->c:Lio/reactivex/disposables/c;
+
+    invoke-interface {v0}, Lio/reactivex/disposables/c;->isDisposed()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final onComplete()V
+    .locals 1
+
+    iget-object v0, p0, Lio/reactivex/internal/operators/maybe/u$a;->a:Lio/reactivex/j;
+
+    invoke-interface {v0}, Lio/reactivex/j;->onComplete()V
+
+    return-void
+.end method
+
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 3
+
+    iget-object v0, p0, Lio/reactivex/internal/operators/maybe/u$a;->a:Lio/reactivex/j;
+
+    :try_start_0
+    iget-object v1, p0, Lio/reactivex/internal/operators/maybe/u$a;->b:Lio/reactivex/internal/functions/a$e0;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-interface {v0}, Lio/reactivex/j;->onComplete()V
+
+    return-void
+
+    :catchall_0
+    move-exception v1
+
+    invoke-static {v1}, Lcom/google/android/gms/internal/ads/fs;->a(Ljava/lang/Throwable;)V
+
+    new-instance v2, Lio/reactivex/exceptions/CompositeException;
+
+    filled-new-array {p1, v1}, [Ljava/lang/Throwable;
+
+    move-result-object p1
+
+    invoke-direct {v2, p1}, Lio/reactivex/exceptions/CompositeException;-><init>([Ljava/lang/Throwable;)V
+
+    invoke-interface {v0, v2}, Lio/reactivex/j;->onError(Ljava/lang/Throwable;)V
+
+    return-void
+.end method
+
+.method public final onSubscribe(Lio/reactivex/disposables/c;)V
+    .locals 1
+
+    iget-object v0, p0, Lio/reactivex/internal/operators/maybe/u$a;->c:Lio/reactivex/disposables/c;
+
+    invoke-static {v0, p1}, Lio/reactivex/internal/disposables/d;->g(Lio/reactivex/disposables/c;Lio/reactivex/disposables/c;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iput-object p1, p0, Lio/reactivex/internal/operators/maybe/u$a;->c:Lio/reactivex/disposables/c;
+
+    iget-object p1, p0, Lio/reactivex/internal/operators/maybe/u$a;->a:Lio/reactivex/j;
+
+    invoke-interface {p1, p0}, Lio/reactivex/j;->onSubscribe(Lio/reactivex/disposables/c;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onSuccess(Ljava/lang/Object;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TT;)V"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lio/reactivex/internal/operators/maybe/u$a;->a:Lio/reactivex/j;
+
+    invoke-interface {v0, p1}, Lio/reactivex/j;->onSuccess(Ljava/lang/Object;)V
+
+    return-void
+.end method

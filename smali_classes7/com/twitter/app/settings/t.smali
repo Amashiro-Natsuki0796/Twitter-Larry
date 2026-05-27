@@ -1,0 +1,42 @@
+.class public final synthetic Lcom/twitter/app/settings/t;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lcom/twitter/util/functional/u0;
+
+
+# instance fields
+.field public final synthetic a:Ljava/lang/String;
+
+
+# direct methods
+.method public synthetic constructor <init>(Ljava/lang/String;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/twitter/app/settings/t;->a:Ljava/lang/String;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    check-cast p1, Lcom/twitter/account/model/y$a;
+
+    sget-object v0, Lcom/twitter/app/settings/AccountInformationFragment;->Companion:Lcom/twitter/app/settings/AccountInformationFragment$a;
+
+    const-string v0, "builder"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/twitter/app/settings/t;->a:Ljava/lang/String;
+
+    iput-object v0, p1, Lcom/twitter/account/model/y$a;->y:Ljava/lang/String;
+
+    return-object p1
+.end method

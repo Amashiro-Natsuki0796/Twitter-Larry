@@ -1,0 +1,11 @@
+.class public interface abstract Lcom/x/cards/impl/messageme/a;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/x/cards/impl/messageme/a$a;
+    }
+.end annotation

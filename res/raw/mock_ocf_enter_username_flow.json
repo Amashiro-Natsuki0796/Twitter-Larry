@@ -1,0 +1,152 @@
+{
+  "flow_token": "enterUsernameSubtaskFlow",
+  "status": "success",
+  "subtasks": [
+    {
+      "subtask_id": "UsernameEntry",
+      "enter_username": {
+        "primary_text": {
+          "text": "What should people call you?",
+          "entities": []
+        },
+        "secondary_text": {
+          "text": "Your @username is unique. You can always change it later.",
+          "entities": []
+        },
+        "hint": "Username",
+        "detail_texts": [
+          {
+            "text": "@5Salfetka, @5_salfetka\n\nShow more",
+            "entities": [
+              {
+                "from_index": 0,
+                "to_index": 10,
+                "navigation_link": {
+                  "link_type": "subtask",
+                  "link_id": "5Salfetka",
+                  "subtask_navigation_context": {
+                    "action": "set_text",
+                    "text": "5Salfetka"
+                  },
+                  "subtask_id": "UsernameEntry"
+                }
+              },
+              {
+                "from_index": 12,
+                "to_index": 23,
+                "navigation_link": {
+                  "link_type": "subtask",
+                  "link_id": "5_salfetka",
+                  "subtask_navigation_context": {
+                    "action": "set_text",
+                    "text": "5_salfetka"
+                  },
+                  "subtask_id": "UsernameEntry"
+                }
+              },
+              {
+                "from_index": 25,
+                "to_index": 34,
+                "navigation_link": {
+                  "link_type": "subtask",
+                  "link_id": "show_more_usernames",
+                  "subtask_navigation_context": {
+                    "action": "next_detail_text"
+                  },
+                  "subtask_id": "UsernameEntry"
+                }
+              }
+            ]
+          },
+          {
+            "text": "@5Salfetka, @5_salfetka, @Andrewbelous15, @Salfetka555555, @andrewbelous1_5",
+            "entities": [
+              {
+                "from_index": 0,
+                "to_index": 10,
+                "navigation_link": {
+                  "link_type": "subtask",
+                  "link_id": "5Salfetka",
+                  "subtask_navigation_context": {
+                    "action": "set_text",
+                    "text": "5Salfetka"
+                  },
+                  "subtask_id": "UsernameEntry"
+                }
+              },
+              {
+                "from_index": 12,
+                "to_index": 23,
+                "navigation_link": {
+                  "link_type": "subtask",
+                  "link_id": "5_salfetka",
+                  "subtask_navigation_context": {
+                    "action": "set_text",
+                    "text": "5_salfetka"
+                  },
+                  "subtask_id": "UsernameEntry"
+                }
+              },
+              {
+                "from_index": 25,
+                "to_index": 40,
+                "navigation_link": {
+                  "link_type": "subtask",
+                  "link_id": "Andrewbelous15",
+                  "subtask_navigation_context": {
+                    "action": "set_text",
+                    "text": "Andrewbelous15"
+                  },
+                  "subtask_id": "UsernameEntry"
+                }
+              },
+              {
+                "from_index": 42,
+                "to_index": 57,
+                "navigation_link": {
+                  "link_type": "subtask",
+                  "link_id": "Salfetka555555",
+                  "subtask_navigation_context": {
+                    "action": "set_text",
+                    "text": "Salfetka555555"
+                  },
+                  "subtask_id": "UsernameEntry"
+                }
+              },
+              {
+                "from_index": 59,
+                "to_index": 75,
+                "navigation_link": {
+                  "link_type": "subtask",
+                  "link_id": "andrewbelous1_5",
+                  "subtask_navigation_context": {
+                    "action": "set_text",
+                    "text": "andrewbelous1_5"
+                  },
+                  "subtask_id": "UsernameEntry"
+                }
+              }
+            ]
+          }
+        ],
+        "next_link": {
+          "link_type": "task",
+          "link_id": "next_link",
+          "label": "Next"
+        },
+        "skip_link": {
+          "link_type": "task",
+          "link_id": "skip_link",
+          "label": "Skip for now"
+        },
+        "cancel_link": {
+          "link_type": "abort",
+          "link_id": "cancel_link",
+          "label": "Skip for now"
+        }
+      },
+      "subtask_back_navigation": "cancel_flow"
+    }
+  ]
+}
+

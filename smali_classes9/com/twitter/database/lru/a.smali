@@ -1,0 +1,78 @@
+.class public final synthetic Lcom/twitter/database/lru/a;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ljava/util/concurrent/Callable;
+
+
+# instance fields
+.field public final synthetic a:Lcom/twitter/database/lru/m;
+
+.field public final synthetic b:Ljava/lang/String;
+
+.field public final synthetic c:Ljava/lang/Object;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lcom/twitter/database/lru/m;Ljava/lang/Object;Ljava/lang/String;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/twitter/database/lru/a;->a:Lcom/twitter/database/lru/m;
+
+    iput-object p3, p0, Lcom/twitter/database/lru/a;->b:Ljava/lang/String;
+
+    iput-object p2, p0, Lcom/twitter/database/lru/a;->c:Ljava/lang/Object;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final call()Ljava/lang/Object;
+    .locals 10
+
+    iget-object v0, p0, Lcom/twitter/database/lru/a;->a:Lcom/twitter/database/lru/m;
+
+    iget-object v0, v0, Lcom/twitter/database/lru/m;->a:Lcom/twitter/database/lru/o;
+
+    iget-object v1, v0, Lcom/twitter/database/lru/o;->b:Lcom/twitter/database/lru/d0;
+
+    iget-wide v7, v1, Lcom/twitter/database/lru/d0;->b:J
+
+    invoke-virtual {v0}, Lcom/twitter/database/lru/o;->a()I
+
+    move-result v3
+
+    sget-object v1, Lcom/twitter/util/serialization/util/b;->a:Lcom/twitter/util/serialization/stream/c;
+
+    iget-object v2, p0, Lcom/twitter/database/lru/a;->c:Ljava/lang/Object;
+
+    iget-object v9, v0, Lcom/twitter/database/lru/o;->d:Lcom/twitter/util/serialization/serializer/j;
+
+    invoke-virtual {v1, v2, v9}, Lcom/twitter/util/serialization/stream/c;->c(Ljava/lang/Object;Lcom/twitter/util/serialization/serializer/j;)[B
+
+    move-result-object v6
+
+    iget-object v2, v0, Lcom/twitter/database/lru/o;->a:Lcom/twitter/database/lru/z;
+
+    iget v5, v0, Lcom/twitter/database/lru/o;->f:I
+
+    iget-object v4, p0, Lcom/twitter/database/lru/a;->b:Ljava/lang/String;
+
+    invoke-interface/range {v2 .. v8}, Lcom/twitter/database/lru/z;->b(ILjava/lang/String;I[BJ)[B
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0, v9}, Lcom/twitter/util/serialization/stream/c;->a([BLcom/twitter/util/serialization/serializer/j;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/twitter/util/collection/p0;->a(Ljava/lang/Object;)Lcom/twitter/util/collection/p0;
+
+    move-result-object v0
+
+    return-object v0
+.end method

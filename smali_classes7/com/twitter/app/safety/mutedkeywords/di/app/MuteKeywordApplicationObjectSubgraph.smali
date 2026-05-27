@@ -1,0 +1,14 @@
+.class public interface abstract Lcom/twitter/app/safety/mutedkeywords/di/app/MuteKeywordApplicationObjectSubgraph;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lcom/twitter/util/di/app/g;
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/twitter/app/safety/mutedkeywords/di/app/MuteKeywordApplicationObjectSubgraph$BindingDeclarations;
+    }
+.end annotation

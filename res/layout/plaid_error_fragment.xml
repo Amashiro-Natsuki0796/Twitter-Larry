@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/plaid_error_fragment_container" android:background="@color/plaid_white" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.plaid.internal.core.ui_components.PlaidNavigationBar android:id="@id/plaid_navigation" android:layout_width="match_parent" android:layout_height="@dimen/plaid_navigation_height" />
+    <ScrollView android:layout_width="match_parent" android:layout_height="0.0dp" android:fillViewport="true" android:layout_weight="1.0">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:paddingBottom="@dimen/plaid_space_4x" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/plaid_space_4x" android:paddingEnd="@dimen/plaid_space_4x">
+            <ImageView android:layout_gravity="center" android:id="@id/error_image" android:layout_width="match_parent" android:layout_height="@dimen/plaid_header_height" android:layout_marginTop="@dimen/plaid_space_2x" android:src="@drawable/pl_illustration_scene_error" android:scaleType="centerInside" />
+            <TextView android:enabled="true" android:gravity="center" android:id="@id/error_header" android:paddingBottom="@dimen/plaid_space_1x" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/plaid_space_1x" android:text="@string/plaid_error_internal_server_error_something_went_wrong" style="@style/PlaidText.H2.ExtraBold" />
+            <TextView android:enabled="true" android:gravity="center" android:id="@id/error_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/plaid_error_internal_server_error_try_again_later" style="@style/PlaidText.H5.Regular" />
+            <View android:layout_width="wrap_content" android:layout_height="0.0dp" android:layout_weight="1.0" />
+            <com.plaid.internal.core.ui_components.PlaidPrimaryButton android:id="@id/exit_button" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/plaid_space_2x" android:text="@string/plaid_error_internal_error_exit" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,23 @@
+.class public final Lkotlin/reflect/jvm/internal/impl/types/l;
+.super Lkotlin/reflect/jvm/internal/impl/types/DelegatingSimpleTypeImpl;
+.source "SourceFile"
+
+
+# virtual methods
+.method public final H0()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final R0(Lkotlin/reflect/jvm/internal/impl/types/SimpleType;)Lkotlin/reflect/jvm/internal/impl/types/DelegatingSimpleType;
+    .locals 1
+
+    new-instance v0, Lkotlin/reflect/jvm/internal/impl/types/l;
+
+    invoke-direct {v0, p1}, Lkotlin/reflect/jvm/internal/impl/types/DelegatingSimpleTypeImpl;-><init>(Lkotlin/reflect/jvm/internal/impl/types/SimpleType;)V
+
+    return-object v0
+.end method

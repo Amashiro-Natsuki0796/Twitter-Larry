@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.twitter.ui.components.text.legacy.TypefacesTextView android:textSize="@dimen/font_size_small" android:textColor="?dynamicColorGray600" android:id="@id/grok_translation_vote_guide_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/translate_vote_guide" android:layout_marginVertical="@dimen/space_4" />
+    <ImageView android:id="@id/grok_translation_vote_up" android:src="@drawable/ic_vector_thumbs_up" android:importantForAccessibility="no" style="@style/TranslationVote" />
+    <ImageView android:id="@id/grok_translation_vote_down" android:src="@drawable/ic_vector_thumbs_down" android:importantForAccessibility="no" style="@style/TranslationVote" />
+</merge>

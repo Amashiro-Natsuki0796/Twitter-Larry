@@ -1,0 +1,540 @@
+.class public final Lcom/twitter/creator/impl/main/a;
+.super Lcom/twitter/app/legacy/client/h;
+.source "SourceFile"
+
+
+# annotations
+.annotation build Lkotlin/jvm/internal/SourceDebugExtension;
+.end annotation
+
+
+# instance fields
+.field public final V1:Lcom/twitter/app/common/z;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/twitter/app/common/z<",
+            "*>;"
+        }
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+.end field
+
+.field public final X1:Lcom/twitter/creator/MonetizationContentViewArgs;
+    .annotation build Lorg/jetbrains/annotations/a;
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>(Landroid/content/Intent;Lcom/twitter/app/common/g0;Landroid/content/res/Resources;Lcom/twitter/repository/m;Ldagger/a;Lcom/twitter/app/common/activity/b;Lcom/twitter/app/common/inject/o;Lcom/twitter/app/common/util/i0;Lcom/twitter/account/login/b;Landroid/view/LayoutInflater;Lcom/twitter/util/rx/s;Lcom/twitter/util/user/UserIdentifier;Lcom/twitter/app/legacy/t;Ldagger/a;Lcom/twitter/util/geo/b;Lcom/twitter/search/typeahead/suggestion/l;Lcom/twitter/media/av/player/g2;Lcom/twitter/app/common/z;Lcom/twitter/app/common/inject/view/h0;Lcom/twitter/network/i;Lcom/twitter/util/rx/q;Lcom/twitter/search/provider/g;Lcom/twitter/downloader/b;Lcom/twitter/onboarding/gating/a;Lcom/twitter/creator/MonetizationContentViewArgs;)V
+    .locals 16
+    .param p1    # Landroid/content/Intent;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+    .param p2    # Lcom/twitter/app/common/g0;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+    .param p3    # Landroid/content/res/Resources;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+    .param p4    # Lcom/twitter/repository/m;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+    .param p5    # Ldagger/a;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+    .param p6    # Lcom/twitter/app/common/activity/b;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+    .param p7    # Lcom/twitter/app/common/inject/o;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+    .param p8    # Lcom/twitter/app/common/util/i0;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+    .param p9    # Lcom/twitter/account/login/b;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+    .param p10    # Landroid/view/LayoutInflater;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+    .param p11    # Lcom/twitter/util/rx/s;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+    .param p12    # Lcom/twitter/util/user/UserIdentifier;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+    .param p13    # Lcom/twitter/app/legacy/t;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+    .param p14    # Ldagger/a;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+    .param p15    # Lcom/twitter/util/geo/b;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+    .param p16    # Lcom/twitter/search/typeahead/suggestion/l;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+    .param p17    # Lcom/twitter/media/av/player/g2;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+    .param p18    # Lcom/twitter/app/common/z;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+    .param p19    # Lcom/twitter/app/common/inject/view/h0;
+        .annotation build Lorg/jetbrains/annotations/b;
+        .end annotation
+    .end param
+    .param p20    # Lcom/twitter/network/i;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+    .param p21    # Lcom/twitter/util/rx/q;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+    .param p22    # Lcom/twitter/search/provider/g;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+    .param p23    # Lcom/twitter/downloader/b;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+    .param p24    # Lcom/twitter/onboarding/gating/a;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+    .param p25    # Lcom/twitter/creator/MonetizationContentViewArgs;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p18
+
+    move-object/from16 v2, p25
+
+    const-string v3, "viewLifecycle"
+
+    move-object/from16 v4, p2
+
+    invoke-static {v4, v3}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v3, "resources"
+
+    move-object/from16 v5, p3
+
+    invoke-static {v5, v3}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v3, "requestRepositoryFactory"
+
+    move-object/from16 v6, p4
+
+    invoke-static {v6, v3}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v3, "navManagerLazy"
+
+    move-object/from16 v7, p5
+
+    invoke-static {v7, v3}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v3, "activityFinisher"
+
+    move-object/from16 v8, p6
+
+    invoke-static {v8, v3}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v3, "loginController"
+
+    move-object/from16 v9, p9
+
+    invoke-static {v9, v3}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v3, "layoutInflater"
+
+    move-object/from16 v10, p10
+
+    invoke-static {v10, v3}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v3, "currentUser"
+
+    move-object/from16 v11, p12
+
+    invoke-static {v11, v3}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v3, "twitterFragmentActivityOptions"
+
+    move-object/from16 v12, p13
+
+    invoke-static {v12, v3}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v3, "fabPresenter"
+
+    move-object/from16 v13, p14
+
+    invoke-static {v13, v3}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v3, "locationProducer"
+
+    move-object/from16 v14, p15
+
+    invoke-static {v14, v3}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v3, "searchSuggestionController"
+
+    move-object/from16 v15, p16
+
+    invoke-static {v15, v3}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v3, "registrableHeadsetPlugReceiver"
+
+    move-object/from16 v4, p17
+
+    invoke-static {v4, v3}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v3, "navigator"
+
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v3, "cookieManagerWrapper"
+
+    move-object/from16 v4, p20
+
+    invoke-static {v4, v3}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v3, "activityResultStream"
+
+    move-object/from16 v4, p21
+
+    invoke-static {v4, v3}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v3, "searchSuggestionCache"
+
+    move-object/from16 v4, p22
+
+    invoke-static {v4, v3}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v3, "fileDownloader"
+
+    move-object/from16 v4, p23
+
+    invoke-static {v4, v3}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v3, "softUserConfig"
+
+    move-object/from16 v4, p24
+
+    invoke-static {v4, v3}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v3, "args"
+
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-direct/range {p0 .. p24}, Lcom/twitter/app/legacy/client/h;-><init>(Landroid/content/Intent;Lcom/twitter/app/common/g0;Landroid/content/res/Resources;Lcom/twitter/repository/m;Ldagger/a;Lcom/twitter/app/common/activity/b;Landroidx/fragment/app/y;Lcom/twitter/app/common/util/i0;Lcom/twitter/account/login/b;Landroid/view/LayoutInflater;Lcom/twitter/util/rx/q;Lcom/twitter/util/user/UserIdentifier;Lcom/twitter/app/legacy/t;Ldagger/a;Lcom/twitter/util/geo/b;Lcom/twitter/search/typeahead/suggestion/l;Lcom/twitter/media/av/player/g2;Lcom/twitter/app/common/z;Lcom/twitter/app/common/inject/view/h0;Lcom/twitter/network/i;Lcom/twitter/util/rx/q;Lcom/twitter/search/provider/g;Lcom/twitter/downloader/b;Lcom/twitter/onboarding/gating/a;)V
+
+    iput-object v1, v0, Lcom/twitter/creator/impl/main/a;->V1:Lcom/twitter/app/common/z;
+
+    iput-object v2, v0, Lcom/twitter/creator/impl/main/a;->X1:Lcom/twitter/creator/MonetizationContentViewArgs;
+
+    invoke-virtual/range {p25 .. p25}, Lcom/twitter/creator/MonetizationContentViewArgs;->getUrl()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/twitter/app/legacy/client/h;->H3(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final J3(Landroid/webkit/WebView;Ljava/lang/String;)V
+    .locals 3
+    .param p1    # Landroid/webkit/WebView;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+
+    const-string v0, "view"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string p1, "url"
+
+    invoke-static {p2, p1}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-static {p2}, Lcom/twitter/util/h;->b(Ljava/lang/String;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_5
+
+    invoke-static {p2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object p1
+
+    iget-object p2, p0, Lcom/twitter/creator/impl/main/a;->X1:Lcom/twitter/creator/MonetizationContentViewArgs;
+
+    invoke-virtual {p2}, Lcom/twitter/creator/MonetizationContentViewArgs;->getUrl()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-static {p2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Landroid/net/Uri;->getPath()Ljava/lang/String;
+
+    move-result-object p2
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x1
+
+    if-eqz p2, :cond_0
+
+    invoke-virtual {p1}, Landroid/net/Uri;->getPath()Ljava/lang/String;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_0
+
+    invoke-static {v2, p2, v0}, Lkotlin/text/p;->B(Ljava/lang/String;Ljava/lang/String;Z)Z
+
+    move-result p2
+
+    if-ne p2, v1, :cond_0
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p1}, Landroid/net/Uri;->getPath()Ljava/lang/String;
+
+    move-result-object p2
+
+    if-eqz p2, :cond_1
+
+    const-string v2, "/settings/monetization"
+
+    invoke-static {p2, v2, v0}, Lkotlin/text/p;->B(Ljava/lang/String;Ljava/lang/String;Z)Z
+
+    move-result p2
+
+    if-ne p2, v1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {p1}, Landroid/net/Uri;->getPath()Ljava/lang/String;
+
+    move-result-object p2
+
+    if-eqz p2, :cond_2
+
+    const-string v2, "/settings/creator-subscriptions"
+
+    invoke-static {p2, v2, v0}, Lkotlin/text/p;->B(Ljava/lang/String;Ljava/lang/String;Z)Z
+
+    move-result p2
+
+    if-ne p2, v1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {p1}, Landroid/net/Uri;->getPath()Ljava/lang/String;
+
+    move-result-object p2
+
+    if-eqz p2, :cond_3
+
+    const-string v2, "/settings/superfollows"
+
+    invoke-static {p2, v2, v0}, Lkotlin/text/p;->B(Ljava/lang/String;Ljava/lang/String;Z)Z
+
+    move-result p2
+
+    if-ne p2, v1, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    invoke-virtual {p1}, Landroid/net/Uri;->getPath()Ljava/lang/String;
+
+    move-result-object p2
+
+    if-eqz p2, :cond_4
+
+    const-string v2, "/settings/monetization_idv"
+
+    invoke-static {p2, v2, v0}, Lkotlin/text/p;->B(Ljava/lang/String;Ljava/lang/String;Z)Z
+
+    move-result p2
+
+    if-ne p2, v1, :cond_4
+
+    :goto_0
+    return-void
+
+    :cond_4
+    sget-object p2, Lcom/twitter/deeplink/api/a;->Companion:Lcom/twitter/deeplink/api/a$a;
+
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {}, Lcom/twitter/deeplink/api/a$a;->a()Lcom/twitter/deeplink/api/a;
+
+    move-result-object p2
+
+    invoke-interface {p2, p1}, Lcom/twitter/deeplink/api/a;->a(Landroid/net/Uri;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_5
+
+    invoke-virtual {p0}, Lcom/twitter/creator/impl/main/a;->goBack()Z
+
+    new-instance p2, Lcom/twitter/deeplink/api/UrlInterpreterActivityArgs;
+
+    invoke-direct {p2, p1}, Lcom/twitter/deeplink/api/UrlInterpreterActivityArgs;-><init>(Landroid/net/Uri;)V
+
+    iget-object p1, p0, Lcom/twitter/app/legacy/r;->r:Lcom/twitter/app/common/z;
+
+    invoke-interface {p1, p2}, Lcom/twitter/app/common/z;->e(Lcom/twitter/app/common/a;)V
+
+    :cond_5
+    return-void
+.end method
+
+.method public final e0(Lcom/twitter/ui/navigation/f;Landroid/view/Menu;)Z
+    .locals 1
+    .param p1    # Lcom/twitter/ui/navigation/f;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/Menu;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+
+    const-string v0, "navComponent"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "menu"
+
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const v0, 0x7f100020
+
+    invoke-interface {p1, v0, p2}, Lcom/twitter/ui/navigation/f;->g(ILandroid/view/Menu;)V
+
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final goBack()Z
+    .locals 1
+
+    invoke-virtual {p0}, Lcom/twitter/app/legacy/client/h;->C3()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Lcom/twitter/app/legacy/client/h;->M3()V
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    invoke-super {p0}, Lcom/twitter/app/legacy/r;->goBack()Z
+
+    move-result v0
+
+    :goto_0
+    return v0
+.end method
+
+.method public final k(Landroid/view/MenuItem;)Z
+    .locals 2
+    .param p1    # Landroid/view/MenuItem;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+
+    const-string v0, "item"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    new-instance p1, Lcom/twitter/network/navigation/uri/a0;
+
+    iget-object v0, p0, Lcom/twitter/app/legacy/h;->j:Landroid/content/res/Resources;
+
+    const v1, 0x7f151ee1
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "getString(...)"
+
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->g(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v0
+
+    invoke-direct {p1, v0}, Lcom/twitter/network/navigation/uri/a0;-><init>(Landroid/net/Uri;)V
+
+    iget-object v0, p0, Lcom/twitter/creator/impl/main/a;->V1:Lcom/twitter/app/common/z;
+
+    invoke-interface {v0, p1}, Lcom/twitter/app/common/z;->e(Lcom/twitter/app/common/a;)V
+
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final p1(Lcom/twitter/ui/navigation/f;)I
+    .locals 1
+    .param p1    # Lcom/twitter/ui/navigation/f;
+        .annotation build Lorg/jetbrains/annotations/a;
+        .end annotation
+    .end param
+
+    const-string v0, "navComponent"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const/4 p1, 0x2
+
+    return p1
+.end method

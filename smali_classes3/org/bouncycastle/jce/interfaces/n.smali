@@ -1,0 +1,20 @@
+.class public interface abstract Lorg/bouncycastle/jce/interfaces/n;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# virtual methods
+.method public abstract getBagAttribute(Lorg/bouncycastle/asn1/t;)Lorg/bouncycastle/asn1/f;
+.end method
+
+.method public abstract getBagAttributeKeys()Ljava/util/Enumeration;
+.end method
+
+.method public abstract hasFriendlyName()Z
+.end method
+
+.method public abstract setBagAttribute(Lorg/bouncycastle/asn1/t;Lorg/bouncycastle/asn1/f;)V
+.end method
+
+.method public abstract setFriendlyName(Ljava/lang/String;)V
+.end method

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/chrome_top" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.Guideline android:orientation="horizontal" android:id="@id/guideline_horizontal_30" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintGuide_percent="0.3" />
+    <View android:background="@drawable/immersive_tweet_drop_shadow_top" android:layout_width="match_parent" android:layout_height="0.0dp" app:layout_constraintBottom_toBottomOf="@id/guideline_horizontal_30" app:layout_constraintTop_toTopOf="parent" />
+    <include android:id="@id/back_button" android:layout_width="@dimen/toolbar_height" android:layout_height="@dimen/toolbar_height" app:layout_constraintStart_toStartOf="@id/guide_controls_left_most" app:layout_constraintTop_toTopOf="@id/guide_controls_top_most" layout="@layout/back_button" />
+    <include android:id="@id/broadcast_title" android:layout_width="wrap_content" android:layout_height="@dimen/toolbar_height" app:layout_constraintEnd_toEndOf="@id/guide_controls_right_most" app:layout_constraintStart_toStartOf="@id/guide_controls_left_most" app:layout_constraintTop_toTopOf="@id/guide_controls_top_most" layout="@layout/broadcast_title" />
+    <include android:id="@id/overflow_button" android:layout_width="@dimen/toolbar_height" android:layout_height="@dimen/toolbar_height" app:layout_constraintEnd_toEndOf="@id/guide_controls_right_most" app:layout_constraintTop_toTopOf="@id/guide_controls_top_most" layout="@layout/overflow_button" />
+    <androidx.constraintlayout.widget.Guideline android:orientation="horizontal" android:id="@id/guide_controls_top_most" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintGuide_begin="0.0dp" />
+    <androidx.constraintlayout.widget.Guideline android:orientation="vertical" android:id="@id/guide_controls_left_most" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintGuide_begin="0.0dp" />
+    <androidx.constraintlayout.widget.Guideline android:orientation="vertical" android:id="@id/guide_controls_right_most" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintGuide_end="0.0dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

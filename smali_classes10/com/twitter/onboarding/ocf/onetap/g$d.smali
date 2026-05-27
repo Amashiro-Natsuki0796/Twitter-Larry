@@ -1,0 +1,91 @@
+.class public final Lcom/twitter/onboarding/ocf/onetap/g$d;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lkotlin/jvm/functions/Function1;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/twitter/onboarding/ocf/onetap/g;-><init>(Landroid/app/Activity;Lcom/twitter/app/common/g0;Lcom/twitter/onboarding/ocf/onetap/b;Ldagger/a;Lcom/twitter/onboarding/ocf/NavigationHandler;Lcom/twitter/util/errorreporter/e;Lcom/twitter/onboarding/ocf/analytics/OcfEventReporter;Lcom/twitter/onboarding/auth/api/a;)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Lkotlin/jvm/functions/Function1<",
+        "Lcom/twitter/util/rx/v;",
+        "Lkotlin/Unit;",
+        ">;"
+    }
+.end annotation
+
+.annotation build Lkotlin/jvm/internal/SourceDebugExtension;
+.end annotation
+
+
+# instance fields
+.field public final synthetic a:Lcom/twitter/onboarding/ocf/onetap/g;
+
+
+# direct methods
+.method public constructor <init>(Lcom/twitter/onboarding/ocf/onetap/g;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/twitter/onboarding/ocf/onetap/g$d;->a:Lcom/twitter/onboarding/ocf/onetap/g;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    check-cast p1, Lcom/twitter/util/rx/v;
+
+    iget-object p1, p0, Lcom/twitter/onboarding/ocf/onetap/g$d;->a:Lcom/twitter/onboarding/ocf/onetap/g;
+
+    iget-object v0, p1, Lcom/twitter/onboarding/ocf/onetap/g;->b:Lcom/twitter/onboarding/ocf/onetap/b;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v1, v0, Lcom/twitter/onboarding/ocf/onetap/b;->b:Ljava/lang/ref/WeakReference;
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/twitter/onboarding/ocf/onetap/g;
+
+    goto :goto_0
+
+    :cond_0
+    move-object v1, v2
+
+    :goto_0
+    invoke-virtual {p1, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    iput-object v2, v0, Lcom/twitter/onboarding/ocf/onetap/b;->b:Ljava/lang/ref/WeakReference;
+
+    :cond_1
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
+
+    return-object p1
+.end method

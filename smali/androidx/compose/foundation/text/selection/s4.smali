@@ -1,0 +1,84 @@
+.class public final synthetic Landroidx/compose/foundation/text/selection/s4;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lkotlin/jvm/functions/Function1;
+
+
+# instance fields
+.field public final synthetic a:I
+
+
+# direct methods
+.method public synthetic constructor <init>(I)V
+    .locals 0
+
+    iput p1, p0, Landroidx/compose/foundation/text/selection/s4;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
+
+    iget v0, p0, Landroidx/compose/foundation/text/selection/s4;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    check-cast p1, Lcom/x/models/dm/XConversationId;
+
+    const-string v0, "it"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    sget-object p1, Lkotlin/collections/p;->a:Lkotlin/collections/p;
+
+    invoke-static {p1}, Lkotlinx/coroutines/flow/q2;->a(Ljava/lang/Object;)Lkotlinx/coroutines/flow/p2;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_0
+    move-object v0, p1
+
+    check-cast v0, Lcom/twitter/mentions/settings/a1;
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    const/16 v6, 0x1f
+
+    invoke-static/range {v0 .. v6}, Lcom/twitter/mentions/settings/a1;->a(Lcom/twitter/mentions/settings/a1;ZZZLcom/twitter/mentions/settings/model/MentionSettings;ZI)Lcom/twitter/mentions/settings/a1;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_1
+    check-cast p1, Landroidx/compose/ui/text/input/k0;
+
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method

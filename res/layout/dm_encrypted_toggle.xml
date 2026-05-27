@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.SwitchCompat android:layout_width="match_parent" android:layout_height="match_parent" android:paddingEnd="4.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

@@ -1,0 +1,60 @@
+.class public Lorg/bouncycastle/jcajce/provider/digest/SHA3$DigestParallelHash;
+.super Lorg/bouncycastle/jcajce/provider/digest/BCMessageDigest;
+.source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Cloneable;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lorg/bouncycastle/jcajce/provider/digest/SHA3;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x9
+    name = "DigestParallelHash"
+.end annotation
+
+
+# direct methods
+.method public constructor <init>(II)V
+    .locals 1
+
+    new-instance v0, Lorg/bouncycastle/crypto/digests/t;
+
+    invoke-direct {v0, p1, p2}, Lorg/bouncycastle/crypto/digests/t;-><init>(II)V
+
+    invoke-direct {p0, v0}, Lorg/bouncycastle/jcajce/provider/digest/BCMessageDigest;-><init>(Lorg/bouncycastle/crypto/t;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public clone()Ljava/lang/Object;
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/CloneNotSupportedException;
+        }
+    .end annotation
+
+    invoke-super {p0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lorg/bouncycastle/jcajce/provider/digest/BCMessageDigest;
+
+    new-instance v1, Lorg/bouncycastle/crypto/digests/t;
+
+    iget-object v2, p0, Lorg/bouncycastle/jcajce/provider/digest/BCMessageDigest;->digest:Lorg/bouncycastle/crypto/t;
+
+    check-cast v2, Lorg/bouncycastle/crypto/digests/t;
+
+    invoke-direct {v1, v2}, Lorg/bouncycastle/crypto/digests/t;-><init>(Lorg/bouncycastle/crypto/digests/t;)V
+
+    iput-object v1, v0, Lorg/bouncycastle/jcajce/provider/digest/BCMessageDigest;->digest:Lorg/bouncycastle/crypto/t;
+
+    return-object v0
+.end method
